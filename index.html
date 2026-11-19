@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GEAR BY GASH — 메타 광고 소재 기획안</title>
-  <meta name="description" content="기어바이가쉬(GEAR BY GASH) 메타 광고 크리에이티브 기획서 — 5대 메인 기획 · 4컷 스토리보드 · 실집행 광고 레퍼런스" />
+  <meta name="description" content="기어바이가쉬(GEAR BY GASH) 메타 광고 크리에이티브 기획서 — 8대 메인 기획 · 32컷 스토리보드 · 실집행 광고 레퍼런스" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="GEAR BY GASH — 메타 광고 소재 기획안" />
-  <meta property="og:description" content="20분 시트팩 대신 바르는 10초 — 90s 필름 & 하이엔드 씨즐 5대 소재 기획서" />
+  <meta property="og:description" content="20분 시트팩 대신 바르는 10초 — 90s 필름 · 하이엔드 씨즐 · FOOH 테크 8대 소재(32컷) 기획서" />
   <meta property="og:image" content="https://bigape-j.github.io/gash-meta-creative-deck/assets/og-cover.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
@@ -196,6 +196,8 @@
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
     .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+    .grid-8-index { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; flex: 1; }
+    .reels-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; flex: 1; align-items: center; }
 
     .card {
       background: var(--bg-bento);
@@ -296,6 +298,10 @@
     .index-info { padding: 4px 6px 8px; display: flex; flex-direction: column; gap: 6px; }
     .index-info h3 { font-size: 18px; font-weight: 800; line-height: 1.28; }
     .index-info p { font-size: 14px; color: var(--ink-sub); line-height: 1.48; }
+    .index-card.compact { padding: 10px; gap: 9px; }
+    .index-card.compact img { aspect-ratio: 4 / 3; object-position: center 18%; }
+    .index-card.compact .index-info h3 { font-size: 16px; }
+    .index-card.compact .index-info p { font-size: 13px; }
 
     /* Slides 05~09: Clean Unobstructed 4-Cut Storyboard Cards */
     .cut-grid {
@@ -433,6 +439,8 @@
       font-size: 13px;
       font-weight: 800;
     }
+    .reels-grid-4 .reels-headline { font-size: 15.5px; }
+    .reels-grid-4 .ig-cta { font-size: 12px; padding: 9px 11px; }
 
     /* Feed Mockup */
     .feed-post {
@@ -496,10 +504,10 @@
       font-size: 13px;
     }
 
-    /* Contact Sheet Grid (Slide 12) */
+    /* Contact Sheet Grid (Slide 15) */
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(10, 1fr);
+      grid-template-columns: repeat(8, 1fr);
       gap: 8px;
       flex: 1;
       align-content: center;
@@ -507,12 +515,12 @@
     .contact-item {
       border-radius: 12px;
       overflow: hidden;
-      aspect-ratio: 9 / 15;
+      aspect-ratio: 4 / 4.2;
       cursor: zoom-in;
       transition: transform 0.2s var(--spring);
     }
     .contact-item:hover { transform: scale(1.08); z-index: 5; }
-    .contact-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .contact-item img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; display: block; }
 
     /* Jumper */
     .jumper {
@@ -585,11 +593,11 @@
       .slide { padding: 28px 22px; min-height: auto; }
       h1.h1 { font-size: 36px; }
       h2.h2 { font-size: 26px; }
-      .cover-grid, .cut-grid, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr 1fr; }
-      .contact-grid { grid-template-columns: repeat(5, 1fr); }
+      .cover-grid, .cut-grid, .grid-3, .grid-4, .grid-5, .grid-8-index, .reels-grid-4 { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: repeat(4, 1fr); }
     }
     @media (max-width: 640px) {
-      .cover-grid, .cover-stats, .cut-grid, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
+      .cover-grid, .cover-stats, .cut-grid, .grid-3, .grid-4, .grid-5, .grid-8-index, .reels-grid-4 { grid-template-columns: 1fr; }
     }
 
     @media print {
@@ -610,7 +618,7 @@
     </div>
     <div class="controls">
       <button class="btn" onclick="prevSlide()">← 이전</button>
-      <span class="counter" id="slideCounter">01 / 12</span>
+      <span class="counter" id="slideCounter">01 / 15</span>
       <button class="btn" onclick="nextSlide()">다음 →</button>
       <button class="btn violet" id="modeBtn" onclick="toggleScrollMode()">전체 한눈에 보기</button>
       <button class="btn dark" onclick="window.print()">PDF 저장</button>
@@ -624,7 +632,7 @@
       <div class="head">
         <div class="head-top">
           <span class="pill yellow">META CREATIVE PROPOSAL · SEEDREAM 5.0 PRO</span>
-          <span class="s-idx">01 / 12</span>
+          <span class="s-idx">01 / 15</span>
         </div>
       </div>
 
@@ -636,7 +644,7 @@
           </h1>
           <p class="lead">
             <strong>트리플 슈퍼 리페어 80ml (그린)</strong> &amp; 5종 + <strong>멜팅 밤패드</strong><br/>
-            초반 3초 후킹과 10초 실증으로 매출을 만드는 <strong>5대 메인 소재 기획안</strong>
+            초반 3초 후킹과 10초 실증으로 매출을 만드는 <strong>8대 메인 소재 기획안 (총 32컷)</strong>
           </p>
           <div class="cover-stats">
             <div class="stat-mini">
@@ -661,8 +669,8 @@
           <div class="cover-pic" onclick="openLb('./assets/air-cut4.jpg', '기획 03 · 90s 퍼스트클래스 기내의 반칙')">
             <img src="./assets/air-cut4.jpg" alt="Airplane" />
           </div>
-          <div class="cover-pic" onclick="openLb('./assets/c3-cut1.jpg', '기획 04 · 시트팩 150장과의 쿨한 결별')">
-            <img src="./assets/c3-cut1.jpg" alt="Manhattan Kitsch" />
+          <div class="cover-pic" onclick="openLb('./assets/c8-cut1.jpg', '기획 08 · 시트팩 150장 압축 FOOH &amp; 열화상 테크')">
+            <img src="./assets/c8-cut1.jpg" alt="FOOH Press" />
           </div>
         </div>
       </div>
@@ -673,7 +681,7 @@
       <div class="head">
         <div class="head-top">
           <span class="pill violet">WHY IT SELLS · 데이터 및 레퍼런스 근거</span>
-          <span class="s-idx">02 / 12</span>
+          <span class="s-idx">02 / 15</span>
         </div>
         <h2 class="h2">왜 이 소재들이 메타에서 높은 클릭률(CTR)과 판매율을 만드는가?</h2>
         <p class="lead">실제 검증된 AI 뷰티 숏폼 데이터와 K-뷰티 상위 브랜드의 성공 문법 3가지를 핵심 설계에 반영했습니다.</p>
@@ -720,7 +728,7 @@
       <div class="head">
         <div class="head-top">
           <span class="pill cyan">20-SECOND GOLDEN FORMULA · 4컷 호흡 설계</span>
-          <span class="s-idx">03 / 12</span>
+          <span class="s-idx">03 / 15</span>
         </div>
         <h2 class="h2">모든 기획안에 동일하게 적용되는 ‘4컷 20초 전환 구조’</h2>
         <p class="lead">초반 3초는 철저히 <strong>시선 강탈(CTR)</strong>에 집중하고, 중반 10초는 <strong>제형·흡수 실증</strong>, 마지막 6초는 <strong>혜택 각인</strong>으로 마무리합니다.</p>
@@ -765,60 +773,87 @@
       </div>
     </section>
 
-    <!-- ==================== SLIDE 04: 5대 메인 기획 한눈 보기 ==================== -->
-    <section class="slide" data-title="04 5대라인업">
+    <!-- ==================== SLIDE 04: 8대 메인 기획 한눈 보기 ==================== -->
+    <section class="slide" data-title="04 8대라인업">
       <div class="head">
         <div class="head-top">
-          <span class="pill violet">5 MASTER CONCEPTS · 클릭 시 해당 슬라이드로 이동</span>
-          <span class="s-idx">04 / 12</span>
+          <span class="pill violet">8 MASTER CONCEPTS · 클릭 시 해당 슬라이드로 이동</span>
+          <span class="s-idx">04 / 15</span>
         </div>
-        <h2 class="h2">타깃 상황별로 촘촘하게 설계한 5대 메인 소재 라인업</h2>
-        <p class="lead"><strong>90s 웨스턴 시네마틱 4종(약속 전 · 웨딩 · 비행기 · 소호 키치)</strong>과 <strong>고급 제형 씨즐 1종</strong>으로 전 타깃 모수를 빈틈없이 공략합니다.</p>
+        <h2 class="h2">타깃 상황·포맷별로 촘촘하게 설계한 8대 메인 소재 라인업</h2>
+        <p class="lead"><strong>90s 웨스턴 시네마틱 6종</strong>과 <strong>럭셔리 씨즐·FOOH 테크 실증 2종</strong>으로 콜드 타깃 후킹부터 번들·5종 세트 전환까지 완벽하게 커버합니다.</p>
       </div>
 
-      <div class="grid-5" style="flex:1;">
-        <div class="index-card" onclick="goToSlide(4)">
+      <div class="grid-8-index">
+        <div class="index-card compact" onclick="goToSlide(4)">
           <img src="./assets/c1-cut1.jpg" alt="기획 01" />
           <div class="index-info">
-            <span class="pill yellow" style="align-self:flex-start; font-size:11.5px; padding:4px 10px;">기획 01 · 화잘먹</span>
+            <span class="pill yellow" style="align-self:flex-start; font-size:11px; padding:3px 9px;">기획 01 · 화잘먹</span>
             <h3>뉴욕 소호 약속 10초 전</h3>
-            <p>찬 바람에 들뜬 베이스, 택시 뒷좌석 10초 심폐소생</p>
+            <p>찬 바람에 들뜬 베이스, 택시 10초 리페어</p>
           </div>
         </div>
 
-        <div class="index-card" onclick="goToSlide(5)">
+        <div class="index-card compact" onclick="goToSlide(5)">
           <img src="./assets/c2-cut1.jpg" alt="기획 02" />
           <div class="index-info">
-            <span class="pill violet" style="align-self:flex-start; font-size:11.5px; padding:4px 10px;">기획 02 · 웨딩 드라마</span>
+            <span class="pill violet" style="align-self:flex-start; font-size:11px; padding:3px 9px;">기획 02 · 웨딩 드라마</span>
             <h3>본식 입장 1분 전 신부</h3>
-            <p>일생일대 중요한 순간 직전, 20분 시트팩 대신 10초</p>
+            <p>중요한 순간 직전, 20분 팩 대신 10초</p>
           </div>
         </div>
 
-        <div class="index-card" onclick="goToSlide(6)">
+        <div class="index-card compact" onclick="goToSlide(6)">
           <img src="./assets/air-cut1.jpg" alt="기획 03" />
           <div class="index-info">
-            <span class="pill emerald" style="align-self:flex-start; font-size:11.5px; padding:4px 10px;">기획 03 · 기내 휴대</span>
+            <span class="pill emerald" style="align-self:flex-start; font-size:11px; padding:3px 9px;">기획 03 · 기내 휴대</span>
             <h3>심야 퍼스트클래스 기내</h3>
-            <p>건조한 비행기 안, 실버파우치 속 80ml 노워시 반칙</p>
+            <p>건조한 비행기 안, 80ml 노워시 반칙</p>
           </div>
         </div>
 
-        <div class="index-card" onclick="goToSlide(7)">
+        <div class="index-card compact" onclick="goToSlide(7)">
           <img src="./assets/c3-cut1.jpg" alt="기획 04" />
           <div class="index-info">
-            <span class="pill dark" style="align-self:flex-start; font-size:11.5px; padding:4px 10px;">기획 04 · 90s 키치</span>
+            <span class="pill dark" style="align-self:flex-start; font-size:11px; padding:3px 9px;">기획 04 · 90s 키치</span>
             <h3>시트팩 150장과의 결별</h3>
-            <p>비닐봉투 가득 시트팩 폐기 훅 &amp; 1회 200원 스마트 럭셔리</p>
+            <p>150장 폐기 훅 &amp; 1회 200원 가성비</p>
           </div>
         </div>
 
-        <div class="index-card" onclick="goToSlide(8)">
+        <div class="index-card compact" onclick="goToSlide(8)">
           <img src="./assets/c4-cut1.jpg" alt="기획 05" />
           <div class="index-info">
-            <span class="pill cyan" style="align-self:flex-start; font-size:11.5px; padding:4px 10px;">기획 05 · 고급 씨즐</span>
+            <span class="pill cyan" style="align-self:flex-start; font-size:11px; padding:3px 9px;">기획 05 · 고급 씨즐</span>
             <h3>2.04µm 버블 &amp; 밤패드</h3>
-            <p>초고밀도 생크림 버블 매크로 &amp; 밤패드 2-Step 실증</p>
+            <p>초고밀도 버블 매크로 &amp; 원패드 실증</p>
+          </div>
+        </div>
+
+        <div class="index-card compact" onclick="goToSlide(9)">
+          <img src="./assets/c6-cut1.jpg" alt="기획 06" />
+          <div class="index-info">
+            <span class="pill violet" style="align-self:flex-start; font-size:11px; padding:3px 9px;">기획 06 · 백스테이지</span>
+            <h3>밀라노 런웨이 30초 전</h3>
+            <p>밤패드 세안 + 10초 물광 리셋 세트</p>
+          </div>
+        </div>
+
+        <div class="index-card compact" onclick="goToSlide(10)">
+          <img src="./assets/c7-cut1.jpg" alt="기획 07" />
+          <div class="index-info">
+            <span class="pill yellow" style="align-self:flex-start; font-size:11px; padding:3px 9px;">기획 07 · 10초 카운트</span>
+            <h3>맨해튼 엘리베이터 10초</h3>
+            <p>10F→1F 거울 체크, 출근·미팅 공감</p>
+          </div>
+        </div>
+
+        <div class="index-card compact" onclick="goToSlide(11)">
+          <img src="./assets/c8-cut1.jpg" alt="기획 08" />
+          <div class="index-info">
+            <span class="pill emerald" style="align-self:flex-start; font-size:11px; padding:3px 9px;">기획 08 · FOOH·테크</span>
+            <h3>150장 압축 &amp; 열화상 쿨링</h3>
+            <p>유압 프레스 훅·열화상 진정·5종 라인업</p>
           </div>
         </div>
       </div>
@@ -835,7 +870,7 @@
           <div style="display:flex; gap:8px; align-items:center;">
             <button class="btn" onclick="openScript('c1')">대본 전문 보기</button>
             <button class="btn dark" onclick="copyScript('c1', this)">대본 복사</button>
-            <span class="s-idx">05 / 12</span>
+            <span class="s-idx">05 / 15</span>
           </div>
         </div>
         <h2 class="h2">〈1997 뉴욕 소호: 그 사람 만나기 딱 10초 전〉</h2>
@@ -899,7 +934,7 @@
           <div style="display:flex; gap:8px; align-items:center;">
             <button class="btn" onclick="openScript('c2')">대본 전문 보기</button>
             <button class="btn dark" onclick="copyScript('c2', this)">대본 복사</button>
-            <span class="s-idx">06 / 12</span>
+            <span class="s-idx">06 / 15</span>
           </div>
         </div>
         <h2 class="h2">〈1998 플라자 호텔 대기실: 본식 입장 1분 전〉</h2>
@@ -963,7 +998,7 @@
           <div style="display:flex; gap:8px; align-items:center;">
             <button class="btn" onclick="openScript('air')">대본 전문 보기</button>
             <button class="btn dark" onclick="copyScript('air', this)">대본 복사</button>
-            <span class="s-idx">07 / 12</span>
+            <span class="s-idx">07 / 15</span>
           </div>
         </div>
         <h2 class="h2">〈1998 심야 퍼스트클래스: 건조한 기내 안 10초의 반칙〉</h2>
@@ -1027,7 +1062,7 @@
           <div style="display:flex; gap:8px; align-items:center;">
             <button class="btn" onclick="openScript('c3')">대본 전문 보기</button>
             <button class="btn dark" onclick="copyScript('c3', this)">대본 복사</button>
-            <span class="s-idx">08 / 12</span>
+            <span class="s-idx">08 / 15</span>
           </div>
         </div>
         <h2 class="h2">〈1996 맨해튼 모닝: 시트팩 150장과의 쿨한 결별〉</h2>
@@ -1091,7 +1126,7 @@
           <div style="display:flex; gap:8px; align-items:center;">
             <button class="btn" onclick="openScript('c4')">대본 전문 보기</button>
             <button class="btn dark" onclick="copyScript('c4', this)">대본 복사</button>
-            <span class="s-idx">09 / 12</span>
+            <span class="s-idx">09 / 15</span>
           </div>
         </div>
         <h2 class="h2">〈2.04µm 초미세 마이크로 버블 &amp; 원패드 리추얼〉</h2>
@@ -1144,18 +1179,210 @@
       </div>
     </section>
 
-    <!-- ==================== SLIDE 10: 메타 릴스 광고 레퍼런스 ==================== -->
-    <section class="slide" data-title="10 릴스레퍼런스">
+    <!-- ==================== SLIDE 10: 기획 06 (밀라노 백스테이지) ==================== -->
+    <section class="slide" data-title="10 기획06 백스테이지">
+      <div class="head">
+        <div class="head-top">
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span class="pill violet">기획 06 · 90s BACKSTAGE DRAMA</span>
+            <span class="pill">밤패드(지우기) + 에어버블(채우기) 세트 직결</span>
+          </div>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <button class="btn" onclick="openScript('c6')">대본 전문 보기</button>
+            <button class="btn dark" onclick="copyScript('c6', this)">대본 복사</button>
+            <span class="s-idx">10 / 15</span>
+          </div>
+        </div>
+        <h2 class="h2">〈1997 밀라노 백스테이지: 다음 런웨이까지 남은 시간 30초〉</h2>
+      </div>
+
+      <div class="cut-grid">
+        <div class="cut-card is-hook">
+          <div class="cut-top"><span>CUT 01 · 3초 후킹</span><span>0~3s</span></div>
+          <div class="cut-photo" onclick="openLb('./assets/c6-cut1.jpg', '기획 06 · CUT 01 — 다음 쇼 30초 전 진한 런웨이 메이크업 위기')">
+            <img src="./assets/c6-cut1.jpg" alt="c6-1" />
+          </div>
+          <div class="cut-desc">
+            <div class="cut-copy">“다음 런웨이 30초 전, 짙은 화장을 다 지워야 한다.”</div>
+            <div class="cut-sub">스모키 무대 화장을 급하게 지우고 베어 글로우로 전환해야 하는 백스테이지 위기</div>
+          </div>
+        </div>
+
+        <div class="cut-card">
+          <div class="cut-top"><span>CUT 02 · 밤패드 올오프</span><span>3~8s</span></div>
+          <div class="cut-photo" onclick="openLb('./assets/c6-cut2.jpg', '기획 06 · CUT 02 — 멜팅 밤패드 1장 원패드 클렌징')">
+            <img src="./assets/c6-cut2.jpg" alt="c6-2" />
+          </div>
+          <div class="cut-desc">
+            <div class="cut-copy">Step 1. 멜팅 밤패드 1장 원패드 올오프</div>
+            <div class="cut-sub">세면대 없이 순면 밤패드 단 한 장으로 진한 메이크업을 싹 녹여내는 컷</div>
+          </div>
+        </div>
+
+        <div class="cut-card">
+          <div class="cut-top"><span>CUT 03 · 10초 속광 리셋</span><span>8~14s</span></div>
+          <div class="cut-photo" onclick="openLb('./assets/c6-cut3.jpg', '기획 06 · CUT 03 — 에메랄드 보틀 10초 노워시 속광 리셋')">
+            <img src="./assets/c6-cut3.jpg" alt="c6-3" />
+          </div>
+          <div class="cut-desc">
+            <div class="cut-copy">Step 2. 10초 노워시 에어버블 속광 리셋</div>
+            <div class="cut-sub">에메랄드 보틀 버블을 두드리자 붉은기 진정과 함께 유리알 베이스 완성</div>
+          </div>
+        </div>
+
+        <div class="cut-card">
+          <div class="cut-top"><span>CUT 04 · 런웨이 출격</span><span>14~20s</span></div>
+          <div class="cut-photo" onclick="openLb('./assets/c6-cut4.jpg', '기획 06 · CUT 04 — 플래시 세례 속 무결점 베어 글로우 출격')">
+            <img src="./assets/c6-cut4.jpg" alt="c6-4" />
+          </div>
+          <div class="cut-desc">
+            <div class="cut-copy">1장으로 지우고 10초 만에 런웨이 출격</div>
+            <div class="cut-sub">플래시 세례 속 빛나는 베어 글로우 &amp; 밤패드 본품 무료 증정 오퍼</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 11: 기획 07 (맨해튼 엘리베이터 10초) ==================== -->
+    <section class="slide" data-title="11 기획07 엘리베이터">
+      <div class="head">
+        <div class="head-top">
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span class="pill yellow">기획 07 · 90s ELEVATOR COUNTDOWN</span>
+            <span class="pill">10F→1F 실시간 10초 · 직장인·미팅 직전 공감</span>
+          </div>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <button class="btn" onclick="openScript('c7')">대본 전문 보기</button>
+            <button class="btn dark" onclick="copyScript('c7', this)">대본 복사</button>
+            <span class="s-idx">11 / 15</span>
+          </div>
+        </div>
+        <h2 class="h2">〈1997 맨해튼 로비행 엘리베이터: 10층에서 1층까지 딱 10초〉</h2>
+      </div>
+
+      <div class="cut-grid">
+        <div class="cut-card is-hook">
+          <div class="cut-top"><span>CUT 01 · 3초 후킹</span><span>0~3s</span></div>
+          <div class="cut-photo" onclick="openLb('./assets/c7-cut1.jpg', '기획 07 · CUT 01 — 10층 엘리베이터 거울 속 들뜬 볼 발견')">
+            <img src="./assets/c7-cut1.jpg" alt="c7-1" />
+          </div>
+          <div class="cut-desc">
+            <div class="cut-copy">“10층에서 1층 내려가는 사이, 들뜬 볼 발견.”</div>
+            <div class="cut-sub">황동 엘리베이터 거울에 비친 건조하고 뜬 각질, 이미 로비에 도착한 상대</div>
+          </div>
+        </div>
+
+        <div class="cut-card">
+          <div class="cut-top"><span>CUT 02 · 가방 속 분사</span><span>3~8s</span></div>
+          <div class="cut-photo" onclick="openLb('./assets/c7-cut2.jpg', '기획 07 · CUT 02 — 숄더백에서 에메랄드 보틀 꺼내 한 번 펌핑')">
+            <img src="./assets/c7-cut2.jpg" alt="c7-2" />
+          </div>
+          <div class="cut-desc">
+            <div class="cut-copy">가방 속 80ml 보틀, 한 번 펌핑</div>
+            <div class="cut-sub">90s 숄더백에서 에메랄드 보틀을 꺼내 사선 노즐로 생크림 버블 분사</div>
+          </div>
+        </div>
+
+        <div class="cut-card">
+          <div class="cut-top"><span>CUT 03 · 3층 통과 흡수</span><span>8~14s</span></div>
+          <div class="cut-photo" onclick="openLb('./assets/c7-cut3.jpg', '기획 07 · CUT 03 — 물 없이 10초 만에 투명 윤광 밀착')">
+            <img src="./assets/c7-cut3.jpg" alt="c7-3" />
+          </div>
+          <div class="cut-desc">
+            <div class="cut-copy">3층 통과 — 물 없이 10초 만에 461% 흡수</div>
+            <div class="cut-sub">거울을 보며 손끝으로 톡톡 두드리자 뭉침·밀림 없이 투명 윤광 밀착</div>
+          </div>
+        </div>
+
+        <div class="cut-card">
+          <div class="cut-top"><span>CUT 04 · 1층 로비 등장</span><span>14~20s</span></div>
+          <div class="cut-photo" onclick="openLb('./assets/c7-cut4.jpg', '기획 07 · CUT 04 — 1층 문 열리자 빛나는 로비 등장 & 오퍼')">
+            <img src="./assets/c7-cut4.jpg" alt="c7-4" />
+          </div>
+          <div class="cut-desc">
+            <div class="cut-copy">1층 ‘띵—’ 문 열릴 땐 이미 완벽한 피부</div>
+            <div class="cut-sub">햇살 가득한 로비로 당당히 나서는 순간 &amp; 1회 200원 · 최대 46% 혜택</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 12: 기획 08 (FOOH 압축 & 열화상 5종 테크) ==================== -->
+    <section class="slide" data-title="12 기획08 FOOH·열화상">
+      <div class="head">
+        <div class="head-top">
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span class="pill emerald">기획 08 · FOOH &amp; CLINICAL TECH</span>
+            <span class="pill">압도적 시각 증명 · 고민별 5종(남성 포함) 골라담기</span>
+          </div>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <button class="btn" onclick="openScript('c8')">대본 전문 보기</button>
+            <button class="btn dark" onclick="copyScript('c8', this)">대본 복사</button>
+            <span class="s-idx">12 / 15</span>
+          </div>
+        </div>
+        <h2 class="h2">〈150장의 압축 &amp; 10초 열화상 쿨링: 눈으로 믿는 에어버블 테크〉</h2>
+      </div>
+
+      <div class="cut-grid">
+        <div class="cut-card is-hook">
+          <div class="cut-top"><span>CUT 01 · 3초 후킹</span><span>0~3s</span></div>
+          <div class="cut-photo" onclick="openLb('./assets/c8-cut1.jpg', '기획 08 · CUT 01 — 시트팩 150장을 한 병으로 압축한 유압 프레스 FOOH')">
+            <img src="./assets/c8-cut1.jpg" alt="c8-1" />
+          </div>
+          <div class="cut-desc">
+            <div class="cut-copy">시트팩 150장을 압축하면 딱 이 한 병</div>
+            <div class="cut-sub">크롬 유압 프레스가 축축한 시트팩 150장을 눌러 80ml 에메랄드 보틀로 압축</div>
+          </div>
+        </div>
+
+        <div class="cut-card">
+          <div class="cut-top"><span>CUT 02 · 열화상 진정</span><span>3~8s</span></div>
+          <div class="cut-photo" onclick="openLb('./assets/c8-cut2.jpg', '기획 08 · CUT 02 — 열화상 카메라 뷰파인더 10초 쿨링 실증')">
+            <img src="./assets/c8-cut2.jpg" alt="c8-2" />
+          </div>
+          <div class="cut-desc">
+            <div class="cut-copy">열화상 실증 — 달아오른 볼 10초 진정</div>
+            <div class="cut-sub">붉게 오른 피부 열감이 버블이 닿자마자 에메랄드 블루로 급속 쿨링</div>
+          </div>
+        </div>
+
+        <div class="cut-card">
+          <div class="cut-top"><span>CUT 03 · 2.04µm 흡수</span><span>8~14s</span></div>
+          <div class="cut-photo" onclick="openLb('./assets/c8-cut3.jpg', '기획 08 · CUT 03 — 2.04µm 초미세 공기압축 버블 장벽 흡수')">
+            <img src="./assets/c8-cut3.jpg" alt="c8-3" />
+          </div>
+          <div class="cut-desc">
+            <div class="cut-copy">2.04µm 초미세 공기압축 461% 흡수</div>
+            <div class="cut-sub">모공보다 작은 미세 거품이 물방울 맺힘 없이 탄탄한 장벽 수분막으로 전환</div>
+          </div>
+        </div>
+
+        <div class="cut-card">
+          <div class="cut-top"><span>CUT 04 · 5종 골라담기</span><span>14~20s</span></div>
+          <div class="cut-photo" onclick="openLb('./assets/c8-cut4.jpg', '기획 08 · CUT 04 — 고민별 5종 풀라인업 & 실버파우치 단상')">
+            <img src="./assets/c8-cut4.jpg" alt="c8-4" />
+          </div>
+          <div class="cut-desc">
+            <div class="cut-copy">탄력·미백·진정·수분·남성 5종 골라담기</div>
+            <div class="cut-sub">커플·가족 맞춤 5종 라인업 + 4개입 실버파우치 &amp; 밤패드 최대 3개 증정</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 13: 메타 릴스 광고 레퍼런스 ==================== -->
+    <section class="slide" data-title="13 릴스레퍼런스">
       <div class="head">
         <div class="head-top">
           <span class="pill yellow">META REELS AD MOCKUPS · 9:16 실집행 화면 레퍼런스</span>
-          <span class="s-idx">10 / 12</span>
+          <span class="s-idx">13 / 15</span>
         </div>
-        <h2 class="h2">메타 릴스(9:16) 실제 집행 화면 레퍼런스 3종</h2>
+        <h2 class="h2">메타 릴스(9:16) 실제 집행 화면 레퍼런스 4종</h2>
         <p class="lead">상·하단 UI 가림 영역을 피해 <strong>첫 3초 훅 카피와 행동 유도(CTA) 버튼</strong>이 한눈에 들어오도록 설계한 가이드입니다.</p>
       </div>
 
-      <div class="grid-3" style="flex:1; align-items:center;">
+      <div class="reels-grid-4">
         <div class="reels-phone">
           <div class="reels-screen" onclick="openLb('./assets/air-cut3.jpg', '릴스 광고 레퍼런스 01 — 심야 퍼스트클래스 기내 편')">
             <img src="./assets/air-cut3.jpg" alt="Reels 1" />
@@ -1189,13 +1416,29 @@
         </div>
 
         <div class="reels-phone">
-          <div class="reels-screen" onclick="openLb('./assets/c4-cut1.jpg', '릴스 광고 레퍼런스 03 — 2.04µm 마이크로 버블 씨즐 편')">
-            <img src="./assets/c4-cut1.jpg" alt="Reels 3" />
+          <div class="reels-screen" onclick="openLb('./assets/c7-cut3.jpg', '릴스 광고 레퍼런스 03 — 엘리베이터 10F→1F 10초 카운트다운 편')">
+            <img src="./assets/c7-cut3.jpg" alt="Reels 3" />
             <div class="reels-shade-top"></div>
             <div class="reels-shade-bot"></div>
             <div class="reels-top-copy">
-              <span class="reels-chip">특허 Air Bubble CDS™</span>
-              <div class="reels-headline">세수 없이 10초 만에<br/>461% 스며드는 생크림 팩</div>
+              <span class="reels-chip">10층 → 1층 실시간 10초</span>
+              <div class="reels-headline">엘리베이터 거울 보고 놀랐을 때<br/>씻지 않는 10초 응급 팩</div>
+            </div>
+            <div class="reels-bot-ui">
+              <div class="ig-acc"><span class="ig-ava">G</span><span>gash.official.kr · 광고</span></div>
+              <div class="ig-cta"><span>외출 직전 화잘먹 루틴</span><span>지금 구매하기 →</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reels-phone">
+          <div class="reels-screen" onclick="openLb('./assets/c8-cut1.jpg', '릴스 광고 레퍼런스 04 — FOOH 150장 압축 테크 편')">
+            <img src="./assets/c8-cut1.jpg" alt="Reels 4" />
+            <div class="reels-shade-top"></div>
+            <div class="reels-shade-bot"></div>
+            <div class="reels-top-copy">
+              <span class="reels-chip">시트팩 150장 = 1병</span>
+              <div class="reels-headline">아직도 20분씩 붙이세요?<br/>150장을 압축한 10초 버블</div>
             </div>
             <div class="reels-bot-ui">
               <div class="ig-acc"><span class="ig-ava">G</span><span>gash.official.kr · 광고</span></div>
@@ -1206,12 +1449,12 @@
       </div>
     </section>
 
-    <!-- ==================== SLIDE 11: 메타 피드 광고 레퍼런스 ==================== -->
-    <section class="slide" data-title="11 피드레퍼런스">
+    <!-- ==================== SLIDE 14: 메타 피드 광고 레퍼런스 ==================== -->
+    <section class="slide" data-title="14 피드레퍼런스">
       <div class="head">
         <div class="head-top">
           <span class="pill emerald">META FEED AD MOCKUPS · 4:5 정지화 배너 레퍼런스</span>
-          <span class="s-idx">11 / 12</span>
+          <span class="s-idx">14 / 15</span>
         </div>
         <h2 class="h2">핀터레스트 검증 구도를 적용한 메타 피드(4:5) 정지화 레퍼런스 3종</h2>
         <p class="lead">릴스 영상과 함께 노출되어 <strong>핵심 스펙(461%·PDRN·1회 200원)과 사은 혜택을 직관적으로 각인</strong>시키는 배너입니다.</p>
@@ -1286,14 +1529,14 @@
       </div>
     </section>
 
-    <!-- ==================== SLIDE 12: 전체 20컷 아카이브 ==================== -->
-    <section class="slide dark" data-title="12 전체20컷보드">
+    <!-- ==================== SLIDE 15: 전체 32컷 아카이브 ==================== -->
+    <section class="slide dark" data-title="15 전체32컷보드">
       <div class="head">
         <div class="head-top">
-          <span class="pill yellow">ALL 20 STORYBOARD CUTS · SEEDREAM 5.0 PRO ARCHIVE</span>
-          <span class="s-idx" style="color:rgba(255,255,255,0.45);">12 / 12</span>
+          <span class="pill yellow">ALL 32 STORYBOARD CUTS · SEEDREAM 5.0 PRO ARCHIVE</span>
+          <span class="s-idx" style="color:rgba(255,255,255,0.45);">15 / 15</span>
         </div>
-        <h2 class="h2" style="color:#ffffff;">5대 기획 × 4컷(총 20컷) 마스터 키컷 아카이브</h2>
+        <h2 class="h2" style="color:#ffffff;">8대 기획 × 4컷(총 32컷) 마스터 키컷 아카이브</h2>
         <p class="lead">모든 썸네일을 클릭하면 2K 고해상도 원본으로 확대 확인하실 수 있습니다.</p>
       </div>
 
@@ -1318,6 +1561,18 @@
         <div class="contact-item" onclick="openLb('./assets/c4-cut2.jpg', '05 씨즐 · Cut 2')"><img src="./assets/c4-cut2.jpg" alt=""/></div>
         <div class="contact-item" onclick="openLb('./assets/c4-cut3.jpg', '05 씨즐 · Cut 3')"><img src="./assets/c4-cut3.jpg" alt=""/></div>
         <div class="contact-item" onclick="openLb('./assets/c4-cut4.jpg', '05 씨즐 · Cut 4')"><img src="./assets/c4-cut4.jpg" alt=""/></div>
+        <div class="contact-item" onclick="openLb('./assets/c6-cut1.jpg', '06 백스테이지 · Cut 1')"><img src="./assets/c6-cut1.jpg" alt=""/></div>
+        <div class="contact-item" onclick="openLb('./assets/c6-cut2.jpg', '06 백스테이지 · Cut 2')"><img src="./assets/c6-cut2.jpg" alt=""/></div>
+        <div class="contact-item" onclick="openLb('./assets/c6-cut3.jpg', '06 백스테이지 · Cut 3')"><img src="./assets/c6-cut3.jpg" alt=""/></div>
+        <div class="contact-item" onclick="openLb('./assets/c6-cut4.jpg', '06 백스테이지 · Cut 4')"><img src="./assets/c6-cut4.jpg" alt=""/></div>
+        <div class="contact-item" onclick="openLb('./assets/c7-cut1.jpg', '07 엘리베이터 · Cut 1')"><img src="./assets/c7-cut1.jpg" alt=""/></div>
+        <div class="contact-item" onclick="openLb('./assets/c7-cut2.jpg', '07 엘리베이터 · Cut 2')"><img src="./assets/c7-cut2.jpg" alt=""/></div>
+        <div class="contact-item" onclick="openLb('./assets/c7-cut3.jpg', '07 엘리베이터 · Cut 3')"><img src="./assets/c7-cut3.jpg" alt=""/></div>
+        <div class="contact-item" onclick="openLb('./assets/c7-cut4.jpg', '07 엘리베이터 · Cut 4')"><img src="./assets/c7-cut4.jpg" alt=""/></div>
+        <div class="contact-item" onclick="openLb('./assets/c8-cut1.jpg', '08 FOOH·열화상 · Cut 1')"><img src="./assets/c8-cut1.jpg" alt=""/></div>
+        <div class="contact-item" onclick="openLb('./assets/c8-cut2.jpg', '08 FOOH·열화상 · Cut 2')"><img src="./assets/c8-cut2.jpg" alt=""/></div>
+        <div class="contact-item" onclick="openLb('./assets/c8-cut3.jpg', '08 FOOH·열화상 · Cut 3')"><img src="./assets/c8-cut3.jpg" alt=""/></div>
+        <div class="contact-item" onclick="openLb('./assets/c8-cut4.jpg', '08 FOOH·열화상 · Cut 4')"><img src="./assets/c8-cut4.jpg" alt=""/></div>
       </div>
     </section>
 
@@ -1475,6 +1730,84 @@
 • 화면: 단상 위 GASH 그린 보틀, 화이트 버블 스와치, 멜팅 밤패드 본품, 실버파우치 프로모션 정물 화보.
 • 내레이션(VO): "한 장으로 지우고 10초 만에 채우다. 지금 구매 시 멜팅 밤패드 본품을 무료로 드립니다."
 • 자막: 최대 46% 할인 + 멜팅 밤패드 최대 3개 무상 증정`
+      },
+      c6: {
+        title: "기획 06 상세 대본 — 〈1997 밀라노 백스테이지: 다음 런웨이까지 남은 시간 30초〉 (20초)",
+        body: `[CUT 01 · 0.0~3.0s | 3초 후킹]
+• 화면: 1997 밀라노 패션위크 백스테이지 거울 앞. 블랙 실크 슬립 드레스를 입은 금발 슈퍼모델이 짙은 스모키 런웨이 화장을 보며 촉박하게 거울을 응시하고, 뒤로 스태프들이 분주히 오감.
+• 대사 / VO: (스태프) "30 seconds to next look!" / (VO) "다음 런웨이까지 남은 시간 30초, 화장을 싹 지우고 다시 올려야 할 때."
+• 자막: 다음 런웨이 30초 전, 짙은 화장을 다 지워야 한다.
+• 사운드: 백스테이지 무전기 잡음 + 빠른 발소리 + 심장 박동
+
+[CUT 02 · 3.0~8.0s | Step 1 밤패드 올오프]
+• 화면: 세면대로 갈 시간 없이 100% 순면 '딥클린 멜팅 밤패드' 단 한 장을 손끝에 쥐고 뺨 위 짙은 무대 메이크업을 한 번에 부드럽게 닦아내자 깨끗한 맨피부가 드러남.
+• 내레이션(VO): "물 세안할 시간 없죠. 클렌징 밤을 품은 순면 패드 한 장으로 먼저 싹 비워내고—"
+• 자막: Step 1. 멜팅 밤패드 1장 원패드 올오프 (세면대 불필요)
+• 사운드: 부드러운 순면 패드 스와이프 폴리
+
+[CUT 03 · 8.0~14.0s | Step 2 10초 속광 리셋]
+• 화면: 깨끗해진 볼 위에 에메랄드 메탈 GASH 보틀을 들고 폭신한 마이크로 버블을 가볍게 두드리자 붉은기 진정과 함께 유리알 베어 글로우가 즉시 차오름.
+• 내레이션(VO): "식물성 PDRN 에어버블을 얹으면, 10초 만에 자극 진정과 유리알 베이스 리셋 완료."
+• 자막: Step 2. 10초 노워시 에어버블 속광 리셋 · 461% 흡수
+• 사운드: 메탈 캡 '딸깍' + 무스 분사 ASMR / 90s 런웨이 하우스 비트 인
+
+[CUT 04 · 14.0~20.0s | 런웨이 출격 & 세트 오퍼]
+• 화면: 무결점 베어 글로우 피부로 어두운 벨벳 커튼을 가르고 눈부신 런웨이 카메라 플래시 세례 속으로 당당히 걸어 나가는 모델 손에 들린 에메랄드 보틀.
+• 내레이션(VO): "한 장으로 지우고 10초 만에 채우다. 지금 구매 시 멜팅 밤패드 본품을 무료로 드립니다."
+• 자막: 1장으로 지우고 10초 만에 채우다 · 밤패드 본품 최대 3개 무상 증정
+• 사운드: 벨벳 커튼 젖히는 소리 + 필름 카메라 플래시 연사`
+      },
+      c7: {
+        title: "기획 07 상세 대본 — 〈1997 맨해튼 로비행 엘리베이터: 10층에서 1층까지 딱 10초〉 (20초)",
+        body: `[CUT 01 · 0.0~3.0s | 3초 후킹]
+• 화면: 1997 맨해튼 아르데코풍 마호가니·황동 엘리베이터. 상단 아날로그 층수 계기판이 높은 층을 가리키는 가운데, 거울에 비친 건조하고 들뜬 앞볼을 만지며 난감해하는 모델.
+• 내레이션(VO): "상대는 이미 1층 로비에 도착했는데, 10층 엘리베이터 거울 속에 하얗게 들뜬 화장이 보였을 때."
+• 자막: 10층에서 1층 내려가는 사이, 들뜬 볼 발견. (로비 도착 10초 전)
+• 사운드: 엘리베이터 도어 닫히는 '쿵' 소리 + 와이어 하강음
+
+[CUT 02 · 3.0~8.0s | 가방 속 80ml 한 번 펌핑]
+• 화면: 90s 블랙 레더 숄더백 지퍼를 열고 80ml 에메랄드 메탈 GASH 보틀을 꺼내 화이트 사선 노즐을 눌러 손끝에 쫀쫀한 생크림 마이크로 버블을 짜 올림.
+• 내레이션(VO): "당황해서 물 찾지 마세요. 가방 속 80ml 이 한 병이면 좁은 엘리베이터 안에서도 충분해요."
+• 자막: 9F → 7F 통과 중 · 가방 속 80ml 에메랄드 보틀 한 번 펌핑
+• 사운드: 가죽 백 지퍼음 + 경쾌한 노즐 분사음 / 90s 시티 재즈 인
+
+[CUT 03 · 8.0~14.0s | 3층 통과 — 10초 461% 흡수]
+• 화면: 엘리베이터 거울 너머로 보이는 얼굴. 3층을 통과하며 물 없이 손끝으로 톡톡 두드리자 버블이 밀림이나 백탁 없이 투명한 유리알 윤광으로 싹 스며듦.
+• 내레이션(VO): "물도 화장솜도 필요 없어요. 1층 내려가는 단 10초 동안 461% 흡수율로 쫀쫀하게 밀착되니까."
+• 자막: 3F 통과 중 · 물 없이 10초 만에 461% 흡수 (밀림 ZERO)
+• 사운드: 미세 버블 흡수 폴리 + 부드러운 층수 통과 틱음
+
+[CUT 04 · 14.0~20.0s | 1층 '띵—' 완벽한 등장]
+• 화면: 1층 로비 도착과 함께 황동 문이 열리고, 따스한 오후 햇살 속 완벽한 광채 피부와 여유로운 미소로 로비로 걸어 나오며 에메랄드 보틀을 쥔 컷.
+• 내레이션(VO): "1층 문이 열릴 땐 이미 완벽한 화잘먹 피부. 1회 200원으로 매일 응급 리페어 하세요."
+• 자막: 1층 도착 · 1병 150회(1회 200원) · 최대 46% + 밤패드 증정
+• 사운드: 엘리베이터 1층 도착 '띵—' 차임벨 + 문 열리는 소리`
+      },
+      c8: {
+        title: "기획 08 상세 대본 — 〈150장의 압축 & 10초 열화상 쿨링: 눈으로 믿는 에어버블 테크〉 (20초)",
+        body: `[CUT 01 · 0.0~3.0s | 3초 FOOH 후킹]
+• 화면: 하이엔드 실버 크롬 연구실. 거대한 유압 프레스기 사이로 켜켜이 쌓인 축축한 시트팩 150장 더미가 강하게 압축되면서 중앙에서 단 한 병의 에메랄드 메탈 GASH 보틀이 탄생하는 FOOH 비주얼.
+• 내레이션(VO): "번거롭고 축축한 20분짜리 시트팩 150장을 딱 한 병으로 압축했습니다."
+• 자막: 시트팩 150장을 압축하면 딱 이 80ml 한 병 (1회 200원)
+• 사운드: 묵직한 유압 프레스 '쉬이익-쿵!' 사운드 + 메탈릭 공명음
+
+[CUT 02 · 3.0~8.0s | 열화상 카메라 10초 진정 실증]
+• 화면: 볼 앞에 놓인 광학 열화상 뷰파인더. 붉은색·오렌지색으로 달아오른 자극 부위에 하얀 마이크로 버블이 닿자마자 순식간에 차가운 에메랄드 블루 톤으로 쿨링·진정되는 시각 증명.
+• 내레이션(VO): "눈으로 직접 확인하세요. 붉게 달아오른 자극 부위도 식물성 PDRN + EGF 버블이 닿는 순간 급속 진정."
+• 자막: 열화상 실증 — 달아오른 자극·붉은기 10초 급속 진정
+• 사운드: 첨단 스캐너 '삐빅' 비프음 + 쿨링 수분 멜팅 사운드
+
+[CUT 03 · 8.0~14.0s | 2.04µm 공기압축 461% 흡수 매크로]
+• 화면: 초근접 매크로 샷. 에메랄드 빛깔 위로 솟아오른 2.04µm 초미세 생크림 거품과 부유하는 미세 공기 방울들이 피부 장벽에 눈 녹듯 스며드는 텍스처 쾌감.
+• 내레이션(VO): "모공보다 작은 2.04마이크로미터 공기압축 버블이 461% 흡수율로 10초 만에 장벽을 채웁니다."
+• 자막: 특허 Air Bubble CDS™ 2.04µm · 흡수율 461% 노워시 팩
+• 사운드: 고밀도 탄산 폼 마이크로 크랙 ASMR
+
+[CUT 04 · 14.0~20.0s | 고민별 5종 풀라인업 골라담기]
+• 화면: 크롬·트래버틴 다단 단상 위 정중앙의 그린(진정) 보틀을 필두로 실버(수분)·로즈(탄력)·라벤더(미백)·매트블랙(남성 MARK5) 5종 보틀과 버블 스와치, 실버파우치가 도열한 화보.
+• 내레이션(VO): "진정부터 수분·탄력·미백·남성용까지 5종 골라담기. 지금 실버파우치와 밤패드까지 전부 챙기세요."
+• 자막: 5종 자유 골라담기 최대 46%↓ · 4개입 실버파우치 & 밤패드 증정
+• 사운드: 청량한 하이엔드 신스 엔딩 코드`
       }
     };
 
