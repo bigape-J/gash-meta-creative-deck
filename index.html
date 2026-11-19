@@ -3,933 +3,1568 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GEAR BY GASH × META AD CREATIVE DECK (소재 기획 마스터본)</title>
-  <meta name="description" content="기어바이가쉬(GEAR BY GASH) 메타 광고 소재 마스터 기획서 — 3초 후킹 · 4대 크리에이티브 트랙 · Track A 초밀도 대본 · AI 키컷" />
+  <title>GEAR BY GASH × META AD CREATIVE DECK</title>
+  <meta name="description" content="기어바이가쉬(GEAR BY GASH) 메타 광고 크리에이티브 마스터 기획서 — 90s 시네마틱 · 4컷 스토리보드 · 메타 광고 레퍼런스 · Seedream 5.0 Pro" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="GEAR BY GASH × META AD CREATIVE DECK" />
-  <meta property="og:description" content="첫 3초 후킹으로 멈추고 10초 제형 실증으로 구매를 터뜨리는 기어바이가쉬 메타 소재 기획서" />
+  <meta property="og:description" content="첫 3초 후킹과 10초 제형 실증으로 CTR·ROAS를 극대화하는 기어바이가쉬 메타 광고 소재 기획서" />
   <meta property="og:image" content="https://bigape-j.github.io/gash-meta-creative-deck/assets/og-cover.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
   <style>
     :root {
-      --bg-app: #f8f8f8;
+      --font-sans: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", sans-serif;
+      --bg-app: #f5f5f7;
       --bg-canvas: #ffffff;
-      --surface-bento: #f2f1f3;
-      --border-hairline: #e5e4e7;
-      --ink-primary: #19171c;
-      --ink-violet-dark: #17082c;
-      --ink-secondary: #6e6e73;
-      --ink-muted: #97979b;
+      --surface-bento: #f2f1f4;
+      --surface-soft: #f8f8fa;
+      --border-hairline: #e4e3e8;
+      --ink-primary: #17161a;
+      --ink-secondary: #64636a;
+      --ink-muted: #929199;
       --accent-violet: #b593ff;
       --accent-violet-soft: #f2ecfd;
       --accent-yellow: #f5ff63;
       --accent-cyan: #01b2fd;
       --accent-cyan-soft: #e6f4ff;
-      --gash-emerald: #0e7c6b;
-      --gash-emerald-soft: #e5f5f2;
+      --gash-emerald: #0d7a69;
+      --gash-emerald-soft: #e4f4f1;
       --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-sans);
+    }
 
-    body {
+    html, body {
       background: var(--bg-app);
       color: var(--ink-primary);
-      font-family: "Pretendard", "Inter", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      font-family: var(--font-sans);
       -webkit-font-smoothing: antialiased;
-      letter-spacing: -0.02em;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      word-break: keep-all;
+      letter-spacing: -0.022em;
+    }
+
+    body {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 16px 20px 44px;
+      padding: 16px 20px 48px;
     }
 
-    .deck-topbar {
+    button, pre, code, table, th, td, span, div {
+      font-family: var(--font-sans);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Top Floating Jitter Nav Bar */
+    .topbar {
       position: sticky;
       top: 12px;
-      z-index: 100;
+      z-index: 120;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
       width: 100%;
-      max-width: 1280px;
-      background: rgba(255, 255, 255, 0.96);
+      max-width: 1320px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--border-hairline);
       border-radius: 999px;
       padding: 8px 14px 8px 20px;
-      margin-bottom: 16px;
-      box-shadow: 0 10px 22px rgba(25, 23, 28, 0.05), 0 2px 6px rgba(25, 23, 28, 0.04);
+      margin-bottom: 18px;
+      box-shadow: 0 10px 26px rgba(23, 22, 26, 0.05), 0 2px 6px rgba(23, 22, 26, 0.03);
     }
 
-    .brand-cluster { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 13.5px; letter-spacing: -0.03em; }
-    .brand-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gash-emerald); display: inline-block; }
-    .nav-controls { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: -0.03em;
+    }
 
-    .pill-btn {
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gash-emerald);
+      display: inline-block;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    .btn-pill {
       appearance: none;
       border: 1px solid var(--border-hairline);
-      background: var(--bg-canvas);
+      background: #ffffff;
       color: var(--ink-primary);
-      font-family: inherit;
-      font-size: 12px;
+      font-size: 12.5px;
       font-weight: 700;
-      padding: 7px 14px;
+      padding: 7px 15px;
       border-radius: 999px;
       cursor: pointer;
       transition: transform 0.2s var(--ease-spring), background-color 0.15s ease;
     }
-    .pill-btn:hover { transform: scale(1.04); background: var(--surface-bento); }
-    .pill-btn:active { transform: scale(0.96); }
-    .pill-btn.dark { background: var(--ink-primary); color: #ffffff; border-color: var(--ink-primary); }
-    .pill-btn.violet { background: var(--accent-violet); color: var(--ink-primary); border-color: var(--accent-violet); }
+    .btn-pill:hover { transform: scale(1.03); background: var(--surface-bento); }
+    .btn-pill:active { transform: scale(0.97); }
+    .btn-pill.dark { background: var(--ink-primary); color: #ffffff; border-color: var(--ink-primary); }
+    .btn-pill.violet { background: var(--accent-violet); color: var(--ink-primary); border-color: var(--accent-violet); }
+    .btn-pill.yellow { background: var(--accent-yellow); color: var(--ink-primary); border-color: #dce649; }
 
-    .slide-counter { font-family: ui-monospace, monospace; font-size: 12px; font-weight: 800; padding: 6px 12px; border-radius: 999px; background: var(--surface-bento); }
+    .counter-pill {
+      font-size: 12.5px;
+      font-weight: 800;
+      padding: 6px 13px;
+      border-radius: 999px;
+      background: var(--surface-bento);
+      color: var(--ink-primary);
+    }
 
-    .deck-stage { width: 100%; max-width: 1280px; }
+    /* Main Slide Stage */
+    .stage {
+      width: 100%;
+      max-width: 1320px;
+    }
 
     .slide {
       display: none;
       width: 100%;
-      min-height: 720px;
+      min-height: 750px;
       background: var(--bg-canvas);
       border-radius: 40px;
-      padding: 36px 44px;
+      padding: 40px 48px;
       border: 1px solid var(--border-hairline);
-      box-shadow: 0 30px 30px rgba(25, 23, 28, 0.04), 0 12px 24px rgba(25, 23, 28, 0.04), 0 4px 10px rgba(25, 23, 28, 0.03);
+      box-shadow:
+        0 30px 40px rgba(23, 22, 26, 0.04),
+        0 10px 20px rgba(23, 22, 26, 0.03);
       flex-direction: column;
       justify-content: space-between;
-      gap: 16px;
+      gap: 20px;
       position: relative;
       overflow: hidden;
     }
+
     .slide.active { display: flex; }
-    body.scroll-mode .slide { display: flex !important; margin-bottom: 26px; }
-    body.scroll-mode .slide-jumper { display: none; }
-    .slide.dark-stage { background: var(--ink-primary); color: #ffffff; border-color: #2c2930; }
+    body.scroll-mode .slide { display: flex !important; margin-bottom: 28px; }
+    body.scroll-mode .jumper { display: none; }
 
-    .slide-head { display: flex; flex-direction: column; gap: 8px; }
-    .eyebrow-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+    .slide.dark-stage {
+      background: var(--ink-primary);
+      color: #ffffff;
+      border-color: #2c2a32;
+    }
 
-    .pill-tag { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 800; padding: 5px 13px; border-radius: 999px; background: var(--surface-bento); color: var(--ink-primary); }
-    .pill-tag.yellow { background: var(--accent-yellow); color: var(--ink-primary); }
-    .pill-tag.violet { background: var(--accent-violet); color: var(--ink-primary); }
-    .pill-tag.cyan { background: var(--accent-cyan); color: #ffffff; }
-    .pill-tag.dark { background: var(--ink-primary); color: #ffffff; }
-    .pill-tag.emerald { background: var(--gash-emerald); color: #ffffff; }
+    /* Header & Pills */
+    .s-head { display: flex; flex-direction: column; gap: 8px; }
+    .s-eyebrow { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
 
-    .slide-num-tag { font-family: ui-monospace, monospace; font-size: 12px; font-weight: 700; color: var(--ink-muted); }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 5px 13px;
+      border-radius: 999px;
+      background: var(--surface-bento);
+      color: var(--ink-primary);
+      letter-spacing: -0.01em;
+    }
+    .tag.yellow { background: var(--accent-yellow); color: var(--ink-primary); }
+    .tag.violet { background: var(--accent-violet); color: var(--ink-primary); }
+    .tag.cyan { background: var(--accent-cyan); color: #ffffff; }
+    .tag.dark { background: var(--ink-primary); color: #ffffff; }
+    .tag.emerald { background: var(--gash-emerald); color: #ffffff; }
 
-    h1.hero-title { font-size: 46px; font-weight: 800; line-height: 1.08; letter-spacing: -0.04em; max-width: 1080px; }
-    h2.slide-title { font-size: 29px; font-weight: 800; line-height: 1.14; letter-spacing: -0.035em; }
-    .slide-sub { font-size: 14px; color: var(--ink-secondary); line-height: 1.5; max-width: 1060px; }
-    .dark-stage .slide-sub { color: rgba(255,255,255,0.74); }
+    .s-num { font-size: 12px; font-weight: 800; color: var(--ink-muted); }
 
-    .hl-yellow { background: var(--accent-yellow); color: var(--ink-primary); padding: 1px 8px; border-radius: 8px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-    .hl-violet { background: var(--accent-violet); color: var(--ink-primary); padding: 1px 8px; border-radius: 8px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    h1.hero-h1 {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.038em;
+      max-width: 1060px;
+    }
 
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; }
-    .split-script { display: grid; grid-template-columns: 260px 1fr; gap: 18px; align-items: stretch; }
-    .split-wide { display: grid; grid-template-columns: 4.2fr 7.8fr; gap: 16px; }
+    h2.s-title {
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.16;
+      letter-spacing: -0.035em;
+    }
 
-    .bento { background: var(--surface-bento); border-radius: 26px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; }
-    .bento.violet-soft { background: var(--accent-violet-soft); color: var(--ink-violet-dark); }
+    .s-sub {
+      font-size: 14.5px;
+      color: var(--ink-secondary);
+      line-height: 1.54;
+      max-width: 1080px;
+    }
+    .dark-stage .s-sub { color: rgba(255,255,255,0.74); }
+
+    .hl-y { background: var(--accent-yellow); color: var(--ink-primary); padding: 2px 9px; border-radius: 9px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hl-v { background: var(--accent-violet); color: var(--ink-primary); padding: 2px 9px; border-radius: 9px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+
+    /* Grids & Bento */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .grid-6 { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+
+    .bento {
+      background: var(--surface-bento);
+      border-radius: 26px;
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .bento.white { background: #ffffff; border: 1px solid var(--border-hairline); }
+    .bento.violet-soft { background: var(--accent-violet-soft); color: #1b0c33; }
     .bento.cyan-soft { background: var(--accent-cyan-soft); }
     .bento.emerald-soft { background: var(--gash-emerald-soft); }
     .bento.yellow { background: var(--accent-yellow); color: var(--ink-primary); }
     .bento.dark { background: var(--ink-primary); color: #ffffff; }
-    .dark-stage .bento { background: #242129; color: #ffffff; }
-    .dark-stage .bento.violet { background: var(--accent-violet); color: var(--ink-primary); }
-    .dark-stage .bento.yellow { background: var(--accent-yellow); color: var(--ink-primary); }
 
-    .big-stat { font-size: 34px; font-weight: 800; line-height: 1.0; letter-spacing: -0.04em; }
-    .bento h3 { font-size: 16.5px; font-weight: 800; line-height: 1.25; }
-    .bento p, .bento li { font-size: 13px; line-height: 1.5; color: var(--ink-secondary); }
-    .bento.dark p, .bento.dark li, .dark-stage .bento p, .dark-stage .bento li { color: rgba(255,255,255,0.8); }
-    .bento.violet-soft p, .bento.violet-soft li { color: #3d2c57; }
-    .bento.yellow p, .bento.yellow li, .dark-stage .bento.violet p, .dark-stage .bento.violet li { color: #2b2830; }
+    .stat-xl { font-size: 36px; font-weight: 800; line-height: 1.02; letter-spacing: -0.04em; }
+    .bento h3 { font-size: 17px; font-weight: 800; line-height: 1.28; letter-spacing: -0.025em; }
+    .bento p, .bento li { font-size: 13.5px; line-height: 1.54; color: var(--ink-secondary); }
+    .bento.dark p, .bento.dark li { color: rgba(255,255,255,0.8); }
+    .bento.violet-soft p, .bento.violet-soft li { color: #3c2c56; }
+    .bento.yellow p, .bento.yellow li { color: #2b2920; }
     .bento strong { color: var(--ink-primary); font-weight: 700; }
-    .bento.dark strong, .dark-stage .bento strong { color: #ffffff; }
-    .dark-stage .bento.yellow strong, .dark-stage .bento.violet strong { color: var(--ink-primary); }
-    .bento ul { padding-left: 16px; display: flex; flex-direction: column; gap: 5px; }
+    .bento.dark strong { color: #ffffff; }
+    .bento ul { padding-left: 17px; display: flex; flex-direction: column; gap: 5px; }
 
-    .table-wrap { background: #ffffff; border: 1px solid var(--border-hairline); border-radius: 20px; overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; font-size: 12.2px; }
-    th { background: var(--surface-bento); color: var(--ink-primary); font-weight: 800; text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border-hairline); }
-    td { padding: 9px 12px; border-bottom: 1px solid var(--border-hairline); vertical-align: top; line-height: 1.46; color: var(--ink-secondary); }
+    /* Cover 4-Cut Hero Preview Strip */
+    .cover-strip {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 28px;
+      align-items: center;
+      flex: 1;
+    }
+    .cover-thumbs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .cover-thumb {
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 9 / 16;
+      border: 1px solid var(--border-hairline);
+      box-shadow: 0 14px 28px rgba(23,22,26,0.10);
+      cursor: zoom-in;
+      transition: transform 0.25s var(--ease-spring);
+    }
+    .cover-thumb:hover { transform: translateY(-5px) scale(1.02); }
+    .cover-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* 4-Cut Storyboard Filmstrip Cards (Slides 05~08) */
+    .filmstrip-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .shot-card {
+      background: var(--surface-soft);
+      border: 1px solid var(--border-hairline);
+      border-radius: 22px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.22s var(--ease-spring), box-shadow 0.22s ease;
+    }
+    .shot-card.hook-card {
+      border: 2px solid var(--ink-primary);
+      background: #fffef6;
+    }
+    .shot-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 30px rgba(23, 22, 26, 0.08);
+    }
+    .shot-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 14.2;
+      overflow: hidden;
+      background: #1a191d;
+      cursor: zoom-in;
+    }
+    .shot-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+    .shot-img-wrap:hover img { transform: scale(1.04); }
+    .shot-pill-top {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
+    }
+    .shot-step-badge {
+      background: rgba(23, 22, 26, 0.85);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 999px;
+      backdrop-filter: blur(6px);
+    }
+    .shot-step-badge.hook {
+      background: var(--accent-yellow);
+      color: var(--ink-primary);
+    }
+    .shot-caption-overlay {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      background: rgba(23, 22, 26, 0.78);
+      backdrop-filter: blur(6px);
+      color: #ffffff;
+      padding: 7px 10px;
+      border-radius: 12px;
+      font-size: 11.5px;
+      font-weight: 700;
+      line-height: 1.35;
+      pointer-events: none;
+    }
+    .shot-body {
+      padding: 12px 14px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex: 1;
+    }
+    .shot-body .vo {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--ink-primary);
+      line-height: 1.42;
+    }
+    .shot-body .dir {
+      font-size: 12px;
+      color: var(--ink-secondary);
+      line-height: 1.45;
+    }
+
+    /* Script Summary Bar under 4-Cut Strip */
+    .script-bar {
+      background: var(--surface-bento);
+      border-radius: 20px;
+      padding: 13px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+
+    /* Tables */
+    .table-wrap {
+      background: #ffffff;
+      border: 1px solid var(--border-hairline);
+      border-radius: 22px;
+      overflow-x: auto;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th {
+      background: var(--surface-bento);
+      color: var(--ink-primary);
+      font-weight: 800;
+      text-align: left;
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+    td {
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--border-hairline);
+      vertical-align: top;
+      line-height: 1.5;
+      color: var(--ink-secondary);
+    }
     tr:last-child td { border-bottom: none; }
     td strong { color: var(--ink-primary); }
-    tr.hook-tr td { background: #fffef3; }
-    tr.demo-tr td { background: #f3fbf9; }
 
-    .keycut-card { background: var(--ink-primary); border-radius: 24px; padding: 10px; display: flex; flex-direction: column; gap: 8px; color: #ffffff; cursor: zoom-in; transition: transform 0.2s var(--ease-spring); }
-    .keycut-card:hover { transform: scale(1.015); }
-    .keycut-img { width: 100%; border-radius: 16px; object-fit: cover; aspect-ratio: 9 / 16; background: #222; }
-    .keycut-img.ratio-45 { aspect-ratio: 4 / 5; }
-    .keycut-meta { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 2px 4px; font-size: 11px; }
-
-    .v-timeline { display: grid; grid-template-columns: 3fr 8fr 4.5fr 4.5fr; gap: 10px; }
-    .v-step { border-radius: 20px; padding: 14px 15px; background: var(--surface-bento); display: flex; flex-direction: column; gap: 4px; }
+    /* Timeline Bar */
+    .v-timeline { display: grid; grid-template-columns: 3fr 8fr 4.5fr 4.5fr; gap: 12px; }
+    .v-step { border-radius: 22px; padding: 16px 18px; background: var(--surface-bento); display: flex; flex-direction: column; gap: 5px; }
     .v-step.hook { background: var(--accent-yellow); }
     .v-step.demo { background: var(--accent-cyan-soft); border: 1.5px solid var(--accent-cyan); }
     .v-step.value { background: var(--accent-violet-soft); }
     .v-step.cta { background: var(--ink-primary); color: #ffffff; }
-    .v-step .time { font-family: ui-monospace, monospace; font-size: 11.5px; font-weight: 800; }
-    .v-step .label { font-size: 14.5px; font-weight: 800; }
-    .v-step .desc { font-size: 12px; line-height: 1.45; color: var(--ink-secondary); }
+    .v-step .time { font-size: 12px; font-weight: 800; }
+    .v-step .label { font-size: 15.5px; font-weight: 800; }
+    .v-step .desc { font-size: 12.5px; line-height: 1.48; color: var(--ink-secondary); }
     .v-step.hook .desc { color: #2b2920; }
-    .v-step.cta .desc { color: rgba(255,255,255,0.8); }
+    .v-step.cta .desc { color: rgba(255,255,255,0.82); }
 
-    .cut-list { display: flex; flex-direction: column; gap: 6px; }
-    .cut-row { display: grid; grid-template-columns: 84px 1fr; gap: 10px; background: #ffffff; border: 1px solid var(--border-hairline); border-radius: 13px; padding: 8px 11px; font-size: 12px; line-height: 1.44; color: var(--ink-secondary); }
-    .cut-row.hook-row { border: 1.5px solid var(--ink-primary); background: #fffef4; }
-    .cut-row strong { color: var(--ink-primary); }
-    .cut-time { font-family: ui-monospace, monospace; font-weight: 800; font-size: 11px; color: var(--ink-primary); }
-    .hook-badge { display: inline-block; background: var(--accent-yellow); color: var(--ink-primary); font-size: 10px; font-weight: 800; padding: 1px 6px; border-radius: 999px; margin-top: 2px; }
-
-    .ad-mockup { background: #ffffff; border: 1.5px solid var(--ink-primary); border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; }
-    .ad-zone-top { background: var(--ink-primary); color: #ffffff; padding: 10px 13px; font-size: 12.5px; font-weight: 800; line-height: 1.3; }
-    .ad-zone-mid { flex: 1; padding: 12px; background: var(--surface-bento); display: flex; flex-direction: column; justify-content: center; gap: 7px; font-size: 12px; }
-    .ad-zone-bot { padding: 9px 12px; background: #ffffff; border-top: 1px solid var(--border-hairline); display: flex; align-items: center; justify-content: space-between; gap: 6px; font-size: 11px; color: var(--ink-secondary); }
-    .offer-stamp { background: var(--accent-yellow); color: var(--ink-primary); font-weight: 900; font-size: 11px; padding: 4px 8px; border-radius: 8px; white-space: nowrap; }
-
-    .slide-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 9px; border-top: 1px solid var(--border-hairline); font-size: 11.5px; color: var(--ink-muted); }
-    .dark-stage .slide-foot { border-color: #322e38; color: rgba(255,255,255,0.5); }
-
-    .slide-jumper { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; margin-top: 14px; max-width: 1280px; }
-    .jump-dot { border: 1px solid var(--border-hairline); background: #ffffff; color: var(--ink-secondary); font-size: 11px; font-weight: 700; padding: 5px 10px; border-radius: 999px; cursor: pointer; }
-    .jump-dot.active { background: var(--ink-primary); color: #ffffff; border-color: var(--ink-primary); }
-
-    .lightbox { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(15, 15, 18, 0.86); flex-direction: column; align-items: center; justify-content: center; padding: 24px; cursor: zoom-out; }
-    .lightbox.open { display: flex; }
-    .lightbox img { max-height: 82vh; max-width: 92vw; border-radius: 20px; box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
-    .lightbox-cap { margin-top: 12px; color: #ffffff; font-size: 13.5px; font-weight: 700; background: rgba(25,23,28,0.9); padding: 7px 16px; border-radius: 999px; }
-
-    @media (max-width: 980px) {
-      .slide { padding: 24px 18px; border-radius: 26px; min-height: auto; }
-      h1.hero-title { font-size: 30px; }
-      h2.slide-title { font-size: 22px; }
-      .grid-2, .grid-3, .grid-4, .split-script, .split-wide, .v-timeline { grid-template-columns: 1fr; }
+    /* ==================== REALISTIC META AD UI MOCKUPS (Slides 09 & 10) ==================== */
+    .ig-reels-phone {
+      background: #111114;
+      border-radius: 30px;
+      padding: 9px;
+      border: 2px solid #2b2a30;
+      box-shadow: 0 20px 40px rgba(23, 22, 26, 0.14);
+      display: flex;
+      flex-direction: column;
     }
+    .ig-reels-screen {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      aspect-ratio: 9 / 15.6;
+      background: #1c1b20;
+      cursor: zoom-in;
+    }
+    .ig-reels-screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .ig-reels-grad-top {
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 36%;
+      background: linear-gradient(180deg, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0) 100%);
+      pointer-events: none;
+    }
+    .ig-reels-grad-bot {
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 46%;
+      background: linear-gradient(0deg, rgba(0,0,0,0.84) 0%, rgba(0,0,0,0) 100%);
+      pointer-events: none;
+    }
+    .ig-hook-banner {
+      position: absolute;
+      top: 16px;
+      left: 14px;
+      right: 14px;
+      text-align: center;
+      pointer-events: none;
+    }
+    .ig-hook-chip {
+      display: inline-block;
+      background: var(--accent-yellow);
+      color: var(--ink-primary);
+      font-size: 10.5px;
+      font-weight: 900;
+      padding: 3px 9px;
+      border-radius: 999px;
+      margin-bottom: 5px;
+    }
+    .ig-hook-text {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.28;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.65);
+      letter-spacing: -0.03em;
+    }
+    .ig-reels-bottom {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      color: #ffffff;
+      pointer-events: none;
+    }
+    .ig-user-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11.5px;
+      font-weight: 700;
+    }
+    .ig-avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--gash-emerald);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 900;
+    }
+    .ig-spon { font-size: 10px; font-weight: 500; opacity: 0.78; display: block; }
+    .ig-caption-line { font-size: 11.5px; color: rgba(255,255,255,0.9); line-height: 1.38; }
+    .ig-cta-bar {
+      background: #ffffff;
+      color: var(--ink-primary);
+      border-radius: 10px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    /* Instagram 4:5 Feed Sponsored Post Mockup */
+    .ig-feed-card {
+      background: #ffffff;
+      border: 1px solid var(--border-hairline);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 14px 30px rgba(23, 22, 26, 0.06);
+      display: flex;
+      flex-direction: column;
+    }
+    .ig-feed-header {
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-hairline);
+      font-size: 12px;
+    }
+    .ig-feed-visual {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 4.7;
+      overflow: hidden;
+      background: #18181b;
+      cursor: zoom-in;
+    }
+    .ig-feed-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .ig-feed-overlay-top {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      background: rgba(23, 22, 26, 0.80);
+      backdrop-filter: blur(6px);
+      color: #ffffff;
+      padding: 9px 12px;
+      border-radius: 14px;
+      pointer-events: none;
+    }
+    .ig-feed-overlay-pills {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 6px;
+      pointer-events: none;
+    }
+    .callout-stack { display: flex; flex-direction: column; gap: 4px; }
+    .callout-chip {
+      background: rgba(255, 255, 255, 0.94);
+      color: var(--ink-primary);
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 4px 9px;
+      border-radius: 999px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    }
+    .ig-feed-cta {
+      background: var(--surface-soft);
+      padding: 10px 14px;
+      border-top: 1px solid var(--border-hairline);
+      border-bottom: 1px solid var(--border-hairline);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+    }
+    .ig-feed-copy {
+      padding: 10px 14px 13px;
+      font-size: 12px;
+      color: var(--ink-secondary);
+      line-height: 1.46;
+    }
+
+    /* Footer & Jumper */
+    .s-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border-hairline);
+      font-size: 11.5px;
+      color: var(--ink-muted);
+    }
+    .dark-stage .s-foot { border-color: #2e2c35; color: rgba(255,255,255,0.5); }
+
+    .jumper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 16px;
+      max-width: 1320px;
+    }
+    .j-dot {
+      border: 1px solid var(--border-hairline);
+      background: #ffffff;
+      color: var(--ink-secondary);
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .j-dot.active { background: var(--ink-primary); color: #ffffff; border-color: var(--ink-primary); }
+
+    /* Lightbox & Script Modal */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(14, 14, 18, 0.88);
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .modal-backdrop.open { display: flex; }
+    .lb-box { display: flex; flex-direction: column; align-items: center; max-width: 92vw; }
+    .lb-box img { max-height: 82vh; max-width: 90vw; border-radius: 22px; box-shadow: 0 28px 70px rgba(0,0,0,0.55); }
+    .lb-cap { margin-top: 12px; color: #ffffff; font-size: 13.5px; font-weight: 700; background: rgba(25,24,29,0.92); padding: 8px 18px; border-radius: 999px; }
+
+    .script-modal-card {
+      background: #ffffff;
+      color: var(--ink-primary);
+      border-radius: 28px;
+      max-width: 820px;
+      width: 100%;
+      max-height: 84vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+    }
+    .script-modal-head {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border-hairline);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .script-modal-body {
+      padding: 20px 24px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      font-size: 13.5px;
+      line-height: 1.68;
+      color: #26252b;
+      background: var(--surface-soft);
+    }
+
+    @media (max-width: 1040px) {
+      .slide { padding: 24px 18px; border-radius: 28px; min-height: auto; }
+      h1.hero-h1 { font-size: 31px; }
+      h2.s-title { font-size: 22px; }
+      .cover-strip, .filmstrip-4, .grid-2, .grid-3, .grid-4, .grid-6, .v-timeline { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .cover-strip, .filmstrip-4, .grid-2, .grid-3, .grid-4, .grid-6, .v-timeline { grid-template-columns: 1fr; }
+    }
+
     @media print {
       @page { size: 16in 9in landscape; margin: 0.25in; }
       body { background: #ffffff; padding: 0; }
-      .deck-topbar, .slide-jumper { display: none !important; }
+      .topbar, .jumper { display: none !important; }
       .slide { display: flex !important; page-break-after: always; break-after: page; box-shadow: none !important; min-height: 8.2in; }
     }
   </style>
 </head>
 <body>
 
-  <div class="deck-topbar">
-    <div class="brand-cluster">
+  <!-- Top Navigation -->
+  <header class="topbar">
+    <div class="brand-row">
       <span class="brand-dot"></span>
       <span>GEAR BY GASH × META AD CREATIVE DECK</span>
-      <span class="pill-tag yellow" style="font-size:10.5px; padding:3px 9px;">소재 기획 마스터본</span>
+      <span class="tag yellow" style="font-size:10.5px; padding:3px 9px;">ALL SEEDREAM 5.0 PRO · 4-CUT EDITION</span>
     </div>
-    <div class="nav-controls">
-      <button class="pill-btn" onclick="prevSlide()">← 이전</button>
-      <span class="slide-counter" id="slideCounter">01 / 13</span>
-      <button class="pill-btn" onclick="nextSlide()">다음 →</button>
-      <button class="pill-btn violet" id="modeBtn" onclick="toggleScrollMode()">전체 슬라이드 한눈에 펼치기</button>
-      <button class="pill-btn dark" onclick="window.print()">PDF / 인쇄</button>
+    <div class="nav-actions">
+      <button class="btn-pill" onclick="prevSlide()">← 이전</button>
+      <span class="counter-pill" id="slideCounter">01 / 11</span>
+      <button class="btn-pill" onclick="nextSlide()">다음 →</button>
+      <button class="btn-pill violet" id="modeBtn" onclick="toggleScrollMode()">전체 슬라이드 펼치기</button>
+      <button class="btn-pill dark" onclick="window.print()">PDF / 인쇄</button>
     </div>
-  </div>
+  </header>
 
-  <main class="deck-stage">
+  <main class="stage">
 
-    <!-- SLIDE 01 -->
+    <!-- ==================== SLIDE 01: COVER ==================== -->
     <section class="slide active" data-title="01 표지">
-      <div class="slide-head">
-        <div class="eyebrow-row">
+      <div class="s-head">
+        <div class="s-eyebrow">
           <div style="display:flex; gap:8px; flex-wrap:wrap;">
-            <span class="pill-tag yellow">META CREATIVE STRATEGY &amp; STORYBOARD</span>
-            <span class="pill-tag">PURE CREATIVE EDITION · SEEDREAM &amp; NANO BANANA 2</span>
+            <span class="tag yellow">META PERFORMANCE CREATIVE PROPOSAL</span>
+            <span class="tag">90s NYC 35mm FILM × HIGH-END COSMETIC SIZZLE</span>
           </div>
-          <span class="slide-num-tag">SLIDE 01 / 13</span>
+          <span class="s-num">SLIDE 01 / 11</span>
         </div>
       </div>
-      <div style="margin:auto 0; display:flex; flex-direction:column; gap:18px;">
-        <h1 class="hero-title">
-          첫 <span class="hl-yellow">3초 후킹</span>으로 스크롤을 멈추고,<br/>
-          <span class="hl-violet">10초 제형 실증</span>으로 구매를 터뜨리는<br/>
-          기어바이가쉬 메타 소재 기획서
-        </h1>
-        <p class="slide-sub" style="font-size:16px;">
-          대상 제품: <strong>[자극 진정] 트리플 슈퍼 리페어 80ml (그린)</strong> &amp; 에어버블 CDS™ 5종 + <strong>딥클린 멜팅 밤패드</strong> — 리서치 벤치마크 · 4대 컨셉 트랙 · Track A 풀 대본 · AI 생성 키컷 수록
-        </p>
-      </div>
-      <div class="grid-4">
-        <div class="bento emerald-soft">
-          <span class="pill-tag emerald" style="align-self:flex-start;">CORE USP</span>
-          <h3>10초 흡수 · NO-WASH</h3>
-          <p>특허 Air Bubble CDS™ <strong>흡수율 461%</strong><br/>80ml 1병 = 약 150회분 (1회 200원)</p>
-        </div>
-        <div class="bento yellow">
-          <span class="pill-tag dark" style="align-self:flex-start;">TRACK A · 90s</span>
-          <h3>90s 필름 드라마 (풀 대본)</h3>
-          <p>본식 1분 전 신부 · 심야 기내 · 백스테이지<br/><strong>초 단위 내레이션·대사 완비</strong></p>
-        </div>
-        <div class="bento cyan-soft">
-          <span class="pill-tag cyan" style="align-self:flex-start;">TRACK B · C · D</span>
-          <h3>씨즐 · 리얼 UGC · 키치 AI</h3>
-          <p>유압 프레스 압축 · 화장 들뜸 심폐소생 ·<br/>인어 오피스 브이로그 &amp; 속보 뉴스</p>
-        </div>
-        <div class="bento violet-soft">
-          <span class="pill-tag violet" style="align-self:flex-start;">VISUAL KEYCUTS</span>
-          <h3>실제 AI 키컷 8종 탑재</h3>
-          <p><strong>Seedream 5.0 Pro</strong> &amp; <strong>Nano Banana 2</strong>로 생성한 실전 레퍼런스 수록</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- SLIDE 02 -->
-    <section class="slide" data-title="02 성과근거">
-      <div class="slide-head">
-        <div class="eyebrow-row">
-          <span class="pill-tag violet">01 · BENCHMARK RESEARCH &amp; EVIDENCE</span>
-          <span class="slide-num-tag">SLIDE 02 / 13</span>
-        </div>
-        <h2 class="slide-title">소재 기획의 근거: 메타에서 실제 CTR과 판매율이 터진 뷰티·AI 공식</h2>
-        <p class="slide-sub">예쁜 브랜드 이미지 광고는 소비자가 1.7초 만에 스킵합니다. 실제 성과가 입증된 AI 뷰티 숏폼 사례와 글로벌 스킨케어 메타 데이터에 근거해 소재를 설계했습니다.</p>
-      </div>
-      <div class="grid-3" style="flex:1;">
-        <div class="bento cyan-soft">
-          <span class="pill-tag cyan" style="align-self:flex-start;">AI 뷰티 릴스 실증 사례</span>
-          <div class="big-stat">CTR +485%</div>
-          <h3>AI 상황·제형 극대화 × 실사 보틀 고정</h3>
-          <ul>
-            <li><strong>더셀랩(The Cellab):</strong> AI 모델과 제형 흡수 시각화로 제작비 90% 절감 및 기존 소재 대비 <strong>CTR 485% 상승</strong> 기록.</li>
-            <li><strong>더마픽스 &amp; 글로벌 FOOH:</strong> 비현실적 상황 연출과 거대 오브제 합성이 오가닉 공유·댓글을 폭발시켜 노출 단가 절감.</li>
-            <li><strong>적용 원칙:</strong> 초반 3초 상황극·물리 쾌감은 AI로 극대화하되, <strong>GASH 에메랄드 보틀과 피부 텍스처는 실사 레퍼런스로 고정</strong>해 신뢰 확보.</li>
-          </ul>
-        </div>
-        <div class="bento violet-soft">
-          <span class="pill-tag violet" style="align-self:flex-start;">포맷별 실측 판매 전환(ROAS) 순위</span>
-          <div class="big-stat">ROAS 3.5~5.0x</div>
-          <h3>단일 무드가 아닌 ‘4대 포맷 조합’ 필수</h3>
-          <ul>
-            <li><strong>1위 · 결점 해결 Before/After UGC:</strong> CTR 1.5~2.2% · <strong>ROAS 3.5~5.0x</strong> (실제 판매 견인 1위)</li>
-            <li><strong>2위 · 성분·수치 권위 실증:</strong> CTR 1.1~1.6% · <strong>ROAS 2.8~4.0x</strong> (<code>PDRN · 461%</code>)</li>
-            <li><strong>3위 · 제형 ASMR 매크로 씨즐:</strong> CTR 1.0~1.5% · <strong>ROAS 2.5~3.8x</strong></li>
-            <li><strong>일기·브이로그 화법:</strong> 메타 공식 기준 브랜드 일방 화법 대비 <strong>CTR 평균 +13% 우위</strong>.</li>
-          </ul>
-        </div>
-        <div class="bento yellow">
-          <span class="pill-tag dark" style="align-self:flex-start;">위닝 소재 판별 기준점</span>
-          <div class="big-stat">Hook 30%+</div>
-          <h3>초반 3초 시청률이 전체 성과를 지배</h3>
-          <ul>
-            <li>스킨케어 메타 광고 평균 3초 시청률(Hook Rate)은 20~25% 수준이나, <strong>상위 10% 매출 소재는 모두 30%+를 돌파</strong>합니다.</li>
-            <li>무음 시청 비중이 높으므로 <strong>첫 프레임부터 시각적 대비 + 고통 직격 자막 + 임상 숫자(461%·10초)</strong>가 동시에 박혀야 합니다.</li>
-            <li>지속 시청률(Hold Rate) <strong>25%+</strong> 유지를 위해 3초 직후 즉각 마이크로 버블 분사 데모로 진입합니다.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="slide-foot">
-        <span>근거 요약: 감도 높은 90s 시네마틱(선망성) + 결점 해결 UGC(전환 1위) + 제형 씨즐(직관) + 키치 AI(CTR 폭발) 4개 결이 맞물릴 때 메타 알고리즘 효율이 극대화됩니다.</span>
-        <span>RESEARCH-BACKED CREATIVE</span>
-      </div>
-    </section>
-
-    <!-- SLIDE 03 -->
-    <section class="slide" data-title="03 핀터레스트구도">
-      <div class="slide-head">
-        <div class="eyebrow-row">
-          <span class="pill-tag emerald">02 · PINTEREST COSMETICS AD VISUAL TEARDOWN</span>
-          <span class="slide-num-tag">SLIDE 03 / 13</span>
-        </div>
-        <h2 class="slide-title">핀터레스트 화장품 광고 레퍼런스 분석 → 팔리는 구도의 4대 공식</h2>
-        <p class="slide-sub">핀터레스트 내 고반응 한국 뷰티 광고 핀(SKIN1004, 라네즈, 클리오, 시카 마스크, 허스텔러 등)을 전수 분석해 도출한 <strong>20-55-25 레이아웃</strong>과 핵심 시각 요소입니다.</p>
-      </div>
-      <div class="split-wide" style="flex:1;">
-        <div class="ad-mockup">
-          <div class="ad-zone-top">
-            <span style="color:var(--accent-yellow); font-size:10.5px;">TOP 20% · HOOK ZONE (질문형 카피 or 빅 타이틀)</span>
-            <div style="font-size:15.5px; margin-top:3px;">“시트팩 20분 기다릴 시간 없다면? 바르는 10초”</div>
-          </div>
-          <div class="ad-zone-mid" style="background:linear-gradient(160deg, #e5f5f2 0%, #f2f1f3 100%);">
-            <span class="pill-tag emerald" style="align-self:flex-start;">CENTER 55% · VISUAL PROOF TRIAD</span>
-            <strong style="font-size:13.5px; color:var(--ink-primary);">[유리알 피부 모델 65%] + [에메랄드 보틀] + [생크림 버블 스미어]</strong>
-            <p style="font-size:12px; color:var(--ink-secondary);">단순 보틀 정물 단독 배치 금지 — 반드시 <strong>쫀쫀한 화이트 마이크로 버블 질감</strong>과 <strong>속광 피부 결과</strong>를 한 화면에 겹쳐 감각 전이를 유도합니다.</p>
-            <div style="display:flex; flex-wrap:wrap; gap:5px;">
-              <span class="pill-tag" style="background:#fff; border:1px solid #19171c;">──● 흡수율 461%</span>
-              <span class="pill-tag" style="background:#fff; border:1px solid #19171c;">──● CICA PDRN + EGF</span>
+      <div class="cover-strip">
+        <div style="display:flex; flex-direction:column; gap:18px;">
+          <h1 class="hero-h1">
+            첫 <span class="hl-y">3초 후킹</span>으로 멈추고,<br/>
+            <span class="hl-v">10초 버블 실증</span>으로 설득하는<br/>
+            기어바이가쉬 메타 소재 기획서
+          </h1>
+          <p class="s-sub" style="font-size:15.5px;">
+            <strong>[자극 진정] 트리플 슈퍼 리페어 80ml (그린)</strong> &amp; 에어버블 CDS™ 5종 + <strong>딥클린 멜팅 밤패드</strong><br/>
+            기획안당 4컷 스토리보드(총 16컷) + 실제 메타 릴스·피드 광고 UI 레퍼런스 전량 <strong>Seedream 5.0 Pro</strong> 제작
+          </p>
+          <div class="grid-2" style="margin-top:4px;">
+            <div class="bento emerald-soft" style="padding:15px 18px;">
+              <span class="tag emerald" style="align-self:flex-start;">PRODUCT CORE</span>
+              <h3>흡수율 461% · 10초 노워시</h3>
+              <p>시트팩 150장 분량을 80ml 한 병에 압축 (1회 약 200원)</p>
+            </div>
+            <div class="bento violet-soft" style="padding:15px 18px;">
+              <span class="tag violet" style="align-self:flex-start;">CREATIVE SYSTEM</span>
+              <h3>90s 웨스턴 필름 3종 + 씨즐 1종</h3>
+              <p>기획당 4컷 완결 콘티 · 상세 대본 · 메타 실집행 목업 수록</p>
             </div>
           </div>
-          <div class="ad-zone-bot">
-            <div><strong style="color:var(--ink-primary); display:block;">BOTTOM 25% · BENEFIT &amp; STAMP</strong><span>80ml 1병 = 150회(1회 200원) · 노워시</span></div>
-            <span class="offer-stamp">UP TO 46% + GIFT</span>
+        </div>
+
+        <div class="cover-thumbs">
+          <div class="cover-thumb" onclick="openLb('./assets/c1-cut4.jpg', 'Concept 01 · 90s 뉴욕 소호 스트리트 로맨스')">
+            <img src="./assets/c1-cut4.jpg" alt="90s NYC SoHo" />
+          </div>
+          <div class="cover-thumb" onclick="openLb('./assets/c2-cut4.jpg', 'Concept 02 · 90s 플라자 호텔 브라이덜 백스테이지')">
+            <img src="./assets/c2-cut4.jpg" alt="90s Bridal" />
+          </div>
+          <div class="cover-thumb" onclick="openLb('./assets/c3-cut1.jpg', 'Concept 03 · 90s 맨해튼 잇걸 시트팩 150장 결별 키치')">
+            <img src="./assets/c3-cut1.jpg" alt="90s Kitsch" />
+          </div>
+          <div class="cover-thumb" onclick="openLb('./assets/c4-cut1.jpg', 'Concept 04 · 2.04µm 마이크로 버블 하이엔드 씨즐')">
+            <img src="./assets/c4-cut1.jpg" alt="Luxury Sizzle" />
           </div>
         </div>
-        <div class="grid-2">
-          <div class="bento">
-            <span class="pill-tag dark" style="align-self:flex-start;">공식 ① · 제형 스미어 &amp; 5초 루프</span>
-            <h3>Texture Sizzle First</h3>
-            <p>고성과 뷰티 핀의 공통점은 <strong>크림·버블의 쫀쫀한 피크(뿔) 질감</strong>을 화면 전면에 크게 배치하거나 <code>0:05</code> 짧은 모션 루프로 만들어 시각적 촉각을 자극한다는 점입니다.</p>
-          </div>
-          <div class="bento">
-            <span class="pill-tag dark" style="align-self:flex-start;">공식 ② · 포인터 인출선 &amp; 스펙 알약</span>
-            <h3>Clinical Pointer Callout</h3>
-            <p><code>10중 히알루론산</code> 핀처럼 얇은 지시선과 캡슐 배지로 <strong>식물성 PDRN+EGF · 2.04µm 미세버블 · 비건 인증</strong>을 직관 표기할 때 더마 신뢰도가 급상승합니다.</p>
-          </div>
-          <div class="bento">
-            <span class="pill-tag dark" style="align-self:flex-start;">공식 ③ · 3분할 트리오 스트립</span>
-            <h3>Texture + Skin + Bottle Split</h3>
-            <p>시카 마스크 레퍼런스처럼 <strong>[① 버블 제형 → ② 진정된 물광 볼 → ③ 에메랄드 보틀]</strong> 3분할 구도는 설명 없이 1초 만에 인과관계를 납득시킵니다.</p>
-          </div>
-          <div class="bento">
-            <span class="pill-tag dark" style="align-self:flex-start;">공식 ④ · 모델+스와치 트라이어드</span>
-            <h3>Glass-Skin Portrait Triad</h3>
-            <p>유리알 광채 인물 클로즈업(65%) + 보틀 컷아웃 + 하단 제형 스와치 3박자 구도가 K-뷰티 피드 광고에서 가장 높은 저장률과 클릭률을 기록합니다.</p>
-          </div>
-        </div>
+      </div>
+
+      <div class="s-foot">
+        <span>우측 썸네일 및 모든 스토리보드 컷 클릭 시 2K 고해상도 원본으로 확대됩니다 · 키보드 좌우 방향키(← / →) 이동 지원</span>
+        <span>GEAR BY GASH CREATIVE DECK</span>
       </div>
     </section>
 
-    <!-- SLIDE 04 -->
-    <section class="slide" data-title="04 K뷰티역공">
-      <div class="slide-head">
-        <div class="eyebrow-row">
-          <span class="pill-tag yellow">03 · K-BEAUTY WINNERS → GASH CREATIVE ANGLE</span>
-          <span class="slide-num-tag">SLIDE 04 / 13</span>
+    <!-- ==================== SLIDE 02: EVIDENCE & RESEARCH ==================== -->
+    <section class="slide" data-title="02 기획근거">
+      <div class="s-head">
+        <div class="s-eyebrow">
+          <span class="tag violet">01 · DATA EVIDENCE &amp; K-BEAUTY BENCHMARK</span>
+          <span class="s-num">SLIDE 02 / 11</span>
         </div>
-        <h2 class="slide-title">K-뷰티 메타 탑 3사의 검증된 후킹을 흡수하고 ‘불편함’을 역공하다</h2>
-        <p class="slide-sub">달바·바이오던스·메디큐브가 이미 증명한 흥행 공식을 GASH의 독보적 소구포인트(10초 노워시 · 461% 흡수 · 1회 200원 · 밤패드 증정)로 뒤집습니다.</p>
+        <h2 class="s-title">왜 이 소재 구조가 무조건 높은 CTR과 판매 전환을 만드는가?</h2>
+        <p class="s-sub">실제 메타 뷰티 카테고리에서 검증된 AI 숏폼 성과 데이터와 K-뷰티 탑 3사(달바·바이오던스·메디큐브)의 위닝 후킹 공식을 결합했습니다.</p>
       </div>
-      <div class="table-wrap" style="flex:1;">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:17%;">레퍼런스 브랜드</th>
-              <th style="width:25%;">메타에서 검증된 흥행 후킹 코드</th>
-              <th style="width:22%;">소비자가 느끼는 기존 한계점</th>
-              <th style="width:36%;">GASH 소재 기획으로의 역공 치환 (USP 결합)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>① 달바 (d'Alba)</strong><br/>승무원 미스트 세럼</td>
-              <td>• 기내·메이크업 전 분사 슬로모션 물광<br/>• <em>“화장 다 뜨는 사람, 뿌리면 파데 안 무너짐”</em></td>
-              <td>액상 미스트 특유의 수분 증발감 및 고농축 장벽 팩 대용 한계</td>
-              <td><span class="pill-tag yellow">Track A (90s 웨딩·기내) 직결</span><br/>날아가는 물 미스트 X → <strong>공기 압축 마이크로 버블 마스크팩(흡수율 461%)</strong>이 10초 만에 밀착되어 본식·비행기에서도 안 무너지는 화잘먹 완성</td>
-            </tr>
-            <tr>
-              <td><strong>② 바이오던스</strong><br/>콜라겐 겔 마스크</td>
-              <td>• 불투명한 흰 시트가 투명해지는 물리적 흡수 쾌감<br/>• <em>“떼어내는 순간 깐달걀 되는 팩”</em></td>
-              <td><strong>20분~3시간 이상 붙이고 있어야 하는 귀찮음</strong>, 머리카락 붙음, 1장당 3~4천 원 부담</td>
-              <td><span class="pill-tag cyan">Track B (씨즐·비교) 직결</span><br/>하얀 생크림 버블이 <strong>단 10초 만에 투명 유리알 광채로 녹아드는 동일한 시각 쾌감</strong> + <strong>붙일·씻을 필요 없는 NO-WASH</strong> + <strong>1회 200원(150회분)</strong></td>
-            </tr>
-            <tr>
-              <td><strong>③ 메디큐브</strong><br/>PDRN &amp; 제로모공패드</td>
-              <td>• 피부 결점 초근접 전/후 비교<br/>• <em>“피부샵 30만 원 PDRN 관리, 집에서 끝”</em></td>
-              <td>클렌징 패드와 애프터 리페어 제품을 별도 구매해야 함</td>
-              <td><span class="pill-tag violet">Track C (리얼 문제해결 UGC) 직결</span><br/><strong>식물성 PDRN+EGF(그린) 외 5종</strong>에 워터프루프·모공(LHA)을 지우는 <strong>‘딥클린 멜팅 밤패드 본품’을 무료 증정</strong>해 <em>“1장으로 지우고 10초로 채우는”</em> 루틴 완성</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="bento emerald-soft" style="flex-direction:row; justify-content:space-between; align-items:center; padding:13px 20px;">
-        <span><strong>전 트랙 관통 핵심 메시지:</strong> <em>“20분 붙이는 시트팩 150장을 알루미늄 한 병에 압축 — 씻지 않고 10초 만에 끝내는 초격차 에어버블 마스크”</em></span>
-        <span class="pill-tag emerald">CORE COPY</span>
-      </div>
-    </section>
 
-    <!-- SLIDE 05 -->
-    <section class="slide" data-title="05 3초후킹구조">
-      <div class="slide-head">
-        <div class="eyebrow-row">
-          <span class="pill-tag cyan">04 · C-B-A 3-SECOND HOOK &amp; 20s VIDEO ARCHITECTURE</span>
-          <span class="slide-num-tag">SLIDE 05 / 13</span>
-        </div>
-        <h2 class="slide-title">모든 영상 소재에 적용되는 ‘C-B-A 3초 후킹’ &amp; 20초 전환 구조</h2>
-        <p class="slide-sub">초반 3초에 스크롤을 못 잡으면 뒤의 17초는 존재하지 않습니다. 전 트랙 영상을 아래의 초 단위 심리 설계 공식으로 제작합니다.</p>
-      </div>
       <div class="grid-3">
         <div class="bento yellow">
-          <span class="pill-tag dark" style="align-self:flex-start;">0.0s – 1.0s · C (Catch / 시각 충격)</span>
-          <h3>로고 없는 첫 프레임 기습</h3>
-          <p>예쁜 패키지 오프닝 금지. <strong>하얗게 들뜬 코 옆 각질 / 프레스에 압축되는 시트팩 150장 / 열화상 붉은 볼 / 사무실의 말라붙은 인어</strong>로 0.5초 만에 손가락을 멈춥니다.</p>
+          <span class="tag dark" style="align-self:flex-start;">근거 01 · 90s 35mm 필름의 패턴 인터럽트</span>
+          <div class="stat-xl">CTR +485%</div>
+          <h3>광고 맹시(Ad Blindness)를 깨는 시각적 이질감</h3>
+          <ul>
+            <li>기존 뷰티 메타 광고의 뻔한 화이트 스튜디오 톤은 평균 1.7초 만에 스킵됩니다.</li>
+            <li>AI 숏폼 성공 사례(더셀랩 CTR +485%)처럼 <strong>90s 뉴욕 골든아워 필름 할레이션과 하이패션 외국인 모델</strong>을 전면에 세우면 오가닉 영화 클립처럼 인식되어 <strong>3초 시청률(Hook Rate 30%+)</strong>이 폭발합니다.</li>
+          </ul>
         </div>
+
         <div class="bento cyan-soft">
-          <span class="pill-tag cyan" style="align-self:flex-start;">1.0s – 2.0s · B (Bridge / 고통 질문)</span>
-          <h3>내 얘기 같은 상황 팩폭</h3>
-          <p>무음 상태에서도 단번에 읽히는 12자 내외 상단 자막:<br/><em>“입장 1분 전 화장 다 떴을 때”</em> / <em>“아직도 시트팩 붙이고 20분 버티세요?”</em></p>
+          <span class="tag cyan" style="align-self:flex-start;">근거 02 · K-뷰티 탑3 빈틈 역공 포지셔닝</span>
+          <div class="stat-xl">20분 → 10초</div>
+          <h3>검증된 흥행 코드 흡수 + 기존 페인포인트 파괴</h3>
+          <ul>
+            <li><strong>달바(화잘먹·휴대성) 역공:</strong> 날아가는 물 미스트 대신 <strong>461% 고밀착 버블 마스크</strong>로 메이크업 밀림 제로.</li>
+            <li><strong>바이오던스(제형 쾌감) 역공:</strong> 3시간·20분 붙이는 고통 없이 <strong>단 10초 만에 투명 물광으로 녹는 쾌감 + 1회 200원</strong>.</li>
+            <li><strong>메디큐브(PDRN·패드) 역공:</strong> <strong>식물성 PDRN+EGF</strong>에 <strong>멜팅 밤패드 본품 무상 증정</strong>으로 지우고 채우는 루틴 완결.</li>
+          </ul>
         </div>
+
         <div class="bento violet-soft">
-          <span class="pill-tag violet" style="align-self:flex-start;">2.0s – 3.0s · A (Authority / 숫자)</span>
-          <h3>숫자로 3초 이탈 완벽 차단</h3>
-          <p>모호한 감성어 대신 <strong>“단 10초 노워시 · 흡수율 461% · 1회 200원”</strong> 구체적 숫자를 3초 끝에 던져 데모 구간 시청으로 강제 연결합니다.</p>
+          <span class="tag violet" style="align-self:flex-start;">근거 03 · 포맷 다각화 ROAS 공식</span>
+          <div class="stat-xl">ROAS 3.5~5.0x</div>
+          <h3>감성 후킹 × 물리 씨즐 × 실전 레퍼런스 결합</h3>
+          <ul>
+            <li>글로벌 스킨케어 메타 데이터 기준 <strong>결점 해결 데모(ROAS 3.5~5.0x)</strong>와 <strong>제형 ASMR 씨즐(ROAS 2.5~3.8x)</strong>이 실제 구매를 닫습니다.</li>
+            <li>따라서 <strong>90s 시네마틱 3종(상황 공감·키치 후킹) + 하이엔드 제형 씨즐 1종 + 핀터레스트형 4:5 피드 광고</strong>를 세트로 구성해 유입과 전환을 동시에 장악합니다.</li>
+          </ul>
         </div>
       </div>
-      <div class="v-timeline">
-        <div class="v-step hook"><span class="time">0.0s – 3.0s (3.0초)</span><span class="label">1. C-B-A 후킹</span><span class="desc">시각 위기/쾌감 + 팩폭 자막 + 초침/분사 폴리음으로 스크롤 정지</span></div>
-        <div class="v-step demo"><span class="time">3.0s – 13.0s (10.0초)</span><span class="label">2. 리얼 10초 제형·흡수 데모</span><span class="desc">에메랄드 보틀 무스 분사 → 노워시 롤링 → 유리알 속광 &amp; 밀착 실증</span></div>
-        <div class="v-step value"><span class="time">13.0s – 16.5s (3.5초)</span><span class="label">3. 페이오프 &amp; 가치 앵커</span><span class="desc">무결점 피부 결과 + 1병 150회(1회 200원) · 고민별 5종 각인</span></div>
-        <div class="v-step cta"><span class="time">16.5s – 20.0s (3.5초)</span><span class="label">4. 밤패드 증정 &amp; 오퍼</span><span class="desc">최대 46% 할인 + 멜팅 밤패드 본품 무료 증정 판넬 클로징</span></div>
-      </div>
-      <div class="slide-foot">
-        <span>※ 심의 안전 기준: 자료 내 ‘시트팩 대비 최대 3배 효과(시험 근거 확인 필요)’는 광고 거절 방지를 위해 제외하고 ‘흡수율 461%’ 및 ‘20분 부착 vs 10초 흡수’로 소구합니다.</span>
-        <span>20s GOLDEN STRUCTURE</span>
+
+      <div class="bento white" style="flex-direction:row; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; padding:15px 22px;">
+        <div>
+          <strong>핵심 소구 체크:</strong> ① 특허 Air Bubble CDS™ (흡수율 461% · 10초 흡수) · ② 세안 불필요 NO-WASH 화잘먹 · ③ 80ml 1병 = 150회(1회 200원) · ④ 그린(CICA PDRN+EGF) 외 5종 + 멜팅 밤패드 본품 증정
+        </div>
+        <span class="tag emerald">심의 안전 기준 준수</span>
       </div>
     </section>
 
-    <!-- SLIDE 06 -->
-    <section class="slide" data-title="06 4대트랙맵">
-      <div class="slide-head">
-        <div class="eyebrow-row">
-          <span class="pill-tag violet">05 · 4 CREATIVE PILLARS LINEUP</span>
-          <span class="slide-num-tag">SLIDE 06 / 13</span>
+    <!-- ==================== SLIDE 03: 3s HOOK & 4-CUT 20s STRUCTURE ==================== -->
+    <section class="slide" data-title="03 3초후킹&구조">
+      <div class="s-head">
+        <div class="s-eyebrow">
+          <span class="tag cyan">02 · C-B-A 3-SECOND HOOK &amp; 4-CUT STORYBOARD FORMULA</span>
+          <span class="s-num">SLIDE 03 / 11</span>
         </div>
-        <h2 class="slide-title">90s 시네마틱 메인 축 + 전환·CTR 극대화 4대 소재 트랙 전체 맵</h2>
-        <p class="slide-sub">4대 사용 상황(화잘먹 약속 전 / 여행·기내 / 야근·귀차니즘 / 운동·열감)과 5종 라인업을 4개의 서로 다른 크리에이티브 결로 쪼개어 기획했습니다.</p>
+        <h2 class="s-title">모든 기획안에 일관 적용되는 ‘C-B-A 3초 후킹’ &amp; 4컷(20초) 완결 공식</h2>
+        <p class="s-sub">네 가지 기획안 모두 <strong>Cut 1(3초 후킹) → Cut 2(버블 분사 씨즐) → Cut 3(10초 노워시 흡수 실증) → Cut 4(광채 페이오프 &amp; 오퍼)</strong>의 황금 4컷 호흡으로 설계했습니다.</p>
       </div>
+
+      <div class="v-timeline">
+        <div class="v-step hook">
+          <span class="time">CUT 01 · 0.0s – 3.0s (3초)</span>
+          <span class="label">1. C-B-A THUMB-STOP HOOK</span>
+          <span class="desc"><strong>[시각 충격 + 고통 질문 + 숫자]</strong><br/>사이드미러 속 들뜬 화장 / 본식 1분 전 위기 / 비닐봉투 가득 시트팩 150장 폐기 / 2.04µm 초접사 분사로 스크롤 즉각 정지.</span>
+        </div>
+        <div class="v-step demo">
+          <span class="time">CUT 02 · 3.0s – 8.0s (5초)</span>
+          <span class="label">2. EMERALD BOTTLE &amp; FOAM</span>
+          <span class="desc"><strong>[보색 각인 &amp; 제형 쾌감]</strong><br/>90s 웜톤 조명 위 보석처럼 빛나는 <strong>딥 에메랄드 메탈 GASH 보틀</strong>과 사선 노즐에서 솟아오르는 생크림 마이크로 버블 ASMR.</span>
+        </div>
+        <div class="v-step value">
+          <span class="time">CUT 03 · 8.0s – 14.0s (6초)</span>
+          <span class="label">3. 10s NO-WASH GLASS SKIN</span>
+          <span class="desc"><strong>[효능 입증 · 의심 제거]</strong><br/>물 세안 없이 손끝 롤링만으로 눈 녹듯 스며드는 <strong>흡수율 461% · 식물성 PDRN+EGF 진정 &amp; 화잘먹 속광</strong> 클로즈업.</span>
+        </div>
+        <div class="v-step cta">
+          <span class="time">CUT 04 · 14.0s – 20.0s (6초)</span>
+          <span class="label">4. PAYOFF &amp; BUNDLE OFFER</span>
+          <span class="desc"><strong>[선망성 완성 &amp; 구매 트리거]</strong><br/>골든아워·플래시 세례 속 무결점 피부 + <strong>1병 150회(1회 200원) · 최대 46% 할인 + 멜팅 밤패드 증정</strong> 클로징.</span>
+        </div>
+      </div>
+
+      <div class="grid-3" style="flex:1;">
+        <div class="bento">
+          <span class="tag dark" style="align-self:flex-start;">0~1초 · Catch (시각 기습)</span>
+          <h3>로고 오프닝 배제 원칙</h3>
+          <p>브랜드 로고로 시작하지 않고, 첫 0.5초부터 <strong>인물의 절박한 상황이나 직관적인 비주얼 위트(비닐봉투 시트팩 뭉치 등)</strong>를 던져 광고 스킵 본능을 우회합니다.</p>
+        </div>
+        <div class="bento">
+          <span class="tag dark" style="align-self:flex-start;">1~2초 · Bridge (공감 카피)</span>
+          <h3>무음 시청 대응 상단 자막</h3>
+          <p>소리를 끄고 피드를 내리는 70%의 유저를 잡기 위해 상단 세이프존에 <strong>12자 내외의 직설적 상황 자막</strong>을 배치합니다.</p>
+        </div>
+        <div class="bento">
+          <span class="tag dark" style="align-self:flex-start;">2~3초 · Authority (숫자 쐐기)</span>
+          <h3>구체적 수치로 본편 견인</h3>
+          <p><strong>“20분 대신 10초” · “흡수율 461%” · “1회 200원”</strong> 세 가지 핵심 숫자가 3초 지점에 결합되어 이탈 없이 끝까지 시청하게 만듭니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 04: 4 MASTER CONCEPTS OVERVIEW ==================== -->
+    <section class="slide" data-title="04 4대기획맵">
+      <div class="s-head">
+        <div class="s-eyebrow">
+          <span class="tag violet">03 · 4 MASTER CREATIVE LINEUP (ALL SEEDREAM 5.0 PRO)</span>
+          <span class="s-num">SLIDE 04 / 11</span>
+        </div>
+        <h2 class="s-title">최종 엄선 4대 메타 소재 라인업 — 90s 웨스턴 필름 3종 &amp; 럭셔리 씨즐 1종</h2>
+        <p class="s-sub">촌스러운 뉴스 포맷을 배제하고, 브랜드 감도와 바이럴·구매 전환을 모두 잡는 <strong>하이패션 90s 필름 세계관 3편 + 정통 코스메틱 씨즐 1편</strong>으로 완성도를 높였습니다.</p>
+      </div>
+
       <div class="table-wrap" style="flex:1;">
         <table>
           <thead>
             <tr>
-              <th style="width:18%;">트랙 구분</th>
-              <th style="width:22%;">핵심 연출 무드 &amp; AI 모델</th>
-              <th style="width:28%;">기획 영상 라인업 (각 20초)</th>
-              <th style="width:32%;">소구 USP &amp; 초반 3초 훅 포인트</th>
+              <th style="width:19%;">기획 넘버 &amp; 타이틀</th>
+              <th style="width:21%;">비주얼 무드 &amp; 캐스팅</th>
+              <th style="width:28%;">초반 3초 후킹 (Cut 01)</th>
+              <th style="width:32%;">주력 소구 USP &amp; 타깃 전환 역할</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="hook-tr">
-              <td><span class="pill-tag yellow">Track A · 메인 주력</span><br/><strong style="display:block; margin-top:4px;">90s 필름 드라마</strong></td>
-              <td>35mm 코닥 필름 그레인 · 웜 텅스텐 · 하이패션 실사 인물<br/>(<strong>Seedream 5.0 Pro</strong>)</td>
-              <td>• <strong>A-1.</strong> 1997 본식 입장 1분 전 신부<br/>• <strong>A-2.</strong> 1998 심야 퍼스트클래스 기내<br/>• <strong>A-1-B.</strong> 패션위크 백스테이지 30초 전</td>
-              <td><strong>[중요한 순간 직전 화잘먹 · 휴대성]</strong><br/>입장 1분 전 들뜬 화장 / 기내에서 말라 떨어진 시트팩 위기 → 에메랄드 보틀 10초 노워시 리페어</td>
+            <tr>
+              <td><span class="tag yellow">CONCEPT 01 · 화잘먹</span><br/><strong style="display:block; margin-top:4px;">1997 뉴욕 소호: 약속 10초 전</strong></td>
+              <td>90s 맨해튼 거리 골든아워 할레이션 · 웨스턴 금발 슈퍼모델</td>
+              <td>차 사이드미러를 보며 거센 바람에 하얗게 들뜬 볼 화장을 발견하고 당황한 컷</td>
+              <td><strong>[데이트·외출 직전 응급 화잘먹]</strong><br/>옐로우캡 뒷좌석에서 세안 없이 10초 만에 물광 리페어 (2030 여성 주력 공감)</td>
             </tr>
             <tr>
-              <td><span class="pill-tag cyan">Track B · 씨즐 정공법</span><br/><strong style="display:block; margin-top:4px;">초감각 제형·FOOH 비교</strong></td>
-              <td>크롬 인더스트리얼 스튜디오 · 초근접 매크로 · 열화상 대비<br/>(<strong>Nano Banana 2</strong>)</td>
-              <td>• <strong>B-1.</strong> 시트팩 150장 유압 프레스 압축<br/>• <strong>B-2.</strong> 열화상 카메라 10초 급속 쿨링</td>
-              <td><strong>[1회 200원 가성비 · PDRN 열감 진정]</strong><br/>시트팩 150장이 보틀 1병으로 압축되는 물리 쾌감 &amp; 레드→블루 열화상 컬러 변화</td>
+              <td><span class="tag violet">CONCEPT 02 · 드라마</span><br/><strong style="display:block; margin-top:4px;">1998 플라자 호텔: 입장 1분 전</strong></td>
+              <td>90s 그랜드 호텔 우드 대기실 텅스텐 필름 · 웨스턴 하이패션 신부</td>
+              <td>본식 입장 1분 전, 긴장 열감과 건조함으로 붉고 들뜬 피부 앞에 20분 시트팩을 포기하는 컷</td>
+              <td><strong>[결정적 순간 무결점 피부 · PDRN 진정]</strong><br/>극적인 서사 몰입으로 브랜드 프리미엄 가치 격상 및 고단가 세트 설득</td>
             </tr>
             <tr>
-              <td><span class="pill-tag violet">Track C · 판매 1순위</span><br/><strong style="display:block; margin-top:4px;">리얼 문제해결 UGC</strong></td>
-              <td>스마트폰 거울 셀카 · 초밀착 피부결 Before/After<br/>(<strong>Seedream 5.0 Pro</strong>)</td>
-              <td>• <strong>C-1.</strong> 출근 5분 전 파데 들뜸 심폐소생<br/>• <strong>C-2.</strong> 새벽 2시 야근 여친×귀차니즘 남친</td>
-              <td><strong>[화잘먹 밀착 · 밤패드+블랙 MARK5 연계]</strong><br/>코 옆 낀 파데 초근접 → 밤패드 정돈 + 그린/블랙 10초 흡수로 남녀 동시 전환</td>
+              <td><span class="tag dark">CONCEPT 03 · 90s 키치</span><br/><strong style="display:block; margin-top:4px;">1996 맨해튼: 시트팩 150장 결별</strong></td>
+              <td>90s 소호 스트리트 파파라치 필름 · 퍼프 블라우스 금발 잇걸 &amp; 오픈카</td>
+              <td><strong>투명 비닐봉투 가득 구겨 넣은 시트팩 150장 뭉치</strong>를 시크하게 거리 휴지통에 버리는 컷</td>
+              <td><strong>[압도적 CTR · 1병 150회(1회 200원) 가성비]</strong><br/>하이패션 화보 속 위트 있는 반전 행동으로 저장·공유 및 콜드 타깃 유입 폭발</td>
             </tr>
             <tr>
-              <td><span class="pill-tag dark">Track D · CTR 치트키</span><br/><strong style="display:block; margin-top:4px;">키치 AI &amp; 속보 뉴스</strong></td>
-              <td>할리우드 실사 판타지 브이로그 &amp; 90s TV 뉴스 스튜디오<br/>(<strong>Seedream + Nano Banana 2</strong>)</td>
-              <td>• <strong>D-1.</strong> 육지 출근 3일 차 인어 생존 일기<br/>• <strong>D-2.</strong> GASH NEWS 시트팩 멸종 속보</td>
-              <td><strong>[극건조 장벽 케어 · 댓글 이벤트 폭발]</strong><br/>히터 앞 말라붙는 실사 인어 / 치킨 먹다 묻는 시트팩 뉴스 제보로 스크롤 완전 정지</td>
+              <td><span class="tag cyan">CONCEPT 04 · 고급 씨즐</span><br/><strong style="display:block; margin-top:4px;">2.04µm 버블 &amp; 원패드 리추얼</strong></td>
+              <td>브러시드 실버 &amp; 에메랄드 스튜디오 · 초근접 매크로 피부 과학</td>
+              <td>사선 노즐에서 소프트아이스크림 피크처럼 솟아오르는 초고밀도 화이트 마이크로 버블 극접사</td>
+              <td><strong>[직관적 제형 설득 · 밤패드 증정 번들 직결]</strong><br/>멜팅 밤패드 1장 세안 → 에어버블 10초 흡수(461%) 2-Step 실증으로 구매 클로징</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- SLIDE 07: TRACK A-1 FULL SCRIPT -->
-    <section class="slide" data-title="07 Track A-1 대본">
-      <div class="slide-head">
-        <div class="eyebrow-row">
+    <!-- ==================== SLIDE 05: CONCEPT 01 (4-CUT + SCRIPT) ==================== -->
+    <section class="slide" data-title="05 기획01 소호">
+      <div class="s-head">
+        <div class="s-eyebrow">
           <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
-            <span class="pill-tag yellow">06 · TRACK A-1 FULL PRODUCTION SCRIPT (20.0s)</span>
-            <span class="pill-tag emerald">화잘먹 · 약속 직전 메인 시안</span>
+            <span class="tag yellow">CONCEPT 01 · 90s NYC STREET ROMANCE (20.0s)</span>
+            <span class="tag emerald">화잘먹 · 휴대성 · 노워시</span>
           </div>
-          <div style="display:flex; gap:8px; align-items:center;">
-            <button class="pill-btn dark" onclick="copyById('rawScriptA1', this)">A-1 전체 대본 복사</button>
-            <span class="slide-num-tag">SLIDE 07 / 13</span>
+          <div style="display:flex; gap:7px; align-items:center;">
+            <button class="btn-pill" onclick="openScriptModal('c1')">상세 대본 전문 보기</button>
+            <button class="btn-pill dark" onclick="copyScriptText('c1', this)">대본 복사</button>
+            <span class="s-num">SLIDE 05 / 11</span>
           </div>
         </div>
-        <h2 class="slide-title">Track A-1 상세 대본 — 〈1997 웨딩 대기실: 본식 입장 1분 전〉</h2>
+        <h2 class="s-title">기획 01 — 〈1997 뉴욕 소호: 그 사람 만나기 딱 10초 전〉</h2>
       </div>
-      <div class="split-script" style="flex:1;">
-        <div class="keycut-card" onclick="openLb('./assets/a1-bride.jpg', 'Track A-1 생성 키컷 (Seedream 5.0 Pro · 9:16) — 90s 웨딩 대기실 10초 버블 리페어')">
-          <img src="./assets/a1-bride.jpg" alt="Track A-1 Keycut" class="keycut-img" />
-          <div class="keycut-meta"><span class="pill-tag yellow" style="font-size:10px; padding:2px 8px;">Seedream 5.0 Pro</span><span>클릭 확대 ↗</span></div>
+
+      <div class="filmstrip-4" style="flex:1;">
+        <div class="shot-card hook-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c1-cut1.jpg', 'Concept 01 · CUT 01 (0~3s 훅) — 소호 거리 사이드미러 속 들뜬 베이스 발견')">
+            <img src="./assets/c1-cut1.jpg" alt="Concept 1 Cut 1" />
+            <div class="shot-pill-top"><span class="shot-step-badge hook">CUT 01 · 0~3s HOOK</span></div>
+            <div class="shot-caption-overlay">“만나기 10초 전, 화장이 하얗게 다 떴다.”</div>
+          </div>
+          <div class="shot-body">
+            <div class="vo">VO: “약속 장소 코앞인데, 찬 바람에 화장이 다 떴을 때.”</div>
+            <div class="dir">빈티지 세단 사이드미러에 비친 건조하고 들뜬 앞볼을 만지며 당황하는 90s 금발 모델.</div>
+          </div>
         </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th style="width:92px;">시간 / 컷</th><th>화면 · 연기 지문 (Visual)</th><th style="width:26%;">대사 / 성우 내레이션 (VO)</th><th style="width:24%;">화면 자막 &amp; 사운드(SFX)</th></tr>
-            </thead>
-            <tbody>
-              <tr class="hook-tr"><td><strong>0.0–1.5s</strong><br/>Cut 1 · HOOK</td><td>90s 우드 몰딩 신부 대기실 문이 열리며 플래너가 손목시계를 두드림. 거울 앞 아이보리 새틴 드레스 신부가 긴장으로 굳어짐.</td><td><strong>(플래너 현장음, 다급)</strong><br/>“신부님! 입장 딱 1분 남았어요!”</td><td><strong>[자막]</strong> 본식 입장 딱 1분 전,<br/><span style="font-size:11px;">[SFX] 문 소리 + 하객 웅성거림 + 빠른 초침</span></td></tr>
-              <tr class="hook-tr"><td><strong>1.5–3.0s</strong><br/>Cut 2 · HOOK</td><td>거울 속 신부 앞볼·코 옆 극접사(ECU). 긴장 열감으로 붉은기가 돌고 파데가 하얗게 들뜸. 시트팩을 집었다가(20분 소요) 내려놓음.</td><td><strong>(신부 속마음 VO, 초조)</strong><br/>“미쳤나 봐… 화장이 다 떴는데, 시트팩 붙일 시간은 없고.”</td><td><strong>[자막]</strong> 화장이 하얗게 다 떴다. (시트팩 시간 0초)<br/><span style="font-size:11px;">[SFX] 파우치 비닐음 + 짧은 한숨</span></td></tr>
-              <tr class="demo-tr"><td><strong>3.0–5.5s</strong><br/>Cut 3 · DEMO</td><td>아티스트 손이 단호하게 등장해 <strong>에메랄드 메탈 GASH 보틀</strong> 사선 노즐 클릭. 손끝 위로 생크림 마이크로 버블이 봉긋 솟아오름.</td><td><strong>(아티스트 대사, 확신)</strong><br/>“씻어낼 필요 없어요. 딱 10초만 주세요.”</td><td><strong>[자막]</strong> “입장 1분 전, 20분 시트팩 대신 10초.” <code>[10s→07s]</code><br/><span style="font-size:11px;">[SFX] 캡 딸깍 + 무스 분사음 / 90s 스트링 인</span></td></tr>
-              <tr class="demo-tr"><td><strong>5.5–9.5s</strong><br/>Cut 4 · DEMO</td><td>들뜬 앞볼에 흰 버블을 얹고 부드럽게 롤링하자, 세안 없이 투명 수분막으로 사르르 녹아들며 붉은기·각질이 즉각 차분해짐.</td><td><strong>(시네마틱 성우 VO)</strong><br/>“모공보다 작은 특허 마이크로 버블이 단 10초 만에 깊숙이 스며드니까.”</td><td><strong>[자막]</strong> 씻지 않는 NO-WASH · 흡수율 461% <code>[07s→03s]</code><br/><span style="font-size:11px;">[SFX] 버블이 촉촉히 녹는 스킨 폴리</span></td></tr>
-              <tr class="demo-tr"><td><strong>9.5–13.0s</strong><br/>Cut 5 · DEMO</td><td>흡수 직후 쿠션 퍼프로 볼을 두 번 톡톡 두드리자 밀림 0%로 착 붙으며 유리알 속광 완성. 거울 보며 안도+미소 짓는 신부.</td><td><strong>(성우 VO)</strong><br/>“식물성 PDRN 진정부터 밀림 없는 화잘먹 속광까지, 단숨에.”</td><td><strong>[자막]</strong> CICA PDRN + EGF · 밀림 0% 화잘먹 <code>[00s]</code><br/><span style="font-size:11px;">[SFX] 퍼프 터치 2회 + 벨 차임</span></td></tr>
-              <tr><td><strong>13.0–16.5s</strong><br/>Cut 6 · PAYOFF</td><td>양개문이 활짝 열리고 부케 든 신부가 걸어 나가며 카메라를 향해 돌아보며 미소. 90s 플래시가 터질 때마다 광대 물광이 빛남.</td><td><strong>(성우 VO)</strong><br/>“가장 완벽해야 할 순간 직전, 단 10초면 충분합니다.”</td><td><strong>[자막]</strong> 중요한 순간 직전, 단 10초면 충분하니까.<br/><span style="font-size:11px;">[SFX] 문 오픈 + 필름 카메라 플래시 연속</span></td></tr>
-              <tr><td><strong>16.5–20.0s</strong><br/>Cut 7 · CTA</td><td>브러시드 메탈 위 그린 보틀(센터) + 5종 라인업 &amp; 사은품 딥클린 멜팅 밤패드 정물 샷.</td><td><strong>(성우 VO)</strong><br/>“시트팩 150장을 한 병에. 기어바이가쉬 에어버블 마스크.”</td><td><strong>[자막]</strong> 1병 150회(1회 200원) · 최대 46% + 밤패드 증정<br/><span style="font-size:11px;">[SFX] 세련된 메탈 클릭 잔향</span></td></tr>
-            </tbody>
-          </table>
+
+        <div class="shot-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c1-cut2.jpg', 'Concept 01 · CUT 02 (3~8s 분사) — 옐로우캡 뒷좌석 에메랄드 보틀 버블 분사')">
+            <img src="./assets/c1-cut2.jpg" alt="Concept 1 Cut 2" />
+            <div class="shot-pill-top"><span class="shot-step-badge">CUT 02 · 3~8s SIZZLE</span></div>
+            <div class="shot-caption-overlay">20분 시트팩 대신, 가방 속 10초 에어버블</div>
+          </div>
+          <div class="shot-body">
+            <div class="vo">VO: “20분짜리 시트팩 붙일 시간은 없으니까. 가방 속 에메랄드 한 병.”</div>
+            <div class="dir">옐로우캡 뒷좌석, GASH 에메랄드 보틀 사선 노즐에서 쫀쫀한 생크림 마이크로 버블 분사.</div>
+          </div>
+        </div>
+
+        <div class="shot-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c1-cut3.jpg', 'Concept 01 · CUT 03 (8~14s 흡수) — 세안 없이 10초 만에 녹아드는 유리알 속광')">
+            <img src="./assets/c1-cut3.jpg" alt="Concept 1 Cut 3" />
+            <div class="shot-pill-top"><span class="shot-step-badge">CUT 03 · 8~14s MELT</span></div>
+            <div class="shot-caption-overlay">씻지 않는 NO-WASH · 흡수율 461%</div>
+          </div>
+          <div class="shot-body">
+            <div class="vo">VO: “씻어낼 필요 없이 톡톡 롤링하면, 10초 만에 속광이 차올라요.”</div>
+            <div class="dir">노을빛 택시 창가, 흰 버블이 물기 없이 투명한 유리알 수분막으로 사르르 녹아드는 클로즈업.</div>
+          </div>
+        </div>
+
+        <div class="shot-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c1-cut4.jpg', 'Concept 01 · CUT 04 (14~20s 페이오프) — 소호 골든아워 역광 무결점 물광 & 오퍼')">
+            <img src="./assets/c1-cut4.jpg" alt="Concept 1 Cut 4" />
+            <div class="shot-pill-top"><span class="shot-step-badge">CUT 04 · 14~20s CTA</span></div>
+            <div class="shot-caption-overlay">1병 150회(1회 200원) · 최대 46% + 밤패드 증정</div>
+          </div>
+          <div class="shot-body">
+            <div class="vo">VO: “언제 어디서나 실패 없는 10초. 기어바이가쉬 에어버블 마스크.”</div>
+            <div class="dir">소호 거리 골든아워 역광 속 눈부신 윤광 피부로 뒤돌아 미소 짓는 모델과 에메랄드 보틀.</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 08: TRACK A-2 FULL SCRIPT -->
-    <section class="slide" data-title="08 Track A-2 대본">
-      <div class="slide-head">
-        <div class="eyebrow-row">
+    <!-- ==================== SLIDE 06: CONCEPT 02 (4-CUT + SCRIPT) ==================== -->
+    <section class="slide" data-title="06 기획02 웨딩">
+      <div class="s-head">
+        <div class="s-eyebrow">
           <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
-            <span class="pill-tag yellow">07 · TRACK A-2 FULL PRODUCTION SCRIPT (20.0s)</span>
-            <span class="pill-tag violet">여행 · 기내 휴대성 · 실버파우치 시안</span>
+            <span class="tag violet">CONCEPT 02 · 90s HOLLYWOOD BRIDAL DRAMA (20.0s)</span>
+            <span class="tag emerald">결정적 순간 · CICA PDRN 진정</span>
           </div>
-          <div style="display:flex; gap:8px; align-items:center;">
-            <button class="pill-btn dark" onclick="copyById('rawScriptA2', this)">A-2 전체 대본 복사</button>
-            <span class="slide-num-tag">SLIDE 08 / 13</span>
+          <div style="display:flex; gap:7px; align-items:center;">
+            <button class="btn-pill" onclick="openScriptModal('c2')">상세 대본 전문 보기</button>
+            <button class="btn-pill dark" onclick="copyScriptText('c2', this)">대본 복사</button>
+            <span class="s-num">SLIDE 06 / 11</span>
           </div>
         </div>
-        <h2 class="slide-title">Track A-2 상세 대본 — 〈1998 심야 퍼스트클래스 기내의 반칙〉</h2>
+        <h2 class="s-title">기획 02 — 〈1998 플라자 호텔 대기실: 본식 입장 1분 전〉</h2>
       </div>
-      <div class="split-script" style="flex:1;">
-        <div class="keycut-card" onclick="openLb('./assets/a2-cabin.jpg', 'Track A-2 생성 키컷 (Seedream 5.0 Pro · 9:16) — 90s 심야 퍼스트클래스 기내 노워시 케어')">
-          <img src="./assets/a2-cabin.jpg" alt="Track A-2 Keycut" class="keycut-img" />
-          <div class="keycut-meta"><span class="pill-tag yellow" style="font-size:10px; padding:2px 8px;">Seedream 5.0 Pro</span><span>클릭 확대 ↗</span></div>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th style="width:92px;">시간 / 컷</th><th>화면 · 연기 지문 (Visual)</th><th style="width:27%;">1인칭 독백 내레이션 (VO)</th><th style="width:24%;">화면 자막 &amp; 사운드(SFX)</th></tr>
-            </thead>
-            <tbody>
-              <tr class="hook-tr"><td><strong>0.0–1.5s</strong><br/>Cut 1 · HOOK</td><td>어두운 90s 야간 비행기 기내. 옆 승객 얼굴에 붙어 있던 바짝 마른 하얀 시트팩이 무릎으로 ‘툭’ 떨어지며 당황하는 컷.</td><td><strong>(차분·세련된 여성 독백 VO)</strong><br/>“건조한 비행기 안, 아직도 하얀 시트팩 붙이고 버티세요?”</td><td><strong>[자막]</strong> 건조한 기내 안, 시트팩 떨어진 적 있죠?<br/><span style="font-size:11px;">[SFX] 기내 소음 + 마른 시트 바스락 추락</span></td></tr>
-              <tr class="hook-tr"><td><strong>1.5–3.0s</strong><br/>Cut 2 · HOOK</td><td>창가석 주인공(캐시미어 니트)이 시크한 <strong>가쉬 실버파우치</strong> 지퍼를 열어 <strong>에메랄드 메탈 GASH 보틀(80ml)</strong> 하나만 꺼냄.</td><td>“전 시트팩 뭉치 대신, 기내에 딱 이 한 병만 들고 타요.”</td><td><strong>[자막]</strong> 기내 반입 80ml 한 병 = 시트팩 150장 분량<br/><span style="font-size:11px;">[SFX] 파우치 지퍼 ‘스르륵’ + 메탈 터치음</span></td></tr>
-              <tr class="demo-tr"><td><strong>3.0–7.5s</strong><br/>Cut 3 · DEMO</td><td>따뜻한 골든 독서등 불빛 아래, 화이트 사선 노즐을 눌러 손끝에 쫀쫀한 생크림 마이크로 버블을 짜 볼에 얹는 클로즈업.</td><td>“좁은 화장실에 씻으러 갈 필요도 없거든요. 공기 압축 버블을 얹고—”</td><td><strong>[자막]</strong> 세면대 갈 필요 없는 10초 NO-WASH<br/><span style="font-size:11px;">[SFX] 독서등 클릭 + 무스 분사음 / 재즈 피아노 인</span></td></tr>
-              <tr class="demo-tr"><td><strong>7.5–12.5s</strong><br/>Cut 4 · DEMO</td><td>두어 번 롤링하자 버블이 투명 수분막으로 싹 스며들고(461%), 그대로 실크 수면 안대를 내리고 편안히 잠드는 35mm 필름 무드.</td><td>“10초만 톡톡 두드리면 끝. 사막 같은 기내 공기도 밤새 촉촉하게 막아주니까.”</td><td><strong>[자막]</strong> 특허 에어버블 흡수율 461% · 수분 장벽<br/><span style="font-size:11px;">[SFX] 촉촉한 흡수음 + 부드러운 담요 소리</span></td></tr>
-              <tr><td><strong>12.5–16.5s</strong><br/>Cut 5 · PAYOFF</td><td>착륙 벨과 함께 창문 덮개를 올리자 쏟아지는 아침 햇살. 장거리 비행 직후인데도 혼자만 탱탱하게 빛나는 유리알 피부 클로즈업.</td><td>“내릴 때 혼자만 피부 안 무너진 비밀, 1회 200원이면 충분해요.”</td><td><strong>[자막]</strong> 12시간 비행 후에도 무너짐 없는 속광<br/><span style="font-size:11px;">[SFX] 기내 착륙 벨 ‘딩-동’ + 창문 오픈음</span></td></tr>
-              <tr><td><strong>16.5–20.0s</strong><br/>Cut 6 · CTA</td><td>가쉬 실버파우치 + 에어버블 5종 보틀 + 멜팅 밤패드 정물 컷.</td><td>“여행 가방은 가볍게, 피부는 완벽하게. 기어바이가쉬.”</td><td><strong>[자막]</strong> 최대 46% 할인 · 실버파우치 &amp; 밤패드 증정<br/><span style="font-size:11px;">[SFX] 깔끔한 메탈 잔향 마무리</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
 
-    <!-- SLIDE 09: TRACK A BACKSTAGE VARIATION -->
-    <section class="slide" data-title="09 Track A 파생대본">
-      <div class="slide-head">
-        <div class="eyebrow-row">
-          <span class="pill-tag yellow">08 · TRACK A HOOK-SWAP SCRIPT (백스테이지 + 밤패드 연계)</span>
-          <div style="display:flex; gap:8px; align-items:center;">
-            <button class="pill-btn dark" onclick="copyById('rawScriptA1B', this)">백스테이지 대본 복사</button>
-            <span class="slide-num-tag">SLIDE 09 / 13</span>
+      <div class="filmstrip-4" style="flex:1;">
+        <div class="shot-card hook-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c2-cut1.jpg', 'Concept 02 · CUT 01 (0~3s 훅) — 본식 1분 전 거울 속 들뜬 화장 위기')">
+            <img src="./assets/c2-cut1.jpg" alt="Concept 2 Cut 1" />
+            <div class="shot-pill-top"><span class="shot-step-badge hook">CUT 01 · 0~3s HOOK</span></div>
+            <div class="shot-caption-overlay">“본식 입장 1분 전, 화장이 들떴다.”</div>
+          </div>
+          <div class="shot-body">
+            <div class="vo">대사: “One minute left!” / VO: “입장 1분 전, 긴장 열감에 화장이 다 떴다.”</div>
+            <div class="dir">우드&amp;황동 대기실 거울 앞, 붉은기와 들뜬 각질 때문에 초조한 90s 웨스턴 신부(시트팩 포기).</div>
           </div>
         </div>
-        <h2 class="slide-title">Track A 파생 대본 — 〈1999 패션위크 백스테이지: 쇼 오픈 30초 전〉</h2>
-        <p class="slide-sub">증정품 <strong>‘딥클린 멜팅 밤패드’의 원패드 세정력</strong>과 <strong>‘에어버블’의 10초 부스팅</strong>을 한 편의 긴박한 90s 런웨이 백스테이지 서사로 엮은 파생 대본입니다.</p>
-      </div>
-      <div class="grid-2" style="flex:1;">
-        <div class="bento">
-          <span class="pill-tag dark" style="align-self:flex-start;">PART 1 · 위기 훅 &amp; 밤패드 올오프 (0.0s – 7.0s)</span>
-          <div class="cut-list">
-            <div class="cut-row hook-row">
-              <div class="cut-time">0.0–3.0s<br/><span class="hook-badge">3초 HOOK</span></div>
-              <div><strong>[화면]</strong> 플래시 터지는 쇼 커튼 뒤, 디렉터가 무전기에 외침. 이전 쇼의 진한 메이크업과 열감으로 들뜬 모델 클로즈업.<br/><strong>[대사]</strong> <em>“다음 런웨이 오픈 30초 전! 모델 스탠바이!”</em> / (VO) <em>“세수할 시간조차 없는 백스테이지.”</em><br/><strong>[자막]</strong> 다음 쇼 입장 30초 전, 세수할 시간 0초.</div>
-            </div>
-            <div class="cut-row">
-              <div class="cut-time">3.0–7.0s<br/>Step 1 세안</div>
-              <div><strong>[화면]</strong> 아티스트가 <strong>‘가쉬 딥클린 멜팅 밤패드’</strong> 순면 패드 1장으로 워터프루프 메이크업과 모공 피지를 물 없이 단숨에 싹 닦아냄.<br/><strong>[VO]</strong> <em>“클렌징 밤을 품은 순면 패드 한 장으로 자극 없이 지우고,”</em><br/><strong>[자막]</strong> Step 1. 멜팅 밤패드 1장 원패드 올오프 (LHA 모공케어)</div>
-            </div>
-          </div>
-        </div>
-        <div class="bento violet-soft">
-          <span class="pill-tag violet" style="align-self:flex-start;">PART 2 · 10초 버블 부스팅 &amp; 런웨이 입장 (7.0s – 20.0s)</span>
-          <div class="cut-list">
-            <div class="cut-row">
-              <div class="cut-time">7.0–13.0s<br/>Step 2 부스팅</div>
-              <div><strong>[화면]</strong> 곧바로 <strong>에메랄드 메탈 GASH 보틀</strong>에서 흰 마이크로 버블을 짜 올려 10초 롤링 흡수 → 새 베이스 터치 즉시 폭발하는 윤광.<br/><strong>[VO]</strong> <em>“식물성 PDRN 에어버블로 10초 만에 속광을 채우니까.”</em><br/><strong>[자막]</strong> Step 2. 씻지 않는 10초 에어버블 (흡수율 461%)</div>
-            </div>
-            <div class="cut-row">
-              <div class="cut-time">13.0–20.0s<br/>Payoff &amp; CTA</div>
-              <div><strong>[화면]</strong> 런웨이 스포트라이트를 가르며 워킹하는 모델의 무결점 유리알 광채 → 에어버블 + 밤패드 풀세트 정물.<br/><strong>[VO]</strong> <em>“1장으로 지우고 10초 만에 채우다. 지금 사면 멜팅 밤패드 본품 무료 증정.”</em><br/><strong>[자막]</strong> 에어버블 구매 시 멜팅 밤패드 최대 3개 무료 증정</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="slide-foot">
-        <span>활용 팁: A-1(웨딩 신부)과 A-1-B(백스테이지 모델)는 중반부 데모 컷을 공유해 최소 리소스로 2편 동시 제작 가능합니다.</span>
-        <span>TRACK A · BACKSTAGE VARIATION</span>
-      </div>
-    </section>
 
-    <!-- SLIDE 10: TRACK B -->
-    <section class="slide" data-title="10 Track B 씨즐">
-      <div class="slide-head">
-        <div class="eyebrow-row">
-          <span class="pill-tag cyan">09 · TRACK B — SENSORY SIZZLE &amp; TECH PROOF (NANO BANANA 2)</span>
-          <span class="slide-num-tag">SLIDE 10 / 13</span>
-        </div>
-        <h2 class="slide-title">Track B 상세 기획 — 초감각 물리 씨즐 &amp; 열화상 쿨링 실증</h2>
-      </div>
-      <div class="split-script" style="flex:1;">
-        <div class="keycut-card" onclick="openLb('./assets/b1-press.jpg', 'Track B-1 생성 키컷 (Nano Banana 2 · 9:16) — 시트팩 150장 유압 프레스 압축 → GASH 1병')">
-          <img src="./assets/b1-press.jpg" alt="Track B-1 Keycut" class="keycut-img" />
-          <div class="keycut-meta"><span class="pill-tag cyan" style="font-size:10px; padding:2px 8px;">Nano Banana 2</span><span>클릭 확대 ↗</span></div>
-        </div>
-        <div class="grid-2">
-          <div class="bento cyan-soft">
-            <span class="pill-tag cyan" style="align-self:flex-start;">시안 B-1 · 가성비 1회 200원 직격</span>
-            <h3>〈시트팩 150장 유압 프레스 압축 → 1병〉</h3>
-            <div class="cut-list">
-              <div class="cut-row hook-row"><div class="cut-time">0.0–3.0s<br/><span class="hook-badge">3초 HOOK</span></div><div>크롬 스튜디오 위 거대한 <strong>시트팩 150장 더미가 유압 프레스에 ‘쿵!’ 압축되더니 에메랄드 메탈 GASH 보틀 1병으로 변신</strong>하는 물리 쾌감 컷.</div></div>
-              <div class="cut-row"><div class="cut-time">3.0–12.0s</div><div>사선 노즐에서 소프트아이스크림 피크처럼 솟는 <code>2.04µm</code> 마이크로 버블 극접사 ASMR → 볼 위 10초 투명 흡수 데모.</div></div>
-              <div class="cut-row"><div class="cut-time">12.0–20.0s</div><div><code>3,000분 대기 시트팩 150장 vs 10초 노워시 1회 200원</code> 비교 자막 + 5종 &amp; 밤패드 증정 클로징.</div></div>
-            </div>
+        <div class="shot-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c2-cut2.jpg', 'Concept 02 · CUT 02 (3~8s 분사) — 아티스트의 에메랄드 보틀 마이크로 버블 투입')">
+            <img src="./assets/c2-cut2.jpg" alt="Concept 2 Cut 2" />
+            <div class="shot-pill-top"><span class="shot-step-badge">CUT 02 · 3~8s SIZZLE</span></div>
+            <div class="shot-caption-overlay">“입장 1분 전, 20분 시트팩 대신 10초.”</div>
           </div>
-          <div class="bento">
-            <span class="pill-tag emerald" style="align-self:flex-start;">시안 B-2 · 운동·열감 PDRN 진정</span>
-            <h3>〈열화상 카메라 10초 급속 쿨링 실험실〉</h3>
-            <div class="cut-list">
-              <div class="cut-row hook-row"><div class="cut-time">0.0–3.0s<br/><span class="hook-badge">3초 HOOK</span></div><div>열화상 뷰파인더 화면. 운동 직후 <strong>시뻘겋게 달아오른 볼 한쪽에 하얀 버블이 닿자마자 에메랄드 블루로 순식간에 진정</strong>되는 색채 대비 훅.</div></div>
-              <div class="cut-row"><div class="cut-time">3.0–12.0s</div><div>고해상도 실사 피부결 디졸브 → 식물성 PDRN + EGF 버블이 흡수율 461%로 스며들어 붉은기가 가라앉은 장벽 광채.</div></div>
-              <div class="cut-row"><div class="cut-time">12.0–20.0s</div><div>운동 가방 휴대 컷 + <code>그린(진정) + 실버(수분 집중)</code> 추천 조합 &amp; 최대 46% 혜택 고지.</div></div>
-            </div>
+          <div class="shot-body">
+            <div class="vo">아티스트: “씻어낼 필요 없어요. 딱 10초만 주세요.”</div>
+            <div class="dir">따뜻한 텅스텐 조명 아래 에메랄드 메탈 보틀 노즐에서 솟아오르는 고밀도 화이트 무스 버블.</div>
+          </div>
+        </div>
+
+        <div class="shot-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c2-cut3.jpg', 'Concept 02 · CUT 03 (8~14s 리페어) — 10초 노워시 흡수 & 화잘먹 밀착')">
+            <img src="./assets/c2-cut3.jpg" alt="Concept 2 Cut 3" />
+            <div class="shot-pill-top"><span class="shot-step-badge">CUT 03 · 8~14s REPAIR</span></div>
+            <div class="shot-caption-overlay">식물성 PDRN + EGF 진정 · 흡수율 461%</div>
+          </div>
+          <div class="shot-body">
+            <div class="vo">VO: “모공보다 작은 마이크로 버블이 붉은기와 각질을 단숨에 잠재우니까.”</div>
+            <div class="dir">신부의 앞볼 위 버블이 투명한 속광 장벽으로 스며들며 안도의 미소가 번지는 클로즈업.</div>
+          </div>
+        </div>
+
+        <div class="shot-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c2-cut4.jpg', 'Concept 02 · CUT 04 (14~20s 입장) — 양개문 오픈 & 90s 플래시 세례 속 무결점 입장')">
+            <img src="./assets/c2-cut4.jpg" alt="Concept 2 Cut 4" />
+            <div class="shot-pill-top"><span class="shot-step-badge">CUT 04 · 14~20s CTA</span></div>
+            <div class="shot-caption-overlay">단 10초의 기적 · 최대 46% + 밤패드 증정</div>
+          </div>
+          <div class="shot-body">
+            <div class="vo">VO: “가장 빛나야 할 순간 직전, 기어바이가쉬 에어버블 마스크.”</div>
+            <div class="dir">양개문이 열리고 90s 필름 플래시 세례를 받으며 걸어 나가는 신부의 압도적 유리알 광채.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 11: TRACK C -->
-    <section class="slide" data-title="11 Track C UGC">
-      <div class="slide-head">
-        <div class="eyebrow-row">
-          <span class="pill-tag violet">10 · TRACK C — REAL PROBLEM-SOLUTION UGC (SEEDREAM 5.0 PRO)</span>
-          <span class="slide-num-tag">SLIDE 11 / 13</span>
+    <!-- ==================== SLIDE 07: CONCEPT 03 (4-CUT + SCRIPT — REPLACES NEWS!) ==================== -->
+    <section class="slide" data-title="07 기획03 키치">
+      <div class="s-head">
+        <div class="s-eyebrow">
+          <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+            <span class="tag dark">CONCEPT 03 · 90s NYC IT-GIRL EDITORIAL KITSCH (20.0s)</span>
+            <span class="tag yellow">초강력 CTR · 1병=150장(1회 200원)</span>
+          </div>
+          <div style="display:flex; gap:7px; align-items:center;">
+            <button class="btn-pill" onclick="openScriptModal('c3')">상세 대본 전문 보기</button>
+            <button class="btn-pill dark" onclick="copyScriptText('c3', this)">대본 복사</button>
+            <span class="s-num">SLIDE 07 / 11</span>
+          </div>
         </div>
-        <h2 class="slide-title">Track C 상세 기획 — 메타 뷰티 판매 전환 1위 ‘리얼 결점 해결 UGC’</h2>
+        <h2 class="s-title">기획 03 — 〈1996 맨해튼 모닝: 시트팩 150장과의 쿨한 결별〉</h2>
       </div>
-      <div class="split-script" style="flex:1;">
-        <div class="keycut-card" onclick="openLb('./assets/c1-ugc.jpg', 'Track C-1 생성 키컷 (Seedream 5.0 Pro · 9:16) — 리얼 거울 셀카 밀착 마이크로 버블 물광 UGC')">
-          <img src="./assets/c1-ugc.jpg" alt="Track C-1 Keycut" class="keycut-img" />
-          <div class="keycut-meta"><span class="pill-tag violet" style="font-size:10px; padding:2px 8px;">Seedream 5.0 Pro</span><span>클릭 확대 ↗</span></div>
+
+      <div class="filmstrip-4" style="flex:1;">
+        <div class="shot-card hook-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c3-cut1.jpg', 'Concept 03 · CUT 01 (0~3s 키치 훅) — 투명 비닐봉투 속 시트팩 150장 뭉치 쿨하게 폐기')">
+            <img src="./assets/c3-cut1.jpg" alt="Concept 3 Cut 1" />
+            <div class="shot-pill-top"><span class="shot-step-badge hook">CUT 01 · 0~3s HOOK</span></div>
+            <div class="shot-caption-overlay">“오늘 20분짜리 시트팩 150장이랑 헤어졌다.”</div>
+          </div>
+          <div class="shot-body">
+            <div class="vo">VO: “얼굴에 축축한 종이 붙이고 20분 기다리는 거, 오늘부로 끝냈어요.”</div>
+            <div class="dir">90s 뉴욕 거리, 투명 비닐봉투 가득 구겨 넣은 시트팩 150장 뭉치를 시크하게 버리는 금발 잇걸.</div>
+          </div>
         </div>
-        <div class="grid-2">
-          <div class="bento violet-soft">
-            <span class="pill-tag violet" style="align-self:flex-start;">시안 C-1 · ROAS 3.5~5.0x 전환 포맷</span>
-            <h3>〈출근 5분 전 파데 들뜸 10초 심폐소생〉</h3>
-            <div class="cut-list">
-              <div class="cut-row hook-row"><div class="cut-time">0.0–3.0s<br/><span class="hook-badge">3초 HOOK</span></div><div>자연광 욕실 거울 셀카 톤. 코 옆·볼에 파데가 하얗게 끼고 각질이 일어난 초근접 피부 샷 + <em>“출근 5분 전 화장 다 떴을 때, 절대 세수하지 마세요.”</em></div></div>
-              <div class="cut-row"><div class="cut-time">3.0–12.5s</div><div>뭉친 코 옆만 <code>멜팅 밤패드</code>로 3초 정돈 → <strong>그린 에어버블</strong> 한 펌프 10초 흡수 → 쿠션 재도포 시 <strong>좌(들뜸) vs 우(유리알 밀착) 분할 비교</strong>.</div></div>
-              <div class="cut-row"><div class="cut-time">12.5–20.0s</div><div>일기형 내레이션 <em>“1회 200원꼴이라 매일 아침 화장 전에 무조건 써요”</em> + 밤패드 본품 무료 증정 오퍼.</div></div>
+
+        <div class="shot-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c3-cut2.jpg', 'Concept 03 · CUT 02 (3~8s 반전) — 실버파우치에서 꺼내는 단 하나의 에메랄드 보틀')">
+            <img src="./assets/c3-cut2.jpg" alt="Concept 3 Cut 2" />
+            <div class="shot-pill-top"><span class="shot-step-badge">CUT 02 · 3~8s REVEAL</span></div>
+            <div class="shot-caption-overlay">시트팩 150장 = 이 에메랄드 한 병 (1회 200원)</div>
+          </div>
+          <div class="shot-body">
+            <div class="vo">VO: “시트팩 150장이 이 작은 보틀 하나에 다 들어가니까. 1회 200원꼴.”</div>
+            <div class="dir">가쉬 실버파우치 지퍼를 열어 보석처럼 빛나는 80ml 에메랄드 메탈 보틀 하나를 꺼내는 컷.</div>
+          </div>
+        </div>
+
+        <div class="shot-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c3-cut3.jpg', 'Concept 03 · CUT 03 (8~14s 오픈카 데모) — 빈티지 컨버터블 선바이저 거울 10초 버블 흡수')">
+            <img src="./assets/c3-cut3.jpg" alt="Concept 3 Cut 3" />
+            <div class="shot-pill-top"><span class="shot-step-badge">CUT 03 · 8~14s DEMO</span></div>
+            <div class="shot-caption-overlay">운전석에서도 10초 컷 · NO-WASH 물광</div>
+          </div>
+          <div class="shot-body">
+            <div class="vo">VO: “붙일 필요도, 씻을 필요도 없이 차 안에서 10초면 유리알 피부 끝.”</div>
+            <div class="dir">빈티지 오픈카 운전석 선바이저 거울을 보며 폭신한 마이크로 버블을 볼에 녹여 넣는 햇살 컷.</div>
+          </div>
+        </div>
+
+        <div class="shot-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c3-cut4.jpg', 'Concept 03 · CUT 04 (14~20s 잇걸 엔딩) — 90s 선글라스 윙크 & 에메랄드 보틀 쇼케이스')">
+            <img src="./assets/c3-cut4.jpg" alt="Concept 3 Cut 4" />
+            <div class="shot-pill-top"><span class="shot-step-badge">CUT 04 · 14~20s CTA</span></div>
+            <div class="shot-caption-overlay">최대 46% OFF + 실버파우치·밤패드 증정</div>
+          </div>
+          <div class="shot-body">
+            <div class="vo">VO: “아직도 얼굴에 종이 붙이세요? 갈아타세요, 기어바이가쉬.”</div>
+            <div class="dir">90s 오벌 선글라스를 살짝 내리며 눈부신 속광 광대와 에메랄드 보틀을 들어 보이는 엔딩.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 08: CONCEPT 04 (4-CUT + SCRIPT — LUXURY SIZZLE) ==================== -->
+    <section class="slide" data-title="08 기획04 씨즐">
+      <div class="s-head">
+        <div class="s-eyebrow">
+          <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+            <span class="tag cyan">CONCEPT 04 · LUXURY CLINICAL SIZZLE &amp; BALM PAD RITUAL (20.0s)</span>
+            <span class="tag violet">ROAS 전환 결정타 · 밤패드 번들 직결</span>
+          </div>
+          <div style="display:flex; gap:7px; align-items:center;">
+            <button class="btn-pill" onclick="openScriptModal('c4')">상세 대본 전문 보기</button>
+            <button class="btn-pill dark" onclick="copyScriptText('c4', this)">대본 복사</button>
+            <span class="s-num">SLIDE 08 / 11</span>
+          </div>
+        </div>
+        <h2 class="s-title">기획 04 — 〈2.04µm 초미세 마이크로 버블 &amp; 원패드 리추얼〉</h2>
+      </div>
+
+      <div class="filmstrip-4" style="flex:1;">
+        <div class="shot-card hook-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c4-cut1.jpg', 'Concept 04 · CUT 01 (0~3s 매크로 훅) — 사선 노즐에서 솟는 초고밀도 마이크로 버블 피크')">
+            <img src="./assets/c4-cut1.jpg" alt="Concept 4 Cut 1" />
+            <div class="shot-pill-top"><span class="shot-step-badge hook">CUT 01 · 0~3s HOOK</span></div>
+            <div class="shot-caption-overlay">모공보다 미세한 2.04µm 공기 압축 버블</div>
+          </div>
+          <div class="shot-body">
+            <div class="vo">VO: “모공보다 작게 쪼갠 초미세 에어버블을 본 적 있나요?”</div>
+            <div class="dir">화이트 사선 노즐에서 소프트아이스크림 피크처럼 쫀쫀하게 솟는 마이크로 버블 극접사 ASMR.</div>
+          </div>
+        </div>
+
+        <div class="shot-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c4-cut2.jpg', 'Concept 04 · CUT 02 (3~8s 밤패드 세안) — 딥클린 멜팅 밤패드 1장 원패드 올오프')">
+            <img src="./assets/c4-cut2.jpg" alt="Concept 4 Cut 2" />
+            <div class="shot-pill-top"><span class="shot-step-badge">CUT 02 · 3~8s STEP 1</span></div>
+            <div class="shot-caption-overlay">Step 1. 멜팅 밤패드 1장으로 모공까지 올오프</div>
+          </div>
+          <div class="shot-body">
+            <div class="vo">VO: “순면 멜팅 밤패드 한 장으로 진한 메이크업과 피지를 부드럽게 지우고,”</div>
+            <div class="dir">100% 순면 엠보 패드가 볼 위 파운데이션을 한 번에 깨끗하게 닦아내는 하이키 뷰티 클로즈업.</div>
+          </div>
+        </div>
+
+        <div class="shot-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c4-cut3.jpg', 'Concept 04 · CUT 03 (8~14s 461% 흡수) — 피부 위 투명 유리알 장벽으로 스며드는 버블 매크로')">
+            <img src="./assets/c4-cut3.jpg" alt="Concept 4 Cut 3" />
+            <div class="shot-pill-top"><span class="shot-step-badge">CUT 03 · 8~14s STEP 2</span></div>
+            <div class="shot-caption-overlay">Step 2. 10초 노워시 · 흡수율 461% 리페어</div>
+          </div>
+          <div class="shot-body">
+            <div class="vo">VO: “식물성 PDRN 에어버블을 얹으면, 10초 만에 461% 깊숙이 흡수됩니다.”</div>
+            <div class="dir">맑은 피부결 위 흰 마이크로 버블이 물방울 맺힘 없이 투명 유리알 수분막으로 녹아드는 매크로.</div>
+          </div>
+        </div>
+
+        <div class="shot-card">
+          <div class="shot-img-wrap" onclick="openLb('./assets/c4-cut4.jpg', 'Concept 04 · CUT 04 (14~20s 단상 화보) — 에어버블 + 밤패드 + 실버파우치 풀기프트 단상')">
+            <img src="./assets/c4-cut4.jpg" alt="Concept 4 Cut 4" />
+            <div class="shot-pill-top"><span class="shot-step-badge">CUT 04 · 14~20s CTA</span></div>
+            <div class="shot-caption-overlay">최대 46% 할인 + 멜팅 밤패드 본품 무료 증정</div>
+          </div>
+          <div class="shot-body">
+            <div class="vo">VO: “1장으로 지우고 10초 만에 채우다. 지금 구매 시 밤패드 본품 무료 증정.”</div>
+            <div class="dir">크롬&amp;에메랄드 단상 위 GASH 그린 보틀, 화이트 밤패드 Jar, 실버파우치 럭셔리 프로모션 컷.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 09: META REELS AD UI REFERENCES (9:16) ==================== -->
+    <section class="slide" data-title="09 메타릴스레퍼런스">
+      <div class="s-head">
+        <div class="s-eyebrow">
+          <span class="tag yellow">08 · META REELS AD LIVE UI REFERENCES (9:16 SPONSORED MOCKUPS)</span>
+          <span class="s-num">SLIDE 09 / 11</span>
+        </div>
+        <h2 class="s-title">실제 메타 릴스(9:16) 광고 집행 화면 레퍼런스 시안</h2>
+        <p class="s-sub">메타 상·하단 UI 가림 영역(Safe Zone)을 철저히 계산하여, <strong>상단 3초 훅 타이포그래피와 하단 행동 유도(CTA) 버튼</strong>이 가장 선명하게 작동하도록 설계한 실집행 레퍼런스입니다.</p>
+      </div>
+
+      <div class="grid-3" style="flex:1; align-items:center;">
+        <!-- Reels Ad Ref 1 -->
+        <div class="ig-reels-phone">
+          <div class="ig-reels-screen" onclick="openLb('./assets/c1-cut3.jpg', '메타 릴스 광고 레퍼런스 A — 90s 소호 화잘먹 편')">
+            <img src="./assets/c1-cut3.jpg" alt="Reels Ref 1" />
+            <div class="ig-reels-grad-top"></div>
+            <div class="ig-reels-grad-bot"></div>
+            <div class="ig-hook-banner">
+              <span class="ig-hook-chip">10초 NO-WASH 마스크</span>
+              <div class="ig-hook-text">약속 10초 전 화장 다 떴을 때<br/>절대 세수하지 마세요</div>
+            </div>
+            <div class="ig-reels-bottom">
+              <div class="ig-user-row">
+                <span class="ig-avatar">G</span>
+                <div>gash.official.kr<span class="ig-spon">광고 · Sponsored</span></div>
+              </div>
+              <div class="ig-caption-line">20분 시트팩 대신 바르는 10초 에어버블 · 흡수율 461% 화잘먹 치트키</div>
+              <div class="ig-cta-bar"><span>최대 46% + 밤패드 증정 보기</span><span>더 알아보기 →</span></div>
             </div>
           </div>
-          <div class="bento">
-            <span class="pill-tag dark" style="align-self:flex-start;">시안 C-2 · 야근 귀차니즘 &amp; 맨즈(MARK5) 확장</span>
-            <h3>〈새벽 2시 퇴근 여친 × 귀차니즘 남친 15초템〉</h3>
-            <div class="cut-list">
-              <div class="cut-row hook-row"><div class="cut-time">0.0–3.0s<br/><span class="hook-badge">3초 HOOK</span></div><div>새벽 2시 현관문 열자마자 침대에 쓰러지는 풀메이크업 여자 &amp; 여러 개 바르기 귀찮아 맨얼굴로 버티는 남자 분할 화면.</div></div>
-              <div class="cut-row"><div class="cut-time">3.0–13.0s</div><div>침대 옆 <code>멜팅 밤패드</code> 1장으로 5초 세안 → 여자는 <strong>그린(진정)</strong>, 남자는 <strong>블랙(MARK5 남성 올케어)</strong> 버블 10초 바르고 바로 기절 취침.</div></div>
-              <div class="cut-row"><div class="cut-time">13.0–20.0s</div><div>다음 날 아침 매끈한 두 사람 피부 인증 + <code>커플 베스트 조합: 그린 + 블랙 2개 골라담기 + 밤패드 증정</code>.</div></div>
+        </div>
+
+        <!-- Reels Ad Ref 2 -->
+        <div class="ig-reels-phone">
+          <div class="ig-reels-screen" onclick="openLb('./assets/c3-cut1.jpg', '메타 릴스 광고 레퍼런스 B — 90s 맨해튼 시트팩 150장 결별 키치 편')">
+            <img src="./assets/c3-cut1.jpg" alt="Reels Ref 2" />
+            <div class="ig-reels-grad-top"></div>
+            <div class="ig-reels-grad-bot"></div>
+            <div class="ig-hook-banner">
+              <span class="ig-hook-chip">1병 = 시트팩 150장 분량</span>
+              <div class="ig-hook-text">오늘 20분짜리 시트팩<br/>150장이랑 헤어졌습니다</div>
+            </div>
+            <div class="ig-reels-bottom">
+              <div class="ig-user-row">
+                <span class="ig-avatar">G</span>
+                <div>gash.official.kr<span class="ig-spon">광고 · Sponsored</span></div>
+              </div>
+              <div class="ig-caption-line">1회 200원꼴 초격차 홈케어 · 댓글 남기면 베라 쿠폰 50명 추첨!</div>
+              <div class="ig-cta-bar"><span>1회 200원 에어버블 시작하기</span><span>지금 구매하기 →</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reels Ad Ref 3 -->
+        <div class="ig-reels-phone">
+          <div class="ig-reels-screen" onclick="openLb('./assets/c4-cut1.jpg', '메타 릴스 광고 레퍼런스 C — 2.04µm 초미세 버블 제형 씨즐 편')">
+            <img src="./assets/c4-cut1.jpg" alt="Reels Ref 3" />
+            <div class="ig-reels-grad-top"></div>
+            <div class="ig-reels-grad-bot"></div>
+            <div class="ig-hook-banner">
+              <span class="ig-hook-chip">특허 Air Bubble CDS™</span>
+              <div class="ig-hook-text">모공보다 작은 2.04µm 버블<br/>10초 만에 461% 급속 흡수</div>
+            </div>
+            <div class="ig-reels-bottom">
+              <div class="ig-user-row">
+                <span class="ig-avatar">G</span>
+                <div>gash.official.kr<span class="ig-spon">광고 · Sponsored</span></div>
+              </div>
+              <div class="ig-caption-line">식물성 PDRN + EGF 집중 진정 · 전 구매 선착순 클렌저 &amp; 밤패드 본품 증정</div>
+              <div class="ig-cta-bar"><span>고민별 5종 골라담기</span><span>자사몰 혜택 보기 →</span></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 12: TRACK D -->
-    <section class="slide" data-title="12 Track D 키치">
-      <div class="slide-head">
-        <div class="eyebrow-row">
-          <span class="pill-tag dark">11 · TRACK D — HYPERREAL AI KITSCH &amp; BREAKING NEWS (CTR 치트키)</span>
-          <span class="slide-num-tag">SLIDE 12 / 13</span>
+    <!-- ==================== SLIDE 10: META FEED AD UI REFERENCES (4:5) ==================== -->
+    <section class="slide" data-title="10 메타피드레퍼런스">
+      <div class="s-head">
+        <div class="s-eyebrow">
+          <span class="tag emerald">09 · META FEED AD LIVE UI REFERENCES (4:5 PINTEREST FORMULA)</span>
+          <span class="s-num">SLIDE 10 / 11</span>
         </div>
-        <h2 class="slide-title">Track D 상세 기획 — 미친 3초 후킹으로 CTR과 댓글(베라 쿠폰)을 터뜨리다</h2>
+        <h2 class="s-title">핀터레스트 검증 구도(20-55-25)를 입힌 메타 피드(4:5) 광고 레퍼런스 3종</h2>
+        <p class="s-sub">릴스 영상과 함께 세팅되어 상세 스펙 확인 및 리타겟팅 구매 전환을 책임지는 <strong>인스타그램 피드 정지화 광고 실집행 목업</strong>입니다.</p>
       </div>
-      <div class="grid-2" style="flex:1;">
-        <div class="bento" style="flex-direction:row; gap:14px; align-items:stretch;">
-          <div class="keycut-card" style="width:185px; flex-shrink:0;" onclick="openLb('./assets/d1-mermaid.jpg', 'Track D-1 생성 키컷 (Seedream 5.0 Pro · 9:16) — 육지 출근 인어 오피스 생존 브이로그')">
-            <img src="./assets/d1-mermaid.jpg" alt="Track D-1 Keycut" class="keycut-img" />
-            <div class="keycut-meta"><span class="pill-tag yellow" style="font-size:9.5px; padding:2px 6px;">Seedream 5.0</span><span>확대 ↗</span></div>
+
+      <div class="grid-3" style="flex:1;">
+        <!-- Feed Ad Ref 1 -->
+        <div class="ig-feed-card">
+          <div class="ig-feed-header">
+            <div style="display:flex; align-items:center; gap:8px; font-weight:800;">
+              <span class="ig-avatar">G</span>
+              <div>gash.official.kr <span style="font-weight:500; color:var(--ink-muted); font-size:11px;">· 광고</span></div>
+            </div>
+            <span style="color:var(--ink-muted); font-weight:800;">•••</span>
           </div>
-          <div style="display:flex; flex-direction:column; gap:6px; flex:1;">
-            <span class="pill-tag yellow" style="align-self:flex-start;">시안 D-1 · 실사 판타지 브이로그</span>
-            <h3>〈육지 출근 3일 차 인어의 생존기〉</h3>
-            <p><strong>0~3s 훅:</strong> 할리우드 실사 퀄리티의 에메랄드 비늘 인어 대리가 사무실 히터 바람에 말라비틀어지며 시트팩이 떨어지는 셀카 브이로그.<br/><em>“바다 밖 인간들아, 얼굴에 젖은 종이를 왜 20분이나 붙이고 있니?”</em></p>
-            <p><strong>3~14s 데모:</strong> 꼬리 색과 똑같은 <strong>에메랄드 메탈 GASH 보틀</strong>로 흰 버블을 짜 바르자 10초 만에 유리알 물광 피부로 환골탈태 (<code>1병 150회 · 1회 200원</code>).</p>
-            <p><strong>14~20s CTA:</strong> 최대 46% + 밤패드 증정 &amp; <strong>댓글 달면 베라 아이스크림 쿠폰 50명 추첨</strong> 고지로 댓글 폭발 유도.</p>
+          <div class="ig-feed-visual" onclick="openLb('./assets/feed-90s.jpg', '메타 피드 레퍼런스 01 — 90s 에디토리얼 인물+보틀+스와치 트라이어드')">
+            <img src="./assets/feed-90s.jpg" alt="Feed Ref 1" />
+            <div class="ig-feed-overlay-top">
+              <div style="font-size:10.5px; color:var(--accent-yellow); font-weight:800;">10-SECOND NO-WASH BOOSTER</div>
+              <div style="font-size:15px; font-weight:900; margin-top:2px;">붙이는 20분 대신, 바르는 10초 물광</div>
+            </div>
+            <div class="ig-feed-overlay-pills">
+              <div class="callout-stack">
+                <span class="callout-chip">● 흡수율 461% 특허 버블</span>
+                <span class="callout-chip">● 메이크업 전 밀림 ZERO</span>
+              </div>
+              <span class="offer-stamp">1회 200원꼴</span>
+            </div>
+          </div>
+          <div class="ig-feed-cta">
+            <div><strong style="color:var(--ink-primary);">GEARBYGASH.COM</strong><br/><span style="color:var(--ink-secondary); font-size:11px;">트리플 슈퍼 리페어 80ml (150회분)</span></div>
+            <span class="tag dark">더 알아보기</span>
+          </div>
+          <div class="ig-feed-copy">
+            <strong style="color:var(--ink-primary);">gash.official.kr</strong> 중요한 약속 직전 시트팩 붙일 시간 없다면? 세안 없이 10초 만에 스며드는 화잘먹 치트키.
           </div>
         </div>
-        <div class="bento" style="flex-direction:row; gap:14px; align-items:stretch;">
-          <div class="keycut-card" style="width:185px; flex-shrink:0;" onclick="openLb('./assets/d2-news.jpg', 'Track D-2 생성 키컷 (Nano Banana 2 · 9:16) — 90s GASH NEWS 앵커 10초 라이브 시연')">
-            <img src="./assets/d2-news.jpg" alt="Track D-2 Keycut" class="keycut-img" />
-            <div class="keycut-meta"><span class="pill-tag cyan" style="font-size:9.5px; padding:2px 6px;">Nano Banana 2</span><span>확대 ↗</span></div>
+
+        <!-- Feed Ad Ref 2 -->
+        <div class="ig-feed-card">
+          <div class="ig-feed-header">
+            <div style="display:flex; align-items:center; gap:8px; font-weight:800;">
+              <span class="ig-avatar">G</span>
+              <div>gash.official.kr <span style="font-weight:500; color:var(--ink-muted); font-size:11px;">· 광고</span></div>
+            </div>
+            <span style="color:var(--ink-muted); font-weight:800;">•••</span>
           </div>
-          <div style="display:flex; flex-direction:column; gap:6px; flex:1;">
-            <span class="pill-tag cyan" style="align-self:flex-start;">시안 D-2 · 공식계정 GASH NEWS 계승</span>
-            <h3>〈속보: 시트팩 인류 멸종 위기〉</h3>
-            <p><strong>0~3s 훅:</strong> 90s 브라운관 저녁 뉴스 특보 화면 + 시트팩 붙인 채 치킨 먹다 양념 묻고 드라이기 바람에 날아가는 웃픈 시민 제보 연타.</p>
-            <p><strong>3~14s 데모:</strong> 진지한 앵커가 데스크 위 <strong>GASH 그린 보틀</strong>을 들어 자기 볼에 직접 노워시 10초 흡수를 시연하며 <code>흡수율 461%</code> 브리핑.</p>
-            <p><strong>14~20s CTA:</strong> 하단 뉴스 속보 자막 바(Ticker)로 <code>[긴급] 세트 최대 46% 할인 및 멜팅 밤패드 무상 보급 개시</code> 노출.</p>
+          <div class="ig-feed-visual" onclick="openLb('./assets/feed-sizzle.jpg', '메타 피드 레퍼런스 02 — 임상 포인터 & 마이크로 버블 제형 포스터')">
+            <img src="./assets/feed-sizzle.jpg" alt="Feed Ref 2" />
+            <div class="ig-feed-overlay-top">
+              <div style="font-size:10.5px; color:#6cd4ff; font-weight:800;">TRIPLE SUPER REPAIR · VEGAN</div>
+              <div style="font-size:15px; font-weight:900; margin-top:2px;">예민·붉은 피부 장벽 10초 응급 진정</div>
+            </div>
+            <div class="ig-feed-overlay-pills">
+              <div class="callout-stack">
+                <span class="callout-chip">● 식물성 CICA PDRN + EGF</span>
+                <span class="callout-chip">● 2.04µm 초미세 공기압축 폼</span>
+              </div>
+              <span class="offer-stamp" style="background:var(--accent-cyan); color:#fff;">461% 흡수</span>
+            </div>
+          </div>
+          <div class="ig-feed-cta">
+            <div><strong style="color:var(--ink-primary);">피부 고민별 5종 라인업</strong><br/><span style="color:var(--ink-secondary); font-size:11px;">진정 · 탄력 · 미백 · 수분 · 남성 올케어</span></div>
+            <span class="tag dark">제품 보기</span>
+          </div>
+          <div class="ig-feed-copy">
+            <strong style="color:var(--ink-primary);">gash.official.kr</strong> 모공보다 미세하게 쪼갠 생크림 에어버블이 씻어낼 필요 없이 피부 깊숙이 장벽을 채웁니다.
+          </div>
+        </div>
+
+        <!-- Feed Ad Ref 3 -->
+        <div class="ig-feed-card">
+          <div class="ig-feed-header">
+            <div style="display:flex; align-items:center; gap:8px; font-weight:800;">
+              <span class="ig-avatar">G</span>
+              <div>gash.official.kr <span style="font-weight:500; color:var(--ink-muted); font-size:11px;">· 광고</span></div>
+            </div>
+            <span style="color:var(--ink-muted); font-weight:800;">•••</span>
+          </div>
+          <div class="ig-feed-visual" onclick="openLb('./assets/c4-cut4.jpg', '메타 피드 레퍼런스 03 — 단상 프로모션 & 밤패드·실버파우치 풀기프트 보드')">
+            <img src="./assets/c4-cut4.jpg" alt="Feed Ref 3" />
+            <div class="ig-feed-overlay-top" style="background:rgba(13, 122, 105, 0.90);">
+              <div style="font-size:10.5px; color:var(--accent-yellow); font-weight:800;">SPECIAL BUNDLE PROMOTION</div>
+              <div style="font-size:15px; font-weight:900; margin-top:2px;">에어버블 사면 ‘멜팅 밤패드 본품’ 무료</div>
+            </div>
+            <div class="ig-feed-overlay-pills">
+              <div class="callout-stack">
+                <span class="callout-chip">● 전 구성 무료배송 + 밤패드 1~3개</span>
+                <span class="callout-chip">● 선착순 클렌저 &amp; 실버파우치 증정</span>
+              </div>
+              <span class="offer-stamp">UP TO 46% OFF</span>
+            </div>
+          </div>
+          <div class="ig-feed-cta">
+            <div><strong style="color:var(--ink-primary);">한정 수량 단독 프로모션</strong><br/><span style="color:var(--ink-secondary); font-size:11px;">사은품 소진 시 조기 종료</span></div>
+            <span class="tag emerald">혜택 받기</span>
+          </div>
+          <div class="ig-feed-copy">
+            <strong style="color:var(--ink-primary);">gash.official.kr</strong> 1장으로 지우는 멜팅 밤패드부터 10초 만에 채우는 에어버블까지. 자사몰 단독 최대 46% 혜택.
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 13: 4:5 STATICS & SUMMARY -->
-    <section class="slide dark-stage" data-title="13 4:5정지화&요약">
-      <div class="slide-head">
-        <div class="eyebrow-row">
-          <span class="pill-tag yellow">12 · 4:5 FEED STATIC CREATIVES (NANO BANANA 2) &amp; LAUNCH SUMMARY</span>
-          <span class="slide-num-tag" style="color:rgba(255,255,255,0.5);">SLIDE 13 / 13</span>
+    <!-- ==================== SLIDE 11: DARK FINALE — ALL 18 SEEDREAM ASSETS ==================== -->
+    <section class="slide dark-stage" data-title="11 전체에셋보드">
+      <div class="s-head">
+        <div class="s-eyebrow">
+          <span class="tag yellow">10 · COMPLETE SEEDREAM 5.0 PRO MASTER ASSET CONTACT SHEET (18 CUTS)</span>
+          <span class="s-num" style="color:rgba(255,255,255,0.5);">SLIDE 11 / 11</span>
         </div>
-        <h2 class="slide-title" style="color:#ffffff;">핀터레스트 구도 기반 4:5 피드 정지화 시안 (Nano Banana 2 생성) &amp; 최종 요약</h2>
-        <p class="slide-sub">릴스 영상 4개 트랙과 함께 메타 피드 지면에서 전환을 마무리할 <strong>4:5 정지화 에셋 4종</strong> 구성입니다.</p>
+        <h2 class="s-title" style="color:#ffffff;">전량 Seedream 5.0 Pro 생성 마스터 비주얼 보드 &amp; 즉시 제작 준비 완료</h2>
+        <p class="s-sub">4개 기획안 × 4컷 스토리보드(16컷) + 피드 전용 히어로(2컷) 총 18종의 고해상도 키컷이 일관된 브랜드 톤으로 구축되었습니다. (클릭 시 원본 확대)</p>
       </div>
-      <div class="grid-4" style="flex:1;">
-        <div class="keycut-card" style="background:#242129;" onclick="openLb('./assets/s1-macro.jpg', 'Static 01 생성 비주얼 (Nano Banana 2 · 4:5) — 에메랄드 메탈 & 소프트아이스크림 마이크로 버블 제형 포스터')">
-          <img src="./assets/s1-macro.jpg" alt="Static 01" class="keycut-img ratio-45" />
-          <div style="padding:4px;">
-            <span class="pill-tag cyan" style="font-size:10px; padding:2px 8px;">STATIC 01 · Nano Banana 2</span>
-            <div style="font-weight:800; font-size:13.5px; margin-top:5px;">461% 마이크로 버블 매크로 포스터</div>
-            <div style="font-size:11.5px; color:rgba(255,255,255,0.7); margin-top:2px;">상단 여백 카피: “붙이는 20분 대신, 바르는 10초”</div>
-          </div>
-        </div>
-        <div class="keycut-card" style="background:#242129;" onclick="openLb('./assets/s2-model.jpg', 'Static 02 생성 비주얼 (Nano Banana 2 · 4:5) — 유리알 속광 모델 + 에메랄드 보틀 + 제형 스와치 트라이어드')">
-          <img src="./assets/s2-model.jpg" alt="Static 02" class="keycut-img ratio-45" />
-          <div style="padding:4px;">
-            <span class="pill-tag yellow" style="font-size:10px; padding:2px 8px;">STATIC 02 · Nano Banana 2</span>
-            <div style="font-weight:800; font-size:13.5px; margin-top:5px;">유리알 피부 모델 + 스와치 트라이어드</div>
-            <div style="font-size:11.5px; color:rgba(255,255,255,0.7); margin-top:2px;">핀터레스트 K-뷰티 대표 구도 · 화잘먹 부스터 각인</div>
-          </div>
-        </div>
-        <div class="bento violet">
-          <span class="pill-tag dark" style="align-self:flex-start;">CAROUSEL 03 · 5종 처방</span>
-          <h3>시트팩 150장 비교 &amp; 5종 골라담기 카드뉴스</h3>
-          <ul>
-            <li><strong>1p:</strong> 시트팩 150장(3,000분) vs GASH 1병(10초 · 1회 200원)</li>
-            <li><strong>2p:</strong> <code>화이트+오렌지</code> (탄력·미백 광채)</li>
-            <li><strong>3p:</strong> <code>그린+실버</code> (진정·수분 장벽)</li>
-            <li><strong>4p:</strong> <code>그린+블랙 MARK5</code> (남성 올케어)</li>
-          </ul>
-        </div>
-        <div class="bento yellow">
-          <span class="pill-tag dark" style="align-self:flex-start;">STATIC 04 · 풀기프트 단상</span>
-          <h3>UP TO 46% + 본품 증정 리타겟팅 보드</h3>
-          <ul>
-            <li><strong>구성:</strong> 5종 보틀 단상 + 멜팅 밤패드(1~3개) + 실버파우치 실물 떼샷</li>
-            <li><strong>사은품 강조:</strong> 전구매 뮤신 클렌저(300명) · 4개입 실버파우치(100명) · 댓글 베라 쿠폰(50명)</li>
-          </ul>
-        </div>
+
+      <div class="grid-6" style="flex:1; align-content:center;">
+        <div class="cover-thumb" style="aspect-ratio:9/13;" onclick="openLb('./assets/c1-cut1.jpg', 'C1-1 소호 사이드미러 훅')"><img src="./assets/c1-cut1.jpg" alt="c1-1"/></div>
+        <div class="cover-thumb" style="aspect-ratio:9/13;" onclick="openLb('./assets/c1-cut2.jpg', 'C1-2 옐로우캡 버블 분사')"><img src="./assets/c1-cut2.jpg" alt="c1-2"/></div>
+        <div class="cover-thumb" style="aspect-ratio:9/13;" onclick="openLb('./assets/c1-cut3.jpg', 'C1-3 옐로우캡 10초 흡수')"><img src="./assets/c1-cut3.jpg" alt="c1-3"/></div>
+        <div class="cover-thumb" style="aspect-ratio:9/13;" onclick="openLb('./assets/c1-cut4.jpg', 'C1-4 소호 골든아워 물광')"><img src="./assets/c1-cut4.jpg" alt="c1-4"/></div>
+        <div class="cover-thumb" style="aspect-ratio:9/13;" onclick="openLb('./assets/c2-cut1.jpg', 'C2-1 본식 1분 전 위기')"><img src="./assets/c2-cut1.jpg" alt="c2-1"/></div>
+        <div class="cover-thumb" style="aspect-ratio:9/13;" onclick="openLb('./assets/c2-cut2.jpg', 'C2-2 대기실 버블 분사')"><img src="./assets/c2-cut2.jpg" alt="c2-2"/></div>
+        <div class="cover-thumb" style="aspect-ratio:9/13;" onclick="openLb('./assets/c2-cut3.jpg', 'C2-3 신부 볼 10초 리페어')"><img src="./assets/c2-cut3.jpg" alt="c2-3"/></div>
+        <div class="cover-thumb" style="aspect-ratio:9/13;" onclick="openLb('./assets/c2-cut4.jpg', 'C2-4 양개문 플래시 입장')"><img src="./assets/c2-cut4.jpg" alt="c2-4"/></div>
+        <div class="cover-thumb" style="aspect-ratio:9/13;" onclick="openLb('./assets/c3-cut1.jpg', 'C3-1 비닐봉투 시트팩 150장 결별')"><img src="./assets/c3-cut1.jpg" alt="c3-1"/></div>
+        <div class="cover-thumb" style="aspect-ratio:9/13;" onclick="openLb('./assets/c3-cut2.jpg', 'C3-2 실버파우치 보틀 오픈')"><img src="./assets/c3-cut2.jpg" alt="c3-2"/></div>
+        <div class="cover-thumb" style="aspect-ratio:9/13;" onclick="openLb('./assets/c3-cut3.jpg', 'C3-3 오픈카 선바이저 10초팩')"><img src="./assets/c3-cut3.jpg" alt="c3-3"/></div>
+        <div class="cover-thumb" style="aspect-ratio:9/13;" onclick="openLb('./assets/c3-cut4.jpg', 'C3-4 90s 선글라스 잇걸 엔딩')"><img src="./assets/c3-cut4.jpg" alt="c3-4"/></div>
       </div>
-      <div class="slide-foot">
-        <span>GEAR BY GASH META CREATIVE PROPOSAL · 모든 이미지는 클릭하여 원본 해상도(2K)로 확대 확인하실 수 있습니다.</span>
-        <span>READY TO LAUNCH</span>
+
+      <div class="s-foot">
+        <span>GEAR BY GASH × AROA CREATIVE PRODUCTION · PRETENDARD TYPOGRAPHY &amp; JITTER DESIGN SYSTEM</span>
+        <span>READY FOR VIDEO GENERATION</span>
       </div>
     </section>
 
   </main>
 
-  <div class="slide-jumper" id="slideJumper"></div>
+  <nav class="jumper" id="slideJumper"></nav>
 
-  <!-- Hidden Copyable Scripts -->
-  <pre id="rawScriptA1" style="display:none;">[Track A-1 상세 대본] 〈1997 웨딩 대기실: 본식 입장 1분 전〉 (9:16 Reels · 총 20.0초)
+  <!-- Image Lightbox Modal -->
+  <div class="modal-backdrop" id="lbModal" onclick="closeLb()">
+    <div class="lb-box">
+      <img id="lbImg" src="" alt="" />
+      <div class="lb-cap" id="lbCap"></div>
+    </div>
+  </div>
 
-■ 0.0–1.5s | Cut 1 (HOOK 1 · 위기 예고)
-- 화면/연기: 90s 호텔 우드 몰딩 신부 대기실 문이 반쯤 열리며 웨딩 플래너가 손목시계를 두드리며 다급하게 신호. 거울 앞 아이보리 새틴 드레스 신부가 굳어짐.
-- 현장 대사: (플래너, 다급하게) "신부님! 입장 딱 1분 남았어요!"
-- 화면 자막: [상단] 본식 입장 딱 1분 전,
-- 사운드: 문 열리는 소리 + 복도 하객 웅성거림 + 긴박한 시계 초침(Tick-tock)
-
-■ 1.5–3.0s | Cut 2 (HOOK 2 · 결점 클로즈업)
-- 화면/연기: 거울 속 신부의 앞볼·코 옆 극접사(ECU). 긴장 열감으로 붉은기가 올라오고 파운데이션이 하얗게 각질처럼 들뜸. 시트팩 파우치를 집었다가(20분 소요) 내려놓음.
-- 내레이션(VO): (신부 속마음, 낮고 초조하게) "미쳤나 봐… 화장이 다 떴는데, 시트팩 붙일 시간은 없고."
-- 화면 자막: [상단] 화장이 하얗게 다 떴다. / [하단] (20분 시트팩 붙일 시간 0초)
-- 사운드: 시트팩 파우치 비닐 구겨지는 소리 + 짧은 한숨 호흡
-
-■ 3.0–5.5s | Cut 3 (DEMO 1 · 제품 등장 & 버블 씨즐)
-- 화면/연기: 메이크업 아티스트의 손이 프레임 안으로 단호하게 들어오며 딥 에메랄드 메탈 GASH 보틀의 화이트 사선 노즐 클릭. 손끝 위로 생크림 같은 초고밀도 마이크로 버블이 봉긋 솟아오름.
-- 대사(아티스트): (침착하고 확신 있게) "씻어낼 필요 없어요. 딱 10초만 주세요."
-- 화면 자막: "입장 1분 전, 20분짜리 시트팩 대신 10초." [TIMER 10s → 07s]
-- 사운드: 메탈 캡 '딸깍' + 쫀쫀한 마이크로 버블 분사음 '쉬이익—' / 90s 스트링 BGM 인
-
-■ 5.5–9.5s | Cut 4 (DEMO 2 · 노워시 10초 멜팅 흡수)
-- 화면/연기: 신부의 들뜬 볼 위에 폭신한 흰 버블을 얹고 손끝으로 부드럽게 롤링하자, 세안 없이 투명한 수분막으로 사르르 녹아들며 붉은기와 각질이 즉각 잠재워짐.
-- 내레이션(VO): "모공보다 작은 특허 마이크로 버블이 단 10초 만에 깊숙이 스며드니까."
-- 화면 자막: 씻어낼 필요 없는 NO-WASH · 특허 에어버블 흡수율 461% [07s → 03s]
-- 사운드: 미세 버블이 사르르 스며드는 촉촉한 스킨케어 폴리음
-
-■ 9.5–13.0s | Cut 5 (DEMO 3 · 화잘먹 밀착 완성)
-- 화면/연기: 흡수 직후 쿠션 퍼프로 앞볼을 두 번 톡톡 두드리자 밀림 0%로 착 붙으며 유리알 속광 완성. 거울 속 피부를 보고 안도하며 환하게 미소 짓는 신부.
-- 내레이션(VO): "식물성 PDRN 진정부터 밀림 없는 화잘먹 속광까지, 단숨에."
-- 화면 자막: CICA PDRN + EGF 급속 진정 · 밀림 0% 유리알 속광 [03s → 00s DONE]
-- 사운드: 퍼프 터치음 '톡, 톡' + 은은한 벨 차임 포인트
-
-■ 13.0–16.5s | Cut 6 (PAYOFF · 본식 입장)
-- 화면/연기: 대기실 양개문이 활짝 열리고 부케를 든 신부가 걸어 나가며 카메라 쪽으로 살짝 돌아보며 우아한 미소. 90s 필름 카메라 플래시가 터질 때마다 광대의 물광이 빛남.
-- 내레이션(VO): "가장 완벽해야 할 순간 직전, 단 10초면 충분합니다."
-- 화면 자막: 중요한 순간 직전, 단 10초면 충분하니까.
-- 사운드: 양개문 오픈음 + 빈티지 35mm 플래시 셔터음 연속(찰칵, 찰칵!)
-
-■ 16.5–20.0s | Cut 7 (CTA · 제품 라인업 클로징)
-- 화면/연기: 브러시드 메탈 위 에메랄드 그린 보틀(센터) + 5종 라인업 & 사은품 딥클린 멜팅 밤패드 정물 컷.
-- 내레이션(VO): "시트팩 150장을 한 병에. 기어바이가쉬 에어버블 마스크."
-- 화면 자막: 시트팩 150장을 한 병에(1회 200원) · 최대 46% + 밤패드 본품 증정</pre>
-
-  <pre id="rawScriptA2" style="display:none;">[Track A-2 상세 대본] 〈1998 심야 퍼스트클래스 기내의 반칙〉 (9:16 Reels · 총 20.0초)
-
-■ 0.0–1.5s | Cut 1 (HOOK 1 · 기내 시트팩 굴욕)
-- 화면/연기: 어두운 90s 야간 장거리 비행기 기내. 옆 좌석 승객이 얼굴에 붙이고 자던 바짝 마른 하얀 시트팩이 무릎으로 '툭' 떨어지며 당황하는 컷.
-- 내레이션(VO): (차분하고 세련된 여성 독백) "건조한 비행기 안, 아직도 하얀 시트팩 붙이고 버티세요?"
-- 화면 자막: 건조한 기내 안, 시트팩 붙였다 떨어진 적 있죠?
-- 사운드: 기내 저주파 앰비언스 + 마른 시트 바스락 떨어지는 소리
-
-■ 1.5–3.0s | Cut 2 (HOOK 2 · 실버파우치 속 에메랄드 보틀)
-- 화면/연기: 창가석 주인공(캐시미어 니트)이 시크한 가쉬 실버파우치 지퍼를 열어 딥 에메랄드 메탈 GASH 보틀(80ml) 하나만 가볍게 꺼냄.
-- 내레이션(VO): "전 시트팩 뭉치 대신, 기내에 딱 이 한 병만 들고 타요."
-- 화면 자막: 기내 반입 80ml 한 병 = 시트팩 150장 분량
-- 사운드: 금속 지퍼 '스르륵' + 메탈 보틀 꺼내는 소리
-
-■ 3.0–7.5s | Cut 3 (DEMO 1 · 세면대 없는 좌석 버블 도포)
-- 화면/연기: 따뜻한 웜톤 독서등 아래, 화이트 사선 노즐을 눌러 손끝에 생크림 마이크로 버블을 짜 올린 뒤 볼에 얹는 타이트 클로즈업.
-- 내레이션(VO): "좁은 화장실에 씻으러 갈 필요도 없거든요. 공기 압축 버블을 얹고—"
-- 화면 자막: 세면대 갈 필요 없는 10초 NO-WASH · 특허 마이크로 버블
-- 사운드: 독서등 스위치 '딸깍' + 고밀도 무스 폼 분사 ASMR / 90s 재즈 피아노 BGM 인
-
-■ 7.5–12.5s | Cut 4 (DEMO 2 · 10초 흡수 & 수면)
-- 화면/연기: 손끝으로 두 번 롤링하자 버블이 투명 보습막으로 싹 스며들고(흡수율 461%), 그대로 실크 안대를 내리고 편안히 잠드는 35mm 필름 원테이크.
-- 내레이션(VO): "10초만 톡톡 두드리면 끝. 사막 같은 기내 공기도 밤새 촉촉하게 막아주니까."
-- 화면 자막: 흡수율 461% 장벽 리페어 · 바르고 바로 잠드는 수분막
-- 사운드: 촉촉한 피부 터치음 + 부드러운 담요 스치는 소리
-
-■ 12.5–16.5s | Cut 5 (PAYOFF · 착륙 후 아침 햇살 속광)
-- 화면/연기: 착륙 안내 벨 소리와 함께 창문 덮개를 올리자 쏟아지는 아침 햇살. 12시간 비행 직후인데도 혼자만 탱탱하게 빛나는 유리알 피부 클로즈업.
-- 내레이션(VO): "내릴 때 혼자만 피부 안 무너진 비밀, 1회 200원이면 충분해요."
-- 화면 자막: 12시간 비행 후에도 무너짐 없는 유리알 속광
-- 사운드: 기내 착륙 벨 '딩-동' + 창문 블라인드 올리는 소리
-
-■ 16.5–20.0s | Cut 6 (CTA · 여행 키트 오퍼)
-- 화면/연기: 가쉬 실버파우치 + 에어버블 5종 보틀 + 멜팅 밤패드 정물 컷.
-- 내레이션(VO): "여행 가방은 가볍게, 피부는 완벽하게. 기어바이가쉬."
-- 화면 자막: 1병 150회(1회 200원) · 4개입 구매 시 실버파우치 & 밤패드 증정</pre>
-
-  <pre id="rawScriptA1B" style="display:none;">[Track A 파생 3초 훅 교체 대본] 〈1999 패션위크 백스테이지: 런웨이 30초 전〉 (20.0초)
-
-■ 0.0–3.0s | Cut 1~2 (HOOK · 백스테이지 체인지오버 위기)
-- 화면: 플래시 터지는 쇼 커튼 뒤, 디렉터가 무전기에 외침. 이전 쇼의 진한 메이크업 위에 열감이 올라 들뜬 모델의 얼굴 클로즈업.
-- 현장 대사: "다음 런웨이 오픈 30초 전! 모델 스탠바이!" / (VO) "세수할 시간조차 없는 백스테이지."
-- 자막: 다음 쇼 입장 30초 전, 세수할 시간은 0초.
-
-■ 3.0–7.0s | Cut 3 (STEP 1 · 멜팅 밤패드 원패드 올오프)
-- 화면: 아티스트가 '가쉬 딥클린 멜팅 밤패드' 순면 패드 단 1장으로 모델 볼의 진한 워터프루프 메이크업을 물 없이 단숨에 싹 닦아냄.
-- 내레이션(VO): "클렌징 밤을 품은 패드 한 장으로 자극 없이 지우고,"
-- 자막: Step 1. 멜팅 밤패드 1장 원패드 올오프
-
-■ 7.0–13.0s | Cut 4~5 (STEP 2 · 그린 에어버블 10초 리페어)
-- 화면: 곧바로 에메랄드 메탈 GASH 보틀에서 흰 버블을 짜 올려 10초 롤링 흡수 → 새 베이스 터치 즉시 폭발하는 런웨이 윤광.
-- 내레이션(VO): "식물성 PDRN 에어버블로 10초 만에 속광을 채우니까."
-- 자막: Step 2. 씻지 않는 10초 에어버블 (흡수율 461%)
-
-■ 13.0–20.0s | Cut 6~7 (PAYOFF & CTA · 런웨이 워킹 & 번들 고지)
-- 화면: 런웨이 조명을 가르며 당당히 워킹하는 모델의 무결점 광채 클로즈업 → 에어버블 + 밤패드 세트 정물.
-- 내레이션(VO): "1장으로 지우고 10초 만에 채우다. 지금 사면 멜팅 밤패드 본품 무료 증정."
-- 자막: 에어버블 구매 시 멜팅 밤패드 최대 3개 무료 증정 (최대 46% OFF)</pre>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lb" onclick="closeLb()">
-    <img id="lbImg" src="" alt="" />
-    <div class="lightbox-cap" id="lbCap"></div>
+  <!-- Full Script Viewer Modal -->
+  <div class="modal-backdrop" id="scriptModal" onclick="if(event.target===this)closeScriptModal()">
+    <div class="script-modal-card">
+      <div class="script-modal-head">
+        <strong id="smTitle" style="font-size:16px;">상세 대본</strong>
+        <div style="display:flex; gap:8px;">
+          <button class="btn-pill yellow" id="smCopyBtn">전체 복사</button>
+          <button class="btn-pill dark" onclick="closeScriptModal()">닫기 ✕</button>
+        </div>
+      </div>
+      <div class="script-modal-body" id="smBody"></div>
+    </div>
   </div>
 
   <script>
+    const SCRIPTS = {
+      c1: {
+        title: "기획 01 상세 대본 — 〈1997 뉴욕 소호: 그 사람 만나기 딱 10초 전〉 (20.0s)",
+        body: `■ CUT 01 (0.0s – 3.0s) | C-B-A 3초 후킹
+- 화면/연기: 90s 뉴욕 소호 브라운스톤 거리. 골든아워 역광 속 금발 슈퍼모델이 주차된 빈티지 세단 사이드미러를 들여다보며 건조한 바람에 하얗게 들뜬 앞볼 화장을 만지며 당황함.
+- 내레이션(VO): "약속 장소 코앞인데, 찬 바람에 화장이 하얗게 다 떴을 때."
+- 화면 자막: [상단] 만나기 딱 10초 전, 화장이 다 떴다.
+- 사운드(SFX): 뉴욕 거리 바람 소리 + 짧은 한숨 호흡음
+
+■ CUT 02 (3.0s – 8.0s) | 에메랄드 보틀 & 마이크로 버블 분사
+- 화면/연기: 빈티지 옐로우캡 뒷좌석. 가방에서 딥 에메랄드 메탈 GASH 보틀을 꺼내 화이트 사선 노즐을 클릭하자 손끝 위로 쫀쫀한 생크림 마이크로 버블이 봉긋 솟아오름.
+- 내레이션(VO): "20분짜리 시트팩 붙일 시간은 없으니까. 가방 속 에메랄드 한 병을 꺼내요."
+- 화면 자막: 20분 시트팩 대신, 공기 압축 10초 에어버블
+- 사운드(SFX): 메탈 캡 '딸깍' + 고밀도 무스 폼 분사음 '쉬이익—' / 90s 로맨틱 기타&스트링 BGM 인
+
+■ CUT 03 (8.0s – 14.0s) | 세안 없는 10초 노워시 흡수 & 화잘먹
+- 화면/연기: 노을빛 택시 창가. 앞볼 위에 흰 마이크로 버블을 얹고 부드럽게 롤링하자 물로 씻지 않아도(NO-WASH) 10초 만에 투명하고 촉촉한 유리알 속광(흡수율 461%)으로 스며듦.
+- 내레이션(VO): "씻어낼 필요 없이 톡톡 두드리면 끝. 식물성 PDRN 버블이 10초 만에 속광을 채우니까."
+- 화면 자막: 씻지 않는 NO-WASH · 특허 에어버블 흡수율 461%
+- 사운드(SFX): 미세 버블이 사르르 녹아드는 촉촉한 스킨 폴리음
+
+■ CUT 04 (14.0s – 20.0s) | 골든아워 페이오프 & 오퍼 클로징
+- 화면/연기: 택시에서 내려 소호 거리의 따뜻한 노을 역광을 받으며 뒤돌아 환하게 미소 짓는 무결점 물광 얼굴 & 손에 들린 에메랄드 GASH 보틀.
+- 내레이션(VO): "시트팩 150장을 이 한 병에. 기어바이가쉬 에어버블 마스크."
+- 화면 자막: 80ml 1병 = 150회(1회 200원) · 최대 46% 할인 + 멜팅 밤패드 증정`
+      },
+      c2: {
+        title: "기획 02 상세 대본 — 〈1998 플라자 호텔 대기실: 본식 입장 1분 전〉 (20.0s)",
+        body: `■ CUT 01 (0.0s – 3.0s) | 위기 예고 & 들뜬 베이스 훅
+- 화면/연기: 90s 뉴욕 그랜드 호텔 우드&황동 신부 대기실. 아이보리 새틴 드레스와 베일을 쓴 웨스턴 신부가 거울 속 긴장 열감으로 붉어지고 들뜬 앞볼을 보며 굳어 있음(테이블 위 20분 시트팩 포기).
+- 현장 대사 / VO: (플래너 현장음) "One minute left!" / (VO) "본식 입장 1분 전, 화장이 들떴다."
+- 화면 자막: [상단] 본식 입장 1분 전, 화장이 하얗게 들떴다. (시트팩 시간 0초)
+- 사운드(SFX): 대기실 문 열리는 소리 + 복도 하객 웅성거림 + 긴박한 시계 초침(Tick-tock)
+
+■ CUT 02 (3.0s – 8.0s) | 전담 아티스트의 에메랄드 보틀 투입
+- 화면/연기: 따뜻한 텅스텐 화장대 조명 아래, 아티스트의 손이 단호하게 들어오며 딥 에메랄드 메탈 GASH 보틀 사선 노즐 클릭. 손끝 위로 생크림 같은 초고밀도 화이트 마이크로 버블이 솟아오름.
+- 대사(아티스트): "씻어낼 필요 없어요. 딱 10초만 주세요."
+- 화면 자막: "입장 1분 전, 20분짜리 시트팩 대신 10초." [10s → 05s]
+- 사운드(SFX): 메탈 클릭 + 마이크로 버블 분사 ASMR / 90s 시네마틱 스트링 BGM 인
+
+■ CUT 03 (8.0s – 14.0s) | 10초 리얼타임 진정 & 유리알 밀착
+- 화면/연기: 신부의 앞볼 위에서 흰 버블이 손끝 롤링만으로 투명한 수분 장벽으로 녹아들며 붉은기와 각질이 즉각 잠재워지고, 안도의 미소가 번지는 타이트 뷰티 클로즈업.
+- 내레이션(VO): "모공보다 작은 특허 마이크로 버블이 461% 흡수율로 붉은기와 들뜸을 단숨에 잠재우니까."
+- 화면 자막: 식물성 CICA PDRN + EGF 급속 진정 · 밀림 0% 화잘먹 완성 [00s DONE]
+- 사운드(SFX): 촉촉한 버블 흡수 폴리 + 은은한 벨 차임 포인트
+
+■ CUT 04 (14.0s – 20.0s) | 플래시 세례 본식 입장 & 오퍼
+- 화면/연기: 대기실 양개문이 활짝 열리고 화이트 로즈 부케를 든 신부가 90s 빈티지 카메라 플래시 세례 속으로 걸어 나가며 우아하게 돌아보는 무결점 물광 클로즈업.
+- 내레이션(VO): "가장 완벽해야 할 순간 직전, 단 10초면 충분합니다. 기어바이가쉬."
+- 화면 자막: 시트팩 150장을 한 병에(1회 200원) · 최대 46% + 밤패드 본품 증정
+- 사운드(SFX): 양개문 오픈음 + 빈티지 35mm 카메라 플래시 셔터음 연속`
+      },
+      c3: {
+        title: "기획 03 상세 대본 — 〈1996 맨해튼 모닝: 시트팩 150장과의 쿨한 결별〉 (20.0s)",
+        body: `■ CUT 01 (0.0s – 3.0s) | 하이패션 키치 스톱퍼 훅
+- 화면/연기: 90s 맨해튼 브라운스톤 아침 거리. 러플 크림 블라우스와 풍성한 금발 블로우아웃의 슈퍼모델이 '투명 비닐봉투 가득 구겨 넣은 하얀 시트팩 150장 뭉치'를 무심하게 들고 걸어오다 거리 휴지통에 쿨하게 던져 넣음.
+- 내레이션(VO): "얼굴에 축축한 종이 붙이고 20분 기다리는 거, 오늘부로 완전히 끝냈어요."
+- 화면 자막: [상단] 오늘 20분짜리 시트팩 150장이랑 헤어졌다.
+- 사운드(SFX): 비닐봉투 바스락거리는 경쾌한 폴리 + 90s 업비트 펑키 베이스 리프 인
+
+■ CUT 02 (3.0s – 8.0s) | 실버파우치 속 에메랄드 시크릿 웨폰
+- 화면/연기: 햇살 비치는 맨해튼 보도 위, 시크한 가쉬 실버파우치 지퍼를 열어 보석처럼 빛나는 단 하나의 딥 에메랄드 메탈 GASH 보틀(80ml)을 꺼내 들어 보임.
+- 내레이션(VO): "시트팩 150장 분량이 이 슬릭한 한 병에 다 들어가거든요. 한 번 쓰는 데 딱 200원꼴."
+- 화면 자막: 시트팩 150장 = 80ml 이 한 병 (1회 약 200원!)
+- 사운드(SFX): 파우치 금속 지퍼 '스르륵' + 청량한 메탈 보틀 사운드
+
+■ CUT 03 (8.0s – 14.0s) | 빈티지 오픈카 선바이저 10초 데모
+- 화면/연기: 주차된 90s 클래식 컨버터블 운전석에 앉아 선바이저 거울을 내리고, 폭신한 흰 마이크로 버블을 볼에 톡톡 두드려 10초 만에 물광 피부를 완성하는 햇살 역광 클로즈업.
+- 내레이션(VO): "붙일 필요도, 씻어낼 필요도 없이 차 안에서 10초면 쫀득한 유리알 피부 끝."
+- 화면 자막: 붙이지도 씻지도 않는 10초 NO-WASH · 흡수율 461%
+- 사운드(SFX): 무스 버블 분사음 + 촉촉한 피부 터치 폴리
+
+■ CUT 04 (14.0s – 20.0s) | 90s 선글라스 잇걸 윙크 & 오퍼
+- 화면/연기: 90s 오벌형 선글라스를 코끝에 살짝 내리며 윙크와 함께 빛나는 물광 광대와 에메랄드 GASH 보틀을 카메라 쪽으로 쿨하게 들어 보이는 매거진 커버 엔딩.
+- 내레이션(VO): "아직도 얼굴에 종이 붙이세요? 지금 기어바이가쉬로 갈아타세요."
+- 화면 자막: 최대 46% 할인 + 실버파우치 & 멜팅 밤패드 무료 증정`
+      },
+      c4: {
+        title: "기획 04 상세 대본 — 〈2.04µm 초미세 마이크로 버블 & 원패드 리추얼〉 (20.0s)",
+        body: `■ CUT 01 (0.0s – 3.0s) | 초근접 제형 물리 씨즐 훅
+- 화면/연기: 브러시드 실버&에메랄드 스튜디오. GASH 에메랄드 메탈 보틀의 화이트 사선 노즐에서 초고밀도 생크림 소프트아이스크림 피크 질감의 마이크로 버블(2.04µm)이 솟아오르는 초근접 매크로.
+- 내레이션(VO): "모공보다 작게 쪼갠 2.04마이크로미터 공기 압축 버블을 경험해 보세요."
+- 화면 자막: [상단] 모공보다 미세한 2.04µm 특허 에어버블 마스크
+- 사운드(SFX): 고밀도 탄산 무스 폼이 쫀쫀하게 피어오르는 극접사 ASMR
+
+■ CUT 02 (3.0s – 8.0s) | Step 1 — 딥클린 멜팅 밤패드 원패드 세안
+- 화면/연기: 깨끗한 하이키 뷰티 조명 아래, 100% 순면 엠보 원단의 '가쉬 딥클린 멜팅 밤패드' 단 한 장으로 볼 위의 진한 베이스와 모공 노폐물을 한 번에 매끄럽게 닦아냄.
+- 내레이션(VO): "먼저 클렌징 밤을 품은 순면 패드 한 장으로 모공 속 노폐물까지 말끔히 비워내고,"
+- 화면 자막: Step 1. 멜팅 밤패드 1장 원패드 딥클렌징 (LHA 모공케어)
+- 사운드(SFX): 부드러운 순면 패드 스와이프 사운드
+
+■ CUT 03 (8.0s – 14.0s) | Step 2 — 461% 노워시 멜팅 장벽 리페어
+- 화면/연기: 방금 닦아낸 맑은 피부결 위에 폭신한 화이트 GASH 마이크로 버블이 얹혀 물방울 맺힘 없이 투명하고 탱탱한 수분 장벽(Glass-skin)으로 눈 녹듯 스며드는 초고해상도 매크로.
+- 내레이션(VO): "식물성 PDRN과 EGF 에어버블을 얹으면, 단 10초 만에 461% 흡수율로 장벽을 채웁니다."
+- 화면 자막: Step 2. 세안 없는 10초 흡수 · 흡수율 461% 장벽 리페어
+- 사운드(SFX): 미세 버블이 피부 속으로 촉촉하게 스며드는 사운드
+
+■ CUT 04 (14.0s – 20.0s) | 단상 풀기프트 화보 & 전환 오퍼
+- 화면/연기: 크롬&에메랄드 단상 위 GASH 그린 보틀, 풍성한 화이트 버블 스와치, 멜팅 밤패드 본품 Jar, 실버파우치가 조화롭게 세팅된 럭셔리 프로모션 정물 컷.
+- 내레이션(VO): "한 장으로 지우고 10초 만에 채우다. 지금 에어버블 구매 시 멜팅 밤패드 본품을 무료로 드립니다."
+- 화면 자막: 최대 46% 할인 + 멜팅 밤패드 최대 3개 무상 증정 (무료배송)`
+      }
+    };
+
     const slides = Array.from(document.querySelectorAll('.slide'));
     const counter = document.getElementById('slideCounter');
     const jumper = document.getElementById('slideJumper');
@@ -940,7 +1575,7 @@
     function buildJumper() {
       slides.forEach((s, idx) => {
         const btn = document.createElement('button');
-        btn.className = 'jump-dot' + (idx === 0 ? ' active' : '');
+        btn.className = 'j-dot' + (idx === 0 ? ' active' : '');
         btn.textContent = s.getAttribute('data-title') || String(idx + 1).padStart(2, '0');
         btn.onclick = () => goToSlide(idx);
         jumper.appendChild(btn);
@@ -966,29 +1601,50 @@
     function toggleScrollMode() {
       scrollMode = !scrollMode;
       document.body.classList.toggle('scroll-mode', scrollMode);
-      modeBtn.textContent = scrollMode ? '슬라이드(PPT) 모드로 보기' : '전체 슬라이드 한눈에 펼치기';
+      modeBtn.textContent = scrollMode ? '슬라이드(PPT) 모드로 보기' : '전체 슬라이드 펼치기';
       if (!scrollMode) updateUI();
     }
 
     function openLb(src, cap) {
       document.getElementById('lbImg').src = src;
-      document.getElementById('lbCap').textContent = cap + ' (클릭 또는 ESC로 닫기)';
-      document.getElementById('lb').classList.add('open');
+      document.getElementById('lbCap').textContent = cap + '  ·  클릭 또는 ESC로 닫기';
+      document.getElementById('lbModal').classList.add('open');
     }
-    function closeLb() { document.getElementById('lb').classList.remove('open'); }
+    function closeLb() { document.getElementById('lbModal').classList.remove('open'); }
 
-    function copyById(id, btn) {
-      const text = document.getElementById(id).innerText;
+    function openScriptModal(key) {
+      const item = SCRIPTS[key];
+      if (!item) return;
+      document.getElementById('smTitle').textContent = item.title;
+      document.getElementById('smBody').textContent = item.body;
+      const copyBtn = document.getElementById('smCopyBtn');
+      copyBtn.textContent = '전체 복사';
+      copyBtn.onclick = () => copyRaw(item.body, copyBtn);
+      document.getElementById('scriptModal').classList.add('open');
+    }
+    function closeScriptModal() { document.getElementById('scriptModal').classList.remove('open'); }
+
+    function copyScriptText(key, btn) {
+      const item = SCRIPTS[key];
+      if (!item) return;
+      copyRaw(item.title + '\n\n' + item.body, btn);
+    }
+
+    function copyRaw(text, btn) {
       navigator.clipboard.writeText(text).then(() => {
-        const prev = btn.textContent;
+        const orig = btn.textContent;
         btn.textContent = '✓ 복사 완료!';
-        setTimeout(() => { btn.textContent = prev; }, 1400);
+        setTimeout(() => { btn.textContent = orig; }, 1400);
       });
     }
 
     document.addEventListener('keydown', (e) => {
-      if (document.getElementById('lb').classList.contains('open')) {
+      if (document.getElementById('lbModal').classList.contains('open')) {
         if (e.key === 'Escape') closeLb();
+        return;
+      }
+      if (document.getElementById('scriptModal').classList.contains('open')) {
+        if (e.key === 'Escape') closeScriptModal();
         return;
       }
       if (scrollMode) return;
